@@ -6,6 +6,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Header } from "@/components/Header";
 import DateConverter from "./pages/DateConverter";
 import AgeCalculator from "./pages/AgeCalculator";
+import MorningEveningAdhkar from "./pages/MorningEveningAdhkar";
+import PrayerTimes from "./pages/PrayerTimes";
+import FridayDuas from "./pages/FridayDuas";
 import NotFound from "./pages/NotFound";
 import "./i18n";
 
@@ -23,6 +26,9 @@ const App = () => (
             <Routes>
               <Route path="/" element={<DateConverter />} />
               <Route path="/age-calculator" element={<AgeCalculator />} />
+              <Route path="/adhkar" element={<MorningEveningAdhkar />} />
+              <Route path="/prayer-times" element={<PrayerTimes />} />
+              <Route path="/friday-duas" element={<FridayDuas />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
