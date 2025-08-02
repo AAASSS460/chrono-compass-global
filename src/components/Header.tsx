@@ -20,11 +20,11 @@ export function Header() {
           <nav className="flex items-center gap-2">
             <Button
               asChild
-              variant={location.pathname === '/' ? 'default' : 'ghost'}
+              variant={location.pathname === '/date-converter' ? 'default' : 'ghost'}
               size="sm"
               className="gap-2"
             >
-              <Link to="/">
+              <Link to="/date-converter">
                 <Calendar className="h-4 w-4" />
                 <span className="hidden sm:inline">{t('nav.dateConverter')}</span>
               </Link>
