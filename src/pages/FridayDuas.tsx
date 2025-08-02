@@ -19,42 +19,42 @@ const fridayImportance = [
   }
 ];
 
-const fridayDuas = [
+const getFridayDuas = (t: any) => [
   {
     arabic: "اللَّهُمَّ صَلِّ وَسَلِّمْ وَبَارِكْ عَلَى نَبِيِّنَا مُحَمَّدٍ وَعَلَى آلِهِ وَصَحْبِهِ أَجْمَعِينَ",
     transliteration: "Allaahumma salli wa sallim wa baarik 'alaa nabiyyinaa Muhammadin wa 'alaa aalihi wa sahbihi ajma'een",
-    translation: "O Allah, send prayers, peace, and blessings upon our Prophet Muhammad and upon his family and all his companions.",
-    virtue: "من أفضل الأعمال يوم الجمعة"
+    translation: t('fridayDuas.dua1.translation'),
+    virtue: t('fridayDuas.dua1.virtue')
   },
   {
     arabic: "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
     transliteration: "Rabbanaa aatinaa fil-dunyaa hasanatan wa fil-aakhirati hasanatan wa qinaa 'adhaab an-naar",
-    translation: "Our Lord, give us in this world [that which is] good and in the Hereafter [that which is] good and protect us from the punishment of the Fire.",
-    virtue: "دعاء جامع لخير الدنيا والآخرة"
+    translation: t('fridayDuas.dua2.translation'),
+    virtue: t('fridayDuas.dua2.virtue')
   },
   {
     arabic: "اللَّهُمَّ اغْفِرْ لِي ذَنْبِي وَوَسِّعْ لِي فِي دَارِي وَبَارِكْ لِي فِي رِزْقِي",
     transliteration: "Allaahummaghfir lee dhanbee wa wassi' lee fee daaree wa baarik lee fee rizqee",
-    translation: "O Allah, forgive my sin, expand my home for me, and bless my sustenance.",
-    virtue: "دعاء شامل للمغفرة والبركة"
+    translation: t('fridayDuas.dua3.translation'),
+    virtue: t('fridayDuas.dua3.virtue')
   },
   {
     arabic: "اللَّهُمَّ أَصْلِحْ لِي دِينِي الَّذِي هُوَ عِصْمَةُ أَمْرِي، وَأَصْلِحْ لِي دُنْيَايَ الَّتِي فِيهَا مَعَاشِي، وَأَصْلِحْ لِي آخِرَتِي الَّتِي فِيهَا مَعَادِي",
     transliteration: "Allaahumma aslih lee deeneel-ladhee huwa 'ismatu amree, wa aslih lee dunyaayal-latee feehaa ma'aashee, wa aslih lee aakhirateel-latee feehaa ma'aadee",
-    translation: "O Allah, make my religion good for me, which is the safeguard of my affairs. Make my worldly life good for me, in which is my livelihood. Make my Hereafter good for me, which is my return.",
-    virtue: "دعاء لإصلاح الدين والدنيا والآخرة"
+    translation: t('fridayDuas.dua4.translation'),
+    virtue: t('fridayDuas.dua4.virtue')
   },
   {
     arabic: "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى وَالتُّقَى وَالْعَفَافَ وَالْغِنَى",
     transliteration: "Allaahumma innee as'alukal-hudaa wat-tuqaa wal-'afaafa wal-ghinaa",
-    translation: "O Allah, I ask You for guidance, piety, chastity, and contentment.",
-    virtue: "دعاء للهداية والتقوى"
+    translation: t('fridayDuas.dua5.translation'),
+    virtue: t('fridayDuas.dua5.virtue')
   },
   {
     arabic: "اللَّهُمَّ بَارِكْ لَنَا فِيمَا رَزَقْتَنَا، وَقِنَا عَذَابَ النَّارِ",
     transliteration: "Allaahumma baarik lanaa feemaa razaqtanaa, wa qinaa 'adhaab an-naar",
-    translation: "O Allah, bless us in what You have provided us, and protect us from the punishment of the Fire.",
-    virtue: "دعاء للبركة في الرزق"
+    translation: t('fridayDuas.dua6.translation'),
+    virtue: t('fridayDuas.dua6.virtue')
   }
 ];
 
@@ -66,6 +66,7 @@ const suraAl_Kahf = {
 
 export default function FridayDuas() {
   const { t } = useTranslation();
+  const fridayDuas = getFridayDuas(t);
 
   return (
     <div className="container max-w-4xl mx-auto py-8 px-4">
@@ -86,7 +87,7 @@ export default function FridayDuas() {
             {t('fridayDuas.importance')}
           </CardTitle>
           <CardDescription>
-            فضائل يوم الجمعة في الإسلام
+            {t('fridayDuas.importanceDesc')}
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -135,7 +136,7 @@ export default function FridayDuas() {
             {t('fridayDuas.supplications')}
           </CardTitle>
           <CardDescription>
-            أدعية مستجابة ليوم الجمعة المبارك
+            {t('fridayDuas.supplicationsDesc')}
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -173,7 +174,7 @@ export default function FridayDuas() {
       <Card className="mt-6 border-0 bg-gradient-to-br from-card to-amber-50/30 dark:to-amber-950/30">
         <CardContent className="p-4 text-center">
           <p className="text-sm text-muted-foreground">
-            💫 يُستحب الإكثار من الدعاء والذكر والصلاة على النبي صلى الله عليه وسلم في يوم الجمعة
+            💫 {t('fridayDuas.note')}
           </p>
         </CardContent>
       </Card>

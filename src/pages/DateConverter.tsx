@@ -187,13 +187,13 @@ export default function DateConverter() {
               </div>
 
               {gregorianResult && (
-                <Card className="bg-primary-light border-primary/20">
+                <Card className="bg-secondary border-secondary-foreground/20">
                   <CardContent className="pt-6">
                     <div className="text-center">
                       <p className="text-sm text-muted-foreground mb-2">
                         {t('dateConverter.gregorianDate')}
                       </p>
-                      <p className="text-2xl font-bold text-primary">
+                      <p className="text-2xl font-bold text-secondary-foreground">
                         {formatDate(gregorianResult, i18n.language)}
                       </p>
                     </div>
@@ -266,13 +266,13 @@ export default function DateConverter() {
               </div>
 
               {hijriResult && (
-                <Card className="bg-secondary border-secondary-foreground/20">
+                <Card className="bg-primary-light border-primary/20">
                   <CardContent className="pt-6">
                     <div className="text-center">
                       <p className="text-sm text-muted-foreground mb-2">
                         {t('dateConverter.hijriDate')}
                       </p>
-                      <p className="text-2xl font-bold text-secondary-foreground">
+                      <p className="text-2xl font-bold text-primary">
                         {formatDate(hijriResult, i18n.language)}
                       </p>
                     </div>

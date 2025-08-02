@@ -151,12 +151,12 @@ export default function AgeCalculator() {
                     <div className="text-primary">{age.years}</div>
                     <div className="text-xs text-muted-foreground">{t('ageCalculator.years')}</div>
                   </div>
-                  <div className="text-muted-foreground">:</div>
+                  <div className="text-muted-foreground">/</div>
                   <div className="text-center">
                     <div className="text-primary">{age.months}</div>
                     <div className="text-xs text-muted-foreground">{t('ageCalculator.months')}</div>
                   </div>
-                  <div className="text-muted-foreground">:</div>
+                  <div className="text-muted-foreground">/</div>
                   <div className="text-center">
                     <div className="text-primary">{age.days}</div>
                     <div className="text-xs text-muted-foreground">{t('ageCalculator.days')}</div>

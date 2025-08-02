@@ -51,10 +51,10 @@ export default function Index() {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-primary-hover to-accent bg-clip-text text-transparent">
-            أدوات إسلامية متكاملة
+            {t('home.title')}
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            مجموعة شاملة من الأدوات الإسلامية المفيدة تشمل تحويل التاريخ، حساب العمر، الأذكار، مواقيت الصلاة وأدعية الجمعة
+            {t('home.description')}
           </p>
         </div>
 
@@ -88,7 +88,7 @@ export default function Index() {
                     variant="outline"
                   >
                     <Link to={feature.path} className="flex items-center justify-center gap-2">
-                      استخدم الأداة
+                      {t('home.useTool')}
                       <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
                     </Link>
                   </Button>
@@ -103,10 +103,10 @@ export default function Index() {
           <Card className="bg-gradient-to-r from-primary/5 to-accent/5 border-primary/20">
             <CardContent className="py-8">
               <h2 className="text-2xl font-semibold mb-4 text-primary">
-                متوفر بعدة لغات
+                {t('home.multilingual')}
               </h2>
               <p className="text-muted-foreground">
-                جميع الأدوات متوفرة باللغات العربية والإنجليزية والفرنسية والإسبانية لخدمة المسلمين حول العالم
+                {t('home.multilingualDesc')}
               </p>
             </CardContent>
           </Card>

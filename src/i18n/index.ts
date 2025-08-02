@@ -82,6 +82,28 @@ const resources = {
       'fridayDuas.subtitle': 'Special supplications for the blessed day of Friday',
       'fridayDuas.importance': 'Importance of Friday',
       'fridayDuas.supplications': 'Friday Supplications',
+      'fridayDuas.importanceDesc': 'Virtues of Friday in Islam',
+      'fridayDuas.supplicationsDesc': 'Answered supplications for the blessed Friday',
+      'fridayDuas.note': 'It is recommended to increase dhikr, supplication, and sending prayers upon the Prophet (peace be upon him) on Friday',
+      'fridayDuas.dua1.translation': 'O Allah, send prayers, peace, and blessings upon our Prophet Muhammad and upon his family and all his companions.',
+      'fridayDuas.dua1.virtue': 'One of the best deeds on Friday',
+      'fridayDuas.dua2.translation': 'Our Lord, give us in this world [that which is] good and in the Hereafter [that which is] good and protect us from the punishment of the Fire.',
+      'fridayDuas.dua2.virtue': 'A comprehensive supplication for the good of this world and the next',
+      'fridayDuas.dua3.translation': 'O Allah, forgive my sin, expand my home for me, and bless my sustenance.',
+      'fridayDuas.dua3.virtue': 'A comprehensive supplication for forgiveness and blessings',
+      'fridayDuas.dua4.translation': 'O Allah, make my religion good for me, which is the safeguard of my affairs. Make my worldly life good for me, in which is my livelihood. Make my Hereafter good for me, which is my return.',
+      'fridayDuas.dua4.virtue': 'A supplication for reforming religion, worldly life, and the Hereafter',
+      'fridayDuas.dua5.translation': 'O Allah, I ask You for guidance, piety, chastity, and contentment.',
+      'fridayDuas.dua5.virtue': 'A supplication for guidance and piety',
+      'fridayDuas.dua6.translation': 'O Allah, bless us in what You have provided us, and protect us from the punishment of the Fire.',
+      'fridayDuas.dua6.virtue': 'A supplication for blessings in sustenance',
+      
+      // Home
+      'home.title': 'Comprehensive Islamic Tools',
+      'home.description': 'A complete collection of useful Islamic tools including date conversion, age calculation, adhkar, prayer times, and Friday supplications',
+      'home.useTool': 'Use Tool',
+      'home.multilingual': 'Available in Multiple Languages',
+      'home.multilingualDesc': 'All tools are available in Arabic, English, French, and Spanish to serve Muslims worldwide'
     }
   },
   ar: {
@@ -162,6 +184,28 @@ const resources = {
       'fridayDuas.subtitle': 'الأدعية الخاصة ليوم الجمعة المبارك',
       'fridayDuas.importance': 'أهمية يوم الجمعة',
       'fridayDuas.supplications': 'أدعية الجمعة',
+      'fridayDuas.importanceDesc': 'فضائل يوم الجمعة في الإسلام',
+      'fridayDuas.supplicationsDesc': 'أدعية مستجابة ليوم الجمعة المبارك',
+      'fridayDuas.note': 'يُستحب الإكثار من الدعاء والذكر والصلاة على النبي صلى الله عليه وسلم في يوم الجمعة',
+      'fridayDuas.dua1.translation': 'اللهم صل وسلم وبارك على نبينا محمد وعلى آله وصحبه أجمعين',
+      'fridayDuas.dua1.virtue': 'من أفضل الأعمال يوم الجمعة',
+      'fridayDuas.dua2.translation': 'ربنا آتنا في الدنيا حسنة وفي الآخرة حسنة وقنا عذاب النار',
+      'fridayDuas.dua2.virtue': 'دعاء جامع لخير الدنيا والآخرة',
+      'fridayDuas.dua3.translation': 'اللهم اغفر لي ذنبي ووسع لي في داري وبارك لي في رزقي',
+      'fridayDuas.dua3.virtue': 'دعاء شامل للمغفرة والبركة',
+      'fridayDuas.dua4.translation': 'اللهم أصلح لي ديني الذي هو عصمة أمري، وأصلح لي دنياي التي فيها معاشي، وأصلح لي آخرتي التي فيها معادي',
+      'fridayDuas.dua4.virtue': 'دعاء لإصلاح الدين والدنيا والآخرة',
+      'fridayDuas.dua5.translation': 'اللهم إني أسألك الهدى والتقى والعفاف والغنى',
+      'fridayDuas.dua5.virtue': 'دعاء للهداية والتقوى',
+      'fridayDuas.dua6.translation': 'اللهم بارك لنا فيما رزقتنا، وقنا عذاب النار',
+      'fridayDuas.dua6.virtue': 'دعاء للبركة في الرزق',
+      
+      // Home
+      'home.title': 'أدوات إسلامية متكاملة',
+      'home.description': 'مجموعة شاملة من الأدوات الإسلامية المفيدة تشمل تحويل التاريخ، حساب العمر، الأذكار، مواقيت الصلاة وأدعية الجمعة',
+      'home.useTool': 'استخدم الأداة',
+      'home.multilingual': 'متوفر بعدة لغات',
+      'home.multilingualDesc': 'جميع الأدوات متوفرة باللغات العربية والإنجليزية والفرنسية والإسبانية لخدمة المسلمين حول العالم'
     }
   },
   fr: {
@@ -242,6 +286,28 @@ const resources = {
       'fridayDuas.subtitle': 'Supplications spéciales pour le jour béni du vendredi',
       'fridayDuas.importance': 'Importance du Vendredi',
       'fridayDuas.supplications': 'Supplications du Vendredi',
+      'fridayDuas.importanceDesc': 'Vertus du vendredi en Islam',
+      'fridayDuas.supplicationsDesc': 'Invocations exaucées pour le vendredi béni',
+      'fridayDuas.note': 'Il est recommandé d\'augmenter le dhikr, les invocations et les prières sur le Prophète (paix soit sur lui) le vendredi',
+      'fridayDuas.dua1.translation': 'Ô Allah, envoie des prières, la paix et les bénédictions sur notre Prophète Muhammad et sur sa famille et tous ses compagnons.',
+      'fridayDuas.dua1.virtue': 'L\'une des meilleures actions du vendredi',
+      'fridayDuas.dua2.translation': 'Notre Seigneur, donne-nous en ce monde [ce qui est] bien et dans l\'au-delà [ce qui est] bien et protège-nous du châtiment du Feu.',
+      'fridayDuas.dua2.virtue': 'Une invocation complète pour le bien de ce monde et de l\'au-delà',
+      'fridayDuas.dua3.translation': 'Ô Allah, pardonne mon péché, élargis ma maison pour moi et bénis ma subsistance.',
+      'fridayDuas.dua3.virtue': 'Une invocation complète pour le pardon et les bénédictions',
+      'fridayDuas.dua4.translation': 'Ô Allah, améliore ma religion qui est la sauvegarde de mes affaires. Améliore ma vie mondaine dans laquelle est ma subsistance. Améliore mon au-delà qui est mon retour.',
+      'fridayDuas.dua4.virtue': 'Une invocation pour réformer la religion, la vie mondaine et l\'au-delà',
+      'fridayDuas.dua5.translation': 'Ô Allah, je Te demande la guidance, la piété, la chasteté et le contentement.',
+      'fridayDuas.dua5.virtue': 'Une invocation pour la guidance et la piété',
+      'fridayDuas.dua6.translation': 'Ô Allah, bénis-nous dans ce que Tu nous as fourni et protège-nous du châtiment du Feu.',
+      'fridayDuas.dua6.virtue': 'Une invocation pour les bénédictions dans la subsistance',
+      
+      // Home
+      'home.title': 'Outils Islamiques Complets',
+      'home.description': 'Une collection complète d\'outils islamiques utiles comprenant la conversion de dates, le calcul d\'âge, les adhkar, les heures de prière et les invocations du vendredi',
+      'home.useTool': 'Utiliser l\'Outil',
+      'home.multilingual': 'Disponible en Plusieurs Langues',
+      'home.multilingualDesc': 'Tous les outils sont disponibles en arabe, anglais, français et espagnol pour servir les musulmans du monde entier'
     }
   },
   es: {
@@ -322,6 +388,28 @@ const resources = {
       'fridayDuas.subtitle': 'Súplicas especiales para el día bendito del viernes',
       'fridayDuas.importance': 'Importancia del Viernes',
       'fridayDuas.supplications': 'Súplicas del Viernes',
+      'fridayDuas.importanceDesc': 'Virtudes del viernes en el Islam',
+      'fridayDuas.supplicationsDesc': 'Súplicas respondidas para el viernes bendito',
+      'fridayDuas.note': 'Se recomienda aumentar el dhikr, las súplicas y las oraciones sobre el Profeta (paz sea con él) el viernes',
+      'fridayDuas.dua1.translation': 'Oh Allah, envía oraciones, paz y bendiciones sobre nuestro Profeta Muhammad y sobre su familia y todos sus compañeros.',
+      'fridayDuas.dua1.virtue': 'Una de las mejores acciones del viernes',
+      'fridayDuas.dua2.translation': 'Señor nuestro, danos en este mundo [lo que es] bueno y en el Más Allá [lo que es] bueno y protégenos del castigo del Fuego.',
+      'fridayDuas.dua2.virtue': 'Una súplica integral para el bien de este mundo y el próximo',
+      'fridayDuas.dua3.translation': 'Oh Allah, perdona mi pecado, amplía mi hogar para mí y bendice mi sustento.',
+      'fridayDuas.dua3.virtue': 'Una súplica integral para el perdón y las bendiciones',
+      'fridayDuas.dua4.translation': 'Oh Allah, mejora mi religión que es la salvaguarda de mis asuntos. Mejora mi vida mundana en la que está mi sustento. Mejora mi Más Allá que es mi retorno.',
+      'fridayDuas.dua4.virtue': 'Una súplica para reformar la religión, la vida mundana y el Más Allá',
+      'fridayDuas.dua5.translation': 'Oh Allah, te pido guía, piedad, castidad y contentamiento.',
+      'fridayDuas.dua5.virtue': 'Una súplica para la guía y la piedad',
+      'fridayDuas.dua6.translation': 'Oh Allah, bendícenos en lo que nos has proporcionado y protégenos del castigo del Fuego.',
+      'fridayDuas.dua6.virtue': 'Una súplica para las bendiciones en el sustento',
+      
+      // Home
+      'home.title': 'Herramientas Islámicas Integrales',
+      'home.description': 'Una colección completa de herramientas islámicas útiles que incluye conversión de fechas, cálculo de edad, adhkar, horarios de oración y súplicas del viernes',
+      'home.useTool': 'Usar Herramienta',
+      'home.multilingual': 'Disponible en Múltiples Idiomas',
+      'home.multilingualDesc': 'Todas las herramientas están disponibles en árabe, inglés, francés y español para servir a los musulmanes de todo el mundo'
     }
   }
 };
