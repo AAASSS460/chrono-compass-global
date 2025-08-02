@@ -115,11 +115,26 @@ export function getCurrentGregorianDate(): GregorianDate {
 export function formatDate(date: HijriDate | GregorianDate, locale: string = 'en'): string {
   const { day, month, year } = date;
   
+  // Month names in different languages
+  const monthNames = {
+    en: ['January', 'February', 'March', 'April', 'May', 'June', 
+         'July', 'August', 'September', 'October', 'November', 'December'],
+    ar: ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو',
+         'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'],
+    fr: ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin',
+         'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
+    es: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+         'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
+  };
+
+  const currentLocale = locale as keyof typeof monthNames;
+  const monthName = monthNames[currentLocale]?.[month - 1] || monthNames.en[month - 1];
+  
   if (locale === 'ar') {
-    return `${day}/${month}/${year}`;
+    return `${day} ${monthName} ${year}`;
   }
   
-  return `${day}/${month}/${year}`;
+  return `${day} ${monthName} ${year}`;
 }
 
 // Validate date

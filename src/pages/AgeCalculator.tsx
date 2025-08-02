@@ -18,8 +18,8 @@ export default function AgeCalculator() {
   const handleCalculateAge = () => {
     if (!birthDate) {
       toast({
-        title: "تاريخ الميلاد مطلوب",
-        description: "يرجى إدخال تاريخ الميلاد",
+        title: t('common.error'),
+        description: t('ageCalculator.birthDateRequired'),
         variant: "destructive"
       });
       return;
@@ -30,8 +30,8 @@ export default function AgeCalculator() {
 
     if (birth > current) {
       toast({
-        title: "تاريخ غير صحيح",
-        description: "تاريخ الميلاد لا يمكن أن يكون في المستقبل",
+        title: t('common.error'),
+        description: t('ageCalculator.futureDate'),
         variant: "destructive"
       });
       return;
@@ -46,8 +46,8 @@ export default function AgeCalculator() {
       });
     } catch (error) {
       toast({
-        title: "خطأ في الحساب",
-        description: "حدث خطأ أثناء حساب العمر",
+        title: t('common.error'),
+        description: t('ageCalculator.calculationError'),
         variant: "destructive"
       });
     }

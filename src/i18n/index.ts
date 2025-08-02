@@ -23,6 +23,7 @@ const resources = {
       'common.month': 'Month',
       'common.year': 'Year',
       'common.today': 'Today',
+      'common.error': 'Error',
       
       // Date Converter
       'dateConverter.title': 'Hijri to Gregorian Date Converter',
@@ -33,6 +34,8 @@ const resources = {
       'dateConverter.enterGregorianDate': 'Enter Gregorian Date',
       'dateConverter.convertToGregorian': 'Convert to Gregorian',
       'dateConverter.convertToHijri': 'Convert to Hijri',
+      'dateConverter.invalidDate': 'Please enter a valid date',
+      'dateConverter.conversionError': 'An error occurred during date conversion',
       
       // Age Calculator
       'ageCalculator.title': 'Age Calculator',
@@ -48,6 +51,9 @@ const resources = {
       'ageCalculator.totalMonths': 'Total Months',
       'ageCalculator.nextBirthday': 'Next Birthday',
       'ageCalculator.daysUntilBirthday': 'Days until birthday',
+      'ageCalculator.birthDateRequired': 'Birth date is required',
+      'ageCalculator.futureDate': 'Birth date cannot be in the future',
+      'ageCalculator.calculationError': 'An error occurred while calculating age',
       
       // Morning & Evening Adhkar
       'adhkar.title': 'Morning & Evening Adhkar',
@@ -97,6 +103,7 @@ const resources = {
       'common.month': 'شهر',
       'common.year': 'سنة',
       'common.today': 'اليوم',
+      'common.error': 'خطأ',
       
       // Date Converter
       'dateConverter.title': 'محول التاريخ من هجري إلى ميلادي',
@@ -107,6 +114,8 @@ const resources = {
       'dateConverter.enterGregorianDate': 'أدخل التاريخ الميلادي',
       'dateConverter.convertToGregorian': 'تحويل إلى ميلادي',
       'dateConverter.convertToHijri': 'تحويل إلى هجري',
+      'dateConverter.invalidDate': 'يرجى إدخال تاريخ صحيح',
+      'dateConverter.conversionError': 'حدث خطأ أثناء تحويل التاريخ',
       
       // Age Calculator
       'ageCalculator.title': 'حاسبة العمر',
@@ -122,6 +131,9 @@ const resources = {
       'ageCalculator.totalMonths': 'إجمالي الشهور',
       'ageCalculator.nextBirthday': 'عيد الميلاد القادم',
       'ageCalculator.daysUntilBirthday': 'أيام حتى عيد الميلاد',
+      'ageCalculator.birthDateRequired': 'تاريخ الميلاد مطلوب',
+      'ageCalculator.futureDate': 'تاريخ الميلاد لا يمكن أن يكون في المستقبل',
+      'ageCalculator.calculationError': 'حدث خطأ أثناء حساب العمر',
       
       // Morning & Evening Adhkar
       'adhkar.title': 'أذكار الصباح والمساء',
@@ -171,6 +183,7 @@ const resources = {
       'common.month': 'Mois',
       'common.year': 'Année',
       'common.today': 'Aujourd\'hui',
+      'common.error': 'Erreur',
       
       // Date Converter
       'dateConverter.title': 'Convertisseur de Date Hijri vers Grégorien',
@@ -181,6 +194,8 @@ const resources = {
       'dateConverter.enterGregorianDate': 'Entrez la date grégorienne',
       'dateConverter.convertToGregorian': 'Convertir en Grégorien',
       'dateConverter.convertToHijri': 'Convertir en Hijri',
+      'dateConverter.invalidDate': 'Veuillez entrer une date valide',
+      'dateConverter.conversionError': 'Une erreur s\'est produite lors de la conversion de date',
       
       // Age Calculator
       'ageCalculator.title': 'Calculateur d\'Âge',
@@ -196,6 +211,9 @@ const resources = {
       'ageCalculator.totalMonths': 'Total des Mois',
       'ageCalculator.nextBirthday': 'Prochain Anniversaire',
       'ageCalculator.daysUntilBirthday': 'Jours jusqu\'à l\'anniversaire',
+      'ageCalculator.birthDateRequired': 'La date de naissance est requise',
+      'ageCalculator.futureDate': 'La date de naissance ne peut pas être dans le futur',
+      'ageCalculator.calculationError': 'Une erreur s\'est produite lors du calcul de l\'âge',
       
       // Morning & Evening Adhkar
       'adhkar.title': 'Adhkar Matin & Soir',
@@ -245,6 +263,7 @@ const resources = {
       'common.month': 'Mes',
       'common.year': 'Año',
       'common.today': 'Hoy',
+      'common.error': 'Error',
       
       // Date Converter
       'dateConverter.title': 'Convertidor de Fecha Hijri a Gregoriano',
@@ -255,6 +274,8 @@ const resources = {
       'dateConverter.enterGregorianDate': 'Ingresa la fecha gregoriana',
       'dateConverter.convertToGregorian': 'Convertir a Gregoriano',
       'dateConverter.convertToHijri': 'Convertir a Hijri',
+      'dateConverter.invalidDate': 'Por favor ingresa una fecha válida',
+      'dateConverter.conversionError': 'Ocurrió un error durante la conversión de fecha',
       
       // Age Calculator
       'ageCalculator.title': 'Calculadora de Edad',
@@ -270,6 +291,9 @@ const resources = {
       'ageCalculator.totalMonths': 'Total de Meses',
       'ageCalculator.nextBirthday': 'Próximo Cumpleaños',
       'ageCalculator.daysUntilBirthday': 'Días hasta el cumpleaños',
+      'ageCalculator.birthDateRequired': 'La fecha de nacimiento es requerida',
+      'ageCalculator.futureDate': 'La fecha de nacimiento no puede estar en el futuro',
+      'ageCalculator.calculationError': 'Ocurrió un error al calcular la edad',
       
       // Morning & Evening Adhkar
       'adhkar.title': 'Adhkar Mañana y Tarde',

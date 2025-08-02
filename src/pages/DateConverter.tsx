@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import i18n from '@/i18n';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -32,8 +33,8 @@ export default function DateConverter() {
   const handleHijriToGregorian = () => {
     if (!isValidDate(hijriInput.day, hijriInput.month, hijriInput.year)) {
       toast({
-        title: "تاريخ غير صحيح",
-        description: "يرجى إدخال تاريخ صحيح",
+        title: t('common.error'),
+        description: t('dateConverter.invalidDate'),
         variant: "destructive"
       });
       return;
@@ -44,12 +45,12 @@ export default function DateConverter() {
       setGregorianResult(result);
       toast({
         title: t('common.result'),
-        description: `${formatDate(result)} ${t('dateConverter.gregorianDate')}`
+        description: `${formatDate(result, i18n.language)} ${t('dateConverter.gregorianDate')}`
       });
     } catch (error) {
       toast({
-        title: "خطأ في التحويل",
-        description: "حدث خطأ أثناء تحويل التاريخ",
+        title: t('common.error'),
+        description: t('dateConverter.conversionError'),
         variant: "destructive"
       });
     }
@@ -58,8 +59,8 @@ export default function DateConverter() {
   const handleGregorianToHijri = () => {
     if (!isValidDate(gregorianInput.day, gregorianInput.month, gregorianInput.year)) {
       toast({
-        title: "تاريخ غير صحيح",
-        description: "يرجى إدخال تاريخ صحيح",
+        title: t('common.error'),
+        description: t('dateConverter.invalidDate'),
         variant: "destructive"
       });
       return;
@@ -70,12 +71,12 @@ export default function DateConverter() {
       setHijriResult(result);
       toast({
         title: t('common.result'),
-        description: `${formatDate(result)} ${t('dateConverter.hijriDate')}`
+        description: `${formatDate(result, i18n.language)} ${t('dateConverter.hijriDate')}`
       });
     } catch (error) {
       toast({
-        title: "خطأ في التحويل",
-        description: "حدث خطأ أثناء تحويل التاريخ",
+        title: t('common.error'),
+        description: t('dateConverter.conversionError'),
         variant: "destructive"
       });
     }
@@ -193,7 +194,7 @@ export default function DateConverter() {
                         {t('dateConverter.gregorianDate')}
                       </p>
                       <p className="text-2xl font-bold text-primary">
-                        {formatDate(gregorianResult)}
+                        {formatDate(gregorianResult, i18n.language)}
                       </p>
                     </div>
                   </CardContent>
@@ -272,7 +273,7 @@ export default function DateConverter() {
                         {t('dateConverter.hijriDate')}
                       </p>
                       <p className="text-2xl font-bold text-secondary-foreground">
-                        {formatDate(hijriResult)}
+                        {formatDate(hijriResult, i18n.language)}
                       </p>
                     </div>
                   </CardContent>
