@@ -1,18 +1,4 @@
-import moment from 'moment';
-import 'moment-hijri';
-
-// Configure moment to use hijri calendar
-moment.locale('en');
-
-// Extend moment type to include hijri methods
-declare module 'moment' {
-  interface Moment {
-    iDate(): number;
-    iMonth(): number;
-    iYear(): number;
-    iFormat(format?: string): string;
-  }
-}
+import { format, differenceInDays, addDays } from 'date-fns';
 
 export interface HijriDate {
   day: number;
@@ -36,41 +22,70 @@ export interface Age {
   nextBirthday: Date;
 }
 
+// Hijri epoch: July 16, 622 CE (1st Muharram 1 AH)
+const HIJRI_EPOCH = new Date(622, 6, 16); // Month is 0-indexed in JS Date
+
+// Average Hijri year length in days
+const HIJRI_YEAR_LENGTH = 354.367;
+
+// Days in each Hijri month (for non-leap years)
+const HIJRI_MONTH_DAYS = [30, 29, 30, 29, 30, 29, 30, 29, 30, 29, 30, 29];
+
 // Convert Hijri to Gregorian
 export function hijriToGregorian(hijriDate: HijriDate): GregorianDate {
-  const momentDate = moment(`${hijriDate.year}/${hijriDate.month}/${hijriDate.day}`, 'iYYYY/iM/iD');
+  const { day, month, year } = hijriDate;
+  
+  // Calculate total days since Hijri epoch
+  const totalHijriDays = Math.floor((year - 1) * HIJRI_YEAR_LENGTH);
+  
+  // Add days for complete months
+  let monthDays = 0;
+  for (let i = 0; i < month - 1; i++) {
+    monthDays += HIJRI_MONTH_DAYS[i];
+  }
+  
+  // Add remaining days
+  const daysSinceEpoch = totalHijriDays + monthDays + day - 1;
+  
+  // Convert to Gregorian date
+  const gregorianDate = addDays(HIJRI_EPOCH, daysSinceEpoch);
   
   return {
-    day: momentDate.date(),
-    month: momentDate.month() + 1, // moment months are 0-indexed
-    year: momentDate.year()
+    day: gregorianDate.getDate(),
+    month: gregorianDate.getMonth() + 1,
+    year: gregorianDate.getFullYear()
   };
 }
 
 // Convert Gregorian to Hijri
 export function gregorianToHijri(gregorianDate: GregorianDate): HijriDate {
-  const momentDate = moment(`${gregorianDate.year}/${gregorianDate.month}/${gregorianDate.day}`, 'YYYY/M/D');
+  const { day, month, year } = gregorianDate;
   
-  // Try to use hijri methods, fallback to approximate calculation if not available
-  try {
-    if (typeof (momentDate as any).iDate === 'function') {
-      return {
-        day: (momentDate as any).iDate(),
-        month: (momentDate as any).iMonth() + 1, // moment months are 0-indexed
-        year: (momentDate as any).iYear()
-      };
+  // Create Gregorian date object
+  const gregDate = new Date(year, month - 1, day);
+  
+  // Calculate days since Hijri epoch
+  const daysSinceEpoch = differenceInDays(gregDate, HIJRI_EPOCH);
+  
+  // Calculate Hijri year
+  const hijriYear = Math.floor(daysSinceEpoch / HIJRI_YEAR_LENGTH) + 1;
+  
+  // Calculate remaining days in the year
+  const daysInYear = daysSinceEpoch - Math.floor((hijriYear - 1) * HIJRI_YEAR_LENGTH);
+  
+  // Calculate month and day
+  let remainingDays = daysInYear;
+  let hijriMonth = 1;
+  
+  for (let i = 0; i < 12; i++) {
+    if (remainingDays <= HIJRI_MONTH_DAYS[i]) {
+      hijriMonth = i + 1;
+      break;
     }
-  } catch (error) {
-    console.warn('Hijri methods not available, using approximate conversion');
+    remainingDays -= HIJRI_MONTH_DAYS[i];
   }
   
-  // Simple fallback calculation (approximate)
-  const hijriEpoch = moment('622-07-16', 'YYYY-MM-DD');
-  const daysDiff = momentDate.diff(hijriEpoch, 'days');
-  const hijriYear = Math.floor(daysDiff / 354.367) + 1;
-  const dayInYear = daysDiff - Math.floor((hijriYear - 1) * 354.367);
-  const hijriMonth = Math.floor(dayInYear / 29.5) + 1;
-  const hijriDay = Math.floor(dayInYear % 29.5) + 1;
+  const hijriDay = Math.max(1, Math.ceil(remainingDays));
   
   return {
     day: Math.min(hijriDay, 30),
@@ -81,29 +96,36 @@ export function gregorianToHijri(gregorianDate: GregorianDate): HijriDate {
 
 // Calculate age
 export function calculateAge(birthDate: Date, currentDate: Date = new Date()): Age {
-  const birth = moment(birthDate);
-  const current = moment(currentDate);
+  const birth = new Date(birthDate);
+  const current = new Date(currentDate);
   
   // Calculate exact age
-  const years = current.diff(birth, 'years');
-  birth.add(years, 'years');
+  let years = current.getFullYear() - birth.getFullYear();
+  let months = current.getMonth() - birth.getMonth();
+  let days = current.getDate() - birth.getDate();
   
-  const months = current.diff(birth, 'months');
-  birth.add(months, 'months');
-  
-  const days = current.diff(birth, 'days');
-  
-  // Calculate totals
-  const totalDays = current.diff(moment(birthDate), 'days');
-  const totalMonths = current.diff(moment(birthDate), 'months');
-  
-  // Calculate next birthday
-  const nextBirthday = moment(birthDate).year(current.year());
-  if (nextBirthday.isBefore(current)) {
-    nextBirthday.add(1, 'year');
+  if (days < 0) {
+    months--;
+    const lastMonth = new Date(current.getFullYear(), current.getMonth(), 0);
+    days += lastMonth.getDate();
   }
   
-  const daysUntilBirthday = nextBirthday.diff(current, 'days');
+  if (months < 0) {
+    years--;
+    months += 12;
+  }
+  
+  // Calculate totals
+  const totalDays = differenceInDays(current, birth);
+  const totalMonths = years * 12 + months;
+  
+  // Calculate next birthday
+  const nextBirthday = new Date(current.getFullYear(), birth.getMonth(), birth.getDate());
+  if (nextBirthday <= current) {
+    nextBirthday.setFullYear(current.getFullYear() + 1);
+  }
+  
+  const daysUntilBirthday = differenceInDays(nextBirthday, current);
   
   return {
     years,
@@ -112,44 +134,27 @@ export function calculateAge(birthDate: Date, currentDate: Date = new Date()): A
     totalDays,
     totalMonths,
     daysUntilBirthday,
-    nextBirthday: nextBirthday.toDate()
+    nextBirthday
   };
 }
 
 // Get current Hijri date
 export function getCurrentHijriDate(): HijriDate {
-  const now = moment();
-  
-  // Try to use hijri methods, fallback to conversion if not available
-  try {
-    if (typeof (now as any).iDate === 'function') {
-      return {
-        day: (now as any).iDate(),
-        month: (now as any).iMonth() + 1,
-        year: (now as any).iYear()
-      };
-    }
-  } catch (error) {
-    console.warn('Hijri methods not available, using fallback');
-  }
-  
-  // Fallback: convert current Gregorian date to Hijri
-  const gregorianDate: GregorianDate = {
-    day: now.date(),
-    month: now.month() + 1,
-    year: now.year()
-  };
-  
-  return gregorianToHijri(gregorianDate);
+  const now = new Date();
+  return gregorianToHijri({
+    day: now.getDate(),
+    month: now.getMonth() + 1,
+    year: now.getFullYear()
+  });
 }
 
 // Get current Gregorian date
 export function getCurrentGregorianDate(): GregorianDate {
-  const now = moment();
+  const now = new Date();
   return {
-    day: now.date(),
-    month: now.month() + 1,
-    year: now.year()
+    day: now.getDate(),
+    month: now.getMonth() + 1,
+    year: now.getFullYear()
   };
 }
 
@@ -188,30 +193,7 @@ export function formatDate(date: HijriDate | GregorianDate, locale: string = 'en
     monthName = hijriMonthNames[currentLocale]?.[month - 1] || hijriMonthNames.en[month - 1];
   }
   
-  // Use moment.js for proper date formatting based on locale and type
-  if (type === 'gregorian') {
-    const m = moment(`${year}-${month}-${day}`, 'YYYY-M-D');
-    if (locale === 'ar') {
-      return m.locale('ar-SA').format('D MMMM YYYY');
-    } else if (locale === 'fr') {
-      return m.locale('fr').format('D MMMM YYYY');
-    } else if (locale === 'es') {
-      return m.locale('es').format('D MMMM YYYY');
-    } else {
-      return m.locale('en').format('D MMMM YYYY');
-    }
-  } else { // hijri
-    const m = moment(`${year}-${month}-${day}`, 'iYYYY-iM-iD');
-    if (locale === 'ar') {
-      return m.locale('ar-SA').format('iD iMMMM iYYYY');
-    } else if (locale === 'fr') {
-      return m.locale('fr').format('iD iMMMM iYYYY');
-    } else if (locale === 'es') {
-      return m.locale('es').format('iD iMMMM iYYYY');
-    } else {
-      return m.locale('en').format('iD iMMMM iYYYY');
-    }
-  }
+  return `${day} ${monthName} ${year}`;
 }
 
 // Validate date
@@ -226,5 +208,3 @@ export function isValidDate(day: number, month: number, year: number): boolean {
   
   return true;
 }
-
-
