@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Calendar, Calculator, Heart, Clock, BookOpen, ArrowRight } from 'lucide-react';
+import { Calendar, Calculator, Heart, Clock, BookOpen, ArrowRight, Globe } from 'lucide-react';
 
 export default function Index() {
   const { t } = useTranslation();
@@ -42,6 +42,13 @@ export default function Index() {
       icon: BookOpen,
       path: '/friday-duas',
       gradient: 'from-indigo-500 to-purple-500'
+    },
+    {
+      title: 'Muslims Around the World',
+      description: 'Discover Muslim communities, personalities, and stories from different countries',
+      icon: Globe,
+      path: '/countries',
+      gradient: 'from-teal-500 to-green-500'
     }
   ];
 
