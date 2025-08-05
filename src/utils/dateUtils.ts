@@ -1,6 +1,9 @@
 import moment from 'moment';
 import 'moment-hijri';
 
+// Initialize moment-hijri plugin
+const momentHijri = moment;
+
 // Extend moment type to include hijri methods
 declare module 'moment' {
   interface Moment {
