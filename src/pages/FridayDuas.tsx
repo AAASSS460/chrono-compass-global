@@ -2,71 +2,73 @@ import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Heart, Star, Book } from 'lucide-react';
 
-const fridayImportance = [
+const getFridayImportance = (t: any) => [
   {
-    title: "يوم الجمعة سيد الأيام",
-    content: "قال رسول الله صلى الله عليه وسلم: (خير يوم طلعت عليه الشمس يوم الجمعة، فيه خلق آدم، وفيه أدخل الجنة، وفيه أخرج منها)",
-    reference: "رواه مسلم"
+    title: t('fridayDuas.importanceSection.title1'),
+    content: t('fridayDuas.importanceSection.content1'),
+    reference: t('fridayDuas.importanceSection.reference1')
   },
   {
-    title: "ساعة الإجابة",
-    content: "في يوم الجمعة ساعة لا يوافقها عبد مسلم وهو قائم يصلي يسأل الله تعالى شيئاً إلا أعطاه إياه",
-    reference: "متفق عليه"
+    title: t('fridayDuas.importanceSection.title2'),
+    content: t('fridayDuas.importanceSection.content2'),
+    reference: t('fridayDuas.importanceSection.reference2')
   },
   {
-    title: "فضل الصلاة على النبي",
-    content: "من أفضل أعمال يوم الجمعة الإكثار من الصلاة على النبي صلى الله عليه وسلم"
+    title: t('fridayDuas.importanceSection.title3'),
+    content: t('fridayDuas.importanceSection.content3')
   }
 ];
 
 const getFridayDuas = (t: any) => [
   {
     arabic: "اللَّهُمَّ صَلِّ وَسَلِّمْ وَبَارِكْ عَلَى نَبِيِّنَا مُحَمَّدٍ وَعَلَى آلِهِ وَصَحْبِهِ أَجْمَعِينَ",
-    transliteration: "Allaahumma salli wa sallim wa baarik 'alaa nabiyyinaa Muhammadin wa 'alaa aalihi wa sahbihi ajma'een",
+    transliteration: t('fridayDuas.dua1.transliteration'),
     translation: t('fridayDuas.dua1.translation'),
     virtue: t('fridayDuas.dua1.virtue')
   },
   {
     arabic: "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
-    transliteration: "Rabbanaa aatinaa fil-dunyaa hasanatan wa fil-aakhirati hasanatan wa qinaa 'adhaab an-naar",
+    transliteration: t('fridayDuas.dua2.transliteration'),
     translation: t('fridayDuas.dua2.translation'),
     virtue: t('fridayDuas.dua2.virtue')
   },
   {
     arabic: "اللَّهُمَّ اغْفِرْ لِي ذَنْبِي وَوَسِّعْ لِي فِي دَارِي وَبَارِكْ لِي فِي رِزْقِي",
-    transliteration: "Allaahummaghfir lee dhanbee wa wassi' lee fee daaree wa baarik lee fee rizqee",
+    transliteration: t('fridayDuas.dua3.transliteration'),
     translation: t('fridayDuas.dua3.translation'),
     virtue: t('fridayDuas.dua3.virtue')
   },
   {
     arabic: "اللَّهُمَّ أَصْلِحْ لِي دِينِي الَّذِي هُوَ عِصْمَةُ أَمْرِي، وَأَصْلِحْ لِي دُنْيَايَ الَّتِي فِيهَا مَعَاشِي، وَأَصْلِحْ لِي آخِرَتِي الَّتِي فِيهَا مَعَادِي",
-    transliteration: "Allaahumma aslih lee deeneel-ladhee huwa 'ismatu amree, wa aslih lee dunyaayal-latee feehaa ma'aashee, wa aslih lee aakhirateel-latee feehaa ma'aadee",
+    transliteration: t('fridayDuas.dua4.transliteration'),
     translation: t('fridayDuas.dua4.translation'),
     virtue: t('fridayDuas.dua4.virtue')
   },
   {
     arabic: "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى وَالتُّقَى وَالْعَفَافَ وَالْغِنَى",
-    transliteration: "Allaahumma innee as'alukal-hudaa wat-tuqaa wal-'afaafa wal-ghinaa",
+    transliteration: t('fridayDuas.dua5.transliteration'),
     translation: t('fridayDuas.dua5.translation'),
     virtue: t('fridayDuas.dua5.virtue')
   },
   {
     arabic: "اللَّهُمَّ بَارِكْ لَنَا فِيمَا رَزَقْتَنَا، وَقِنَا عَذَابَ النَّارِ",
-    transliteration: "Allaahumma baarik lanaa feemaa razaqtanaa, wa qinaa 'adhaab an-naar",
+    transliteration: t('fridayDuas.dua6.transliteration'),
     translation: t('fridayDuas.dua6.translation'),
     virtue: t('fridayDuas.dua6.virtue')
   }
 ];
 
-const suraAl_Kahf = {
-  title: "سورة الكهف",
-  virtue: "من قرأ سورة الكهف في يوم الجمعة أضاء له من النور ما بين الجمعتين",
-  description: "يُستحب قراءة سورة الكهف كاملة يوم الجمعة، وهي السورة الثامنة عشرة في القرآن الكريم"
-};
+const getSuraAl_Kahf = (t: any) => ({
+  title: t('fridayDuas.suraAlKahf.title'),
+  virtue: t('fridayDuas.suraAlKahf.virtue'),
+  description: t('fridayDuas.suraAlKahf.description')
+});
 
 export default function FridayDuas() {
   const { t } = useTranslation();
+  const fridayImportance = getFridayImportance(t);
   const fridayDuas = getFridayDuas(t);
+  const suraAl_Kahf = getSuraAl_Kahf(t);
 
   return (
     <div className="container max-w-4xl mx-auto py-8 px-4">
@@ -121,7 +123,7 @@ export default function FridayDuas() {
         <CardContent>
           <Card className="border-0 bg-white/50 dark:bg-gray-900/50">
             <CardContent className="p-4">
-              <p className="text-sm mb-2 font-semibold text-blue-700 dark:text-blue-400">فضل قراءة سورة الكهف:</p>
+              <p className="text-sm mb-2 font-semibold text-blue-700 dark:text-blue-400">{t('fridayDuas.suraAlKahf.virtueTitle')}</p>
               <p className="text-sm leading-relaxed" dir="rtl">{suraAl_Kahf.virtue}</p>
             </CardContent>
           </Card>
@@ -181,3 +183,4 @@ export default function FridayDuas() {
     </div>
   );
 }
+

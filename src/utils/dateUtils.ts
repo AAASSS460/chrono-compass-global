@@ -112,11 +112,10 @@ export function getCurrentGregorianDate(): GregorianDate {
 }
 
 // Format date for display
-export function formatDate(date: HijriDate | GregorianDate, locale: string = 'en'): string {
+export function formatDate(date: HijriDate | GregorianDate, locale: string = 'en', type: 'hijri' | 'gregorian'): string {
   const { day, month, year } = date;
   
-  // Month names in different languages
-  const monthNames = {
+  const gregorianMonthNames = {
     en: ['January', 'February', 'March', 'April', 'May', 'June', 
          'July', 'August', 'September', 'October', 'November', 'December'],
     ar: ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو',
@@ -127,8 +126,25 @@ export function formatDate(date: HijriDate | GregorianDate, locale: string = 'en
          'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
   };
 
-  const currentLocale = locale as keyof typeof monthNames;
-  const monthName = monthNames[currentLocale]?.[month - 1] || monthNames.en[month - 1];
+  const hijriMonthNames = {
+    en: ['Muharram', 'Safar', 'Rabi al-Awwal', 'Rabi al-Thani', 'Jumada al-Awwal', 'Jumada al-Thani',
+         'Rajab', 'Shaaban', 'Ramadan', 'Shawwal', 'Dhul Qadah', 'Dhul Hijjah'],
+    ar: ['محرم', 'صفر', 'ربيع الأول', 'ربيع الثاني', 'جمادى الأولى', 'جمادى الآخرة',
+         'رجب', 'شعبان', 'رمضان', 'شوال', 'ذو القعدة', 'ذو الحجة'],
+    fr: ['Mouharram', 'Safar', 'Rabiʻ al-Awwal', 'Rabiʻ al-Thani', 'Joumada al-Oula', 'Joumada al-Thania',
+         'Rajab', 'Chaabane', 'Ramadan', 'Chawwal', 'Dhou al-Qiʻdah', 'Dhou al-Hijjah'],
+    es: ['Muharram', 'Safar', 'Rabiʻ al-Awwal', 'Rabiʻ al-Thani', 'Jumada al-Awwal', 'Jumada al-Thani',
+         'Rayab', 'Shaʻban', 'Ramadán', 'Shawwal', 'Dhul Qadah', 'Dhul Hijjah']
+  };
+
+  const currentLocale = locale as keyof typeof gregorianMonthNames;
+  let monthName;
+
+  if (type === 'gregorian') {
+    monthName = gregorianMonthNames[currentLocale]?.[month - 1] || gregorianMonthNames.en[month - 1];
+  } else {
+    monthName = hijriMonthNames[currentLocale]?.[month - 1] || hijriMonthNames.en[month - 1];
+  }
   
   if (locale === 'ar') {
     return `${day} ${monthName} ${year}`;
@@ -149,3 +165,4 @@ export function isValidDate(day: number, month: number, year: number): boolean {
   
   return true;
 }
+

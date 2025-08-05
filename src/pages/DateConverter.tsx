@@ -45,7 +45,7 @@ export default function DateConverter() {
       setGregorianResult(result);
       toast({
         title: t('common.result'),
-        description: `${formatDate(result, i18n.language)} ${t('dateConverter.gregorianDate')}`
+        description: `${formatDate(result, i18n.language, 'gregorian')} ${t('dateConverter.gregorianDate')}`
       });
     } catch (error) {
       toast({
@@ -71,7 +71,7 @@ export default function DateConverter() {
       setHijriResult(result);
       toast({
         title: t('common.result'),
-        description: `${formatDate(result, i18n.language)} ${t('dateConverter.hijriDate')}`
+        description: `${formatDate(result, i18n.language, 'hijri')} ${t('dateConverter.hijriDate')}`
       });
     } catch (error) {
       toast({
@@ -194,7 +194,7 @@ export default function DateConverter() {
                         {t('dateConverter.gregorianDate')}
                       </p>
                       <p className="text-2xl font-bold text-secondary-foreground">
-                        {formatDate(gregorianResult, i18n.language)}
+                        {formatDate(gregorianResult, i18n.language, 'gregorian')}
                       </p>
                     </div>
                   </CardContent>
@@ -273,7 +273,7 @@ export default function DateConverter() {
                         {t('dateConverter.hijriDate')}
                       </p>
                       <p className="text-2xl font-bold text-primary">
-                        {formatDate(hijriResult, i18n.language)}
+                        {formatDate(hijriResult, i18n.language, 'hijri')}
                       </p>
                     </div>
                   </CardContent>
@@ -286,3 +286,4 @@ export default function DateConverter() {
     </div>
   );
 }
+
