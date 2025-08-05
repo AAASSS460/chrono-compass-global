@@ -21,9 +21,9 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <div className="min-h-screen bg-background">
+        <div className="min-h-screen bg-background flex flex-col">
           <Header />
-          <main>
+          <main className="flex-grow">
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/date-converter" element={<DateConverter />} />
@@ -42,3 +42,5 @@ const App = () => (
 );
 
 export default App;
+
+
