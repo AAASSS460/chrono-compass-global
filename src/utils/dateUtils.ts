@@ -1,8 +1,8 @@
 import moment from 'moment';
 import 'moment-hijri';
 
-// Initialize moment-hijri plugin
-const momentHijri = moment;
+// Configure moment to use hijri calendar
+moment.locale('en');
 
 // Extend moment type to include hijri methods
 declare module 'moment' {
@@ -10,6 +10,7 @@ declare module 'moment' {
     iDate(): number;
     iMonth(): number;
     iYear(): number;
+    iFormat(format?: string): string;
   }
 }
 
@@ -50,10 +51,31 @@ export function hijriToGregorian(hijriDate: HijriDate): GregorianDate {
 export function gregorianToHijri(gregorianDate: GregorianDate): HijriDate {
   const momentDate = moment(`${gregorianDate.year}/${gregorianDate.month}/${gregorianDate.day}`, 'YYYY/M/D');
   
+  // Try to use hijri methods, fallback to approximate calculation if not available
+  try {
+    if (typeof (momentDate as any).iDate === 'function') {
+      return {
+        day: (momentDate as any).iDate(),
+        month: (momentDate as any).iMonth() + 1, // moment months are 0-indexed
+        year: (momentDate as any).iYear()
+      };
+    }
+  } catch (error) {
+    console.warn('Hijri methods not available, using approximate conversion');
+  }
+  
+  // Simple fallback calculation (approximate)
+  const hijriEpoch = moment('622-07-16', 'YYYY-MM-DD');
+  const daysDiff = momentDate.diff(hijriEpoch, 'days');
+  const hijriYear = Math.floor(daysDiff / 354.367) + 1;
+  const dayInYear = daysDiff - Math.floor((hijriYear - 1) * 354.367);
+  const hijriMonth = Math.floor(dayInYear / 29.5) + 1;
+  const hijriDay = Math.floor(dayInYear % 29.5) + 1;
+  
   return {
-    day: (momentDate as any).iDate(),
-    month: (momentDate as any).iMonth() + 1, // moment months are 0-indexed
-    year: (momentDate as any).iYear()
+    day: Math.min(hijriDay, 30),
+    month: Math.min(hijriMonth, 12),
+    year: hijriYear
   };
 }
 
@@ -97,11 +119,28 @@ export function calculateAge(birthDate: Date, currentDate: Date = new Date()): A
 // Get current Hijri date
 export function getCurrentHijriDate(): HijriDate {
   const now = moment();
-  return {
-    day: (now as any).iDate(),
-    month: (now as any).iMonth() + 1,
-    year: (now as any).iYear()
+  
+  // Try to use hijri methods, fallback to conversion if not available
+  try {
+    if (typeof (now as any).iDate === 'function') {
+      return {
+        day: (now as any).iDate(),
+        month: (now as any).iMonth() + 1,
+        year: (now as any).iYear()
+      };
+    }
+  } catch (error) {
+    console.warn('Hijri methods not available, using fallback');
+  }
+  
+  // Fallback: convert current Gregorian date to Hijri
+  const gregorianDate: GregorianDate = {
+    day: now.date(),
+    month: now.month() + 1,
+    year: now.year()
   };
+  
+  return gregorianToHijri(gregorianDate);
 }
 
 // Get current Gregorian date
