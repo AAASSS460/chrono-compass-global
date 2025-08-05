@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, MapPin, Users, Star, BookOpen, Calendar, Globe, Heart, Mosque, GraduationCap, Trophy, Building } from 'lucide-react';
+import { ArrowLeft, MapPin, Users, Star, BookOpen, Calendar, Globe, Heart, GraduationCap, Trophy, Building } from 'lucide-react';
 
 interface CountryDetailData {
   id: string;
@@ -361,7 +361,7 @@ export default function CountryDetail() {
           <Card className="border-0 shadow-lg">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Mosque className="h-5 w-5 text-primary" />
+                <Building className="h-5 w-5 text-primary" />
                 {isArabic ? country.mosques.titleAr : country.mosques.title}
               </CardTitle>
             </CardHeader>
