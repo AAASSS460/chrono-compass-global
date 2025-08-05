@@ -115,7 +115,7 @@ export function getCurrentGregorianDate(): GregorianDate {
 export function formatDate(date: HijriDate | GregorianDate, locale: string = 'en', type: 'hijri' | 'gregorian'): string {
   const { day, month, year } = date;
   
-  const gregorianMonthNames = {
+  const gregorianMonthNames: { [key: string]: string[] } = {
     en: ['January', 'February', 'March', 'April', 'May', 'June', 
          'July', 'August', 'September', 'October', 'November', 'December'],
     ar: ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو',
@@ -126,7 +126,7 @@ export function formatDate(date: HijriDate | GregorianDate, locale: string = 'en
          'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
   };
 
-  const hijriMonthNames = {
+  const hijriMonthNames: { [key: string]: string[] } = {
     en: ['Muharram', 'Safar', 'Rabi al-Awwal', 'Rabi al-Thani', 'Jumada al-Awwal', 'Jumada al-Thani',
          'Rajab', 'Shaaban', 'Ramadan', 'Shawwal', 'Dhul Qadah', 'Dhul Hijjah'],
     ar: ['محرم', 'صفر', 'ربيع الأول', 'ربيع الثاني', 'جمادى الأولى', 'جمادى الآخرة',
@@ -146,11 +146,30 @@ export function formatDate(date: HijriDate | GregorianDate, locale: string = 'en
     monthName = hijriMonthNames[currentLocale]?.[month - 1] || hijriMonthNames.en[month - 1];
   }
   
-  if (locale === 'ar') {
-    return `${day} ${monthName} ${year}`;
+  // Use moment.js for proper date formatting based on locale and type
+  if (type === 'gregorian') {
+    const m = moment(`${year}-${month}-${day}`, 'YYYY-M-D');
+    if (locale === 'ar') {
+      return m.locale('ar-SA').format('D MMMM YYYY');
+    } else if (locale === 'fr') {
+      return m.locale('fr').format('D MMMM YYYY');
+    } else if (locale === 'es') {
+      return m.locale('es').format('D MMMM YYYY');
+    } else {
+      return m.locale('en').format('D MMMM YYYY');
+    }
+  } else { // hijri
+    const m = moment(`${year}-${month}-${day}`, 'iYYYY-iM-iD');
+    if (locale === 'ar') {
+      return m.locale('ar-SA').format('iD iMMMM iYYYY');
+    } else if (locale === 'fr') {
+      return m.locale('fr').format('iD iMMMM iYYYY');
+    } else if (locale === 'es') {
+      return m.locale('es').format('iD iMMMM iYYYY');
+    } else {
+      return m.locale('en').format('iD iMMMM iYYYY');
+    }
   }
-  
-  return `${day} ${monthName} ${year}`;
 }
 
 // Validate date
@@ -165,4 +184,5 @@ export function isValidDate(day: number, month: number, year: number): boolean {
   
   return true;
 }
+
 

@@ -7,27 +7,27 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ArrowRight, Calendar, RotateCcw } from 'lucide-react';
-import { 
-  hijriToGregorian, 
-  gregorianToHijri, 
-  getCurrentHijriDate, 
+import {
+  hijriToGregorian,
+  gregorianToHijri,
+  getCurrentHijriDate,
   getCurrentGregorianDate,
   formatDate,
   isValidDate,
   type HijriDate,
-  type GregorianDate 
+  type GregorianDate
 } from '@/utils/dateUtils';
 import { toast } from '@/hooks/use-toast';
 
 export default function DateConverter() {
   const { t } = useTranslation();
-  
+
   // Hijri to Gregorian conversion state
-  const [hijriInput, setHijriInput] = useState<HijriDate>({ day: 1, month: 1, year: 1445 });
+  const [hijriInput, setHijriInput] = useState<HijriDate>(getCurrentHijriDate());
   const [gregorianResult, setGregorianResult] = useState<GregorianDate | null>(null);
-  
+
   // Gregorian to Hijri conversion state
-  const [gregorianInput, setGregorianInput] = useState<GregorianDate>({ day: 1, month: 1, year: 2024 });
+  const [gregorianInput, setGregorianInput] = useState<GregorianDate>(getCurrentGregorianDate());
   const [hijriResult, setHijriResult] = useState<HijriDate | null>(null);
 
   const handleHijriToGregorian = () => {
@@ -37,9 +37,10 @@ export default function DateConverter() {
         description: t('dateConverter.invalidDate'),
         variant: "destructive"
       });
+      setGregorianResult(null);
       return;
     }
-    
+
     try {
       const result = hijriToGregorian(hijriInput);
       setGregorianResult(result);
@@ -48,11 +49,13 @@ export default function DateConverter() {
         description: `${formatDate(result, i18n.language, 'gregorian')} ${t('dateConverter.gregorianDate')}`
       });
     } catch (error) {
+      console.error("Error during Hijri to Gregorian conversion:", error);
       toast({
         title: t('common.error'),
         description: t('dateConverter.conversionError'),
         variant: "destructive"
       });
+      setGregorianResult(null);
     }
   };
 
@@ -63,9 +66,10 @@ export default function DateConverter() {
         description: t('dateConverter.invalidDate'),
         variant: "destructive"
       });
+      setHijriResult(null);
       return;
     }
-    
+
     try {
       const result = gregorianToHijri(gregorianInput);
       setHijriResult(result);
@@ -74,11 +78,13 @@ export default function DateConverter() {
         description: `${formatDate(result, i18n.language, 'hijri')} ${t('dateConverter.hijriDate')}`
       });
     } catch (error) {
+      console.error("Error during Gregorian to Hijri conversion:", error);
       toast({
         title: t('common.error'),
         description: t('dateConverter.conversionError'),
         variant: "destructive"
       });
+      setHijriResult(null);
     }
   };
 
