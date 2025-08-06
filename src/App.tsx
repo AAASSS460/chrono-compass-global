@@ -12,6 +12,7 @@ import PrayerTimes from "./pages/PrayerTimes";
 import FridayDuas from "./pages/FridayDuas";
 import IslamicQuiz from "./pages/IslamicQuiz";
 import Quran from "./pages/Quran";
+import SurahDetail from "./pages/SurahDetail";
 import Countries from "./pages/Countries";
 import CountryDetail from "./pages/CountryDetail";
 import PersonalityDetail from "./pages/PersonalityDetail";
@@ -39,6 +40,7 @@ const App = () => (
               <Route path="/friday-duas" element={<FridayDuas />} />
               <Route path="/islamic-quiz" element={<IslamicQuiz />} />
               <Route path="/quran" element={<Quran />} />
+              <Route path="/surah/:surahNumber" element={<SurahDetail />} />
               <Route path="/countries" element={<Countries />} />
               <Route path="/country/:countryId" element={<CountryDetail />} />
               <Route path="/personality/:countryId/:personalityIndex" element={<PersonalityDetail />} />
