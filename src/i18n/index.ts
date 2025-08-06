@@ -12,6 +12,7 @@ const resources = {
       'nav.morningEveningAdhkar': 'Morning & Evening Adhkar',
       'nav.prayerTimes': 'Prayer Times',
       'nav.fridayDuas': 'Friday Duas',
+      'nav.quran': 'Holy Quran',
       'nav.language': 'Language',
       
       // Common
@@ -24,6 +25,8 @@ const resources = {
       'common.year': 'Year',
       'common.today': 'Today',
       'common.error': 'Error',
+      'common.next': 'Next',
+      'common.previous': 'Previous',
       
       // Date Converter
       'dateConverter.title': 'Hijri to Gregorian Date Converter',
@@ -131,7 +134,24 @@ const resources = {
       'home.description': 'A complete collection of useful Islamic tools including date conversion, age calculation, adhkar, prayer times, and Friday supplications',
       'home.useTool': 'Use Tool',
       'home.multilingual': 'Available in Multiple Languages',
-      'home.multilingualDesc': 'All tools are available in Arabic, English, French, and Spanish to serve Muslims worldwide'
+      'home.multilingualDesc': 'All tools are available in Arabic, English, French, and Spanish to serve Muslims worldwide',
+      
+      // Quran
+      'quran.title': 'Holy Quran',
+      'quran.subtitle': 'Read the Holy Quran with beautiful Arabic text and easy navigation',
+      'quran.surahs': 'Surahs',
+      'quran.totalSurahs': '{{count}} Surahs',
+      'quran.searchSurahs': 'Search surahs...',
+      'quran.ayahs': '{{count}} Ayahs',
+      'quran.ayah': 'Ayah',
+      'quran.meccan': 'Meccan',
+      'quran.medinan': 'Medinan',
+      'quran.bismillah': 'In the name of Allah, the Entirely Merciful, the Especially Merciful',
+      'quran.selectSurah': 'Select a Surah',
+      'quran.selectSurahDescription': 'Choose a surah from the list to start reading',
+      'quran.pageOf': 'Page {{current}} of {{total}}',
+      'quran.errorFetchingSurahs': 'Error loading surahs. Please try again.',
+      'quran.errorFetchingSurah': 'Error loading surah. Please try again.',
     }
   },
   ar: {
@@ -142,6 +162,7 @@ const resources = {
       'nav.morningEveningAdhkar': 'أذكار الصباح والمساء',
       'nav.prayerTimes': 'مواقيت الصلاة',
       'nav.fridayDuas': 'أدعية يوم الجمعة',
+      'nav.quran': 'القرآن الكريم',
       'nav.language': 'اللغة',
       
       // Common
@@ -154,6 +175,8 @@ const resources = {
       'common.year': 'سنة',
       'common.today': 'اليوم',
       'common.error': 'خطأ',
+      'common.next': 'التالي',
+      'common.previous': 'السابق',
       
       // Date Converter
       'dateConverter.title': 'محول التاريخ من هجري إلى ميلادي',
@@ -261,7 +284,24 @@ const resources = {
       'home.description': 'مجموعة شاملة من الأدوات الإسلامية المفيدة تشمل تحويل التاريخ، حساب العمر، الأذكار، مواقيت الصلاة وأدعية الجمعة',
       'home.useTool': 'استخدم الأداة',
       'home.multilingual': 'متوفر بعدة لغات',
-      'home.multilingualDesc': 'جميع الأدوات متوفرة باللغات العربية والإنجليزية والفرنسية والإسبانية لخدمة المسلمين حول العالم'
+      'home.multilingualDesc': 'جميع الأدوات متوفرة باللغات العربية والإنجليزية والفرنسية والإسبانية لخدمة المسلمين حول العالم',
+      
+      // Quran
+      'quran.title': 'القرآن الكريم',
+      'quran.subtitle': 'اقرأ القرآن الكريم بالنص العربي الجميل والتنقل السهل',
+      'quran.surahs': 'السور',
+      'quran.totalSurahs': '{{count}} سورة',
+      'quran.searchSurahs': 'البحث في السور...',
+      'quran.ayahs': '{{count}} آية',
+      'quran.ayah': 'آية',
+      'quran.meccan': 'مكية',
+      'quran.medinan': 'مدنية',
+      'quran.bismillah': 'بسم الله الرحمن الرحيم',
+      'quran.selectSurah': 'اختر سورة',
+      'quran.selectSurahDescription': 'اختر سورة من القائمة لبدء القراءة',
+      'quran.pageOf': 'صفحة {{current}} من {{total}}',
+      'quran.errorFetchingSurahs': 'خطأ في تحميل السور. يرجى المحاولة مرة أخرى.',
+      'quran.errorFetchingSurah': 'خطأ في تحميل السورة. يرجى المحاولة مرة أخرى.',
     }
   },
   fr: {
@@ -272,6 +312,7 @@ const resources = {
       'nav.morningEveningAdhkar': 'Adhkar Matin & Soir',
       'nav.prayerTimes': 'Heures de Prière',
       'nav.fridayDuas': 'Duas du Vendredi',
+      'nav.quran': 'Saint Coran',
       'nav.language': 'Langue',
       
       // Common
@@ -391,7 +432,24 @@ const resources = {
       'home.description': 'Une collection complète d\'outils islamiques utiles comprenant la conversion de dates, le calcul d\'âge, les adhkar, les heures de prière et les invocations du vendredi',
       'home.useTool': 'Utiliser l\'Outil',
       'home.multilingual': 'Disponible en Plusieurs Langues',
-      'home.multilingualDesc': 'Tous les outils sont disponibles en arabe, anglais, français et espagnol pour servir les musulmans du monde entier'
+      'home.multilingualDesc': 'Tous les outils sont disponibles en arabe, anglais, français et espagnol pour servir les musulmans du monde entier',
+      
+      // Quran
+      'quran.title': 'Saint Coran',
+      'quran.subtitle': 'Lisez le Saint Coran avec un beau texte arabe et une navigation facile',
+      'quran.surahs': 'Sourates',
+      'quran.totalSurahs': '{{count}} Sourates',
+      'quran.searchSurahs': 'Rechercher des sourates...',
+      'quran.ayahs': '{{count}} Versets',
+      'quran.ayah': 'Verset',
+      'quran.meccan': 'Mecquoise',
+      'quran.medinan': 'Médinoise',
+      'quran.bismillah': 'Au nom d\'Allah, le Tout Miséricordieux, le Très Miséricordieux',
+      'quran.selectSurah': 'Sélectionner une Sourate',
+      'quran.selectSurahDescription': 'Choisissez une sourate dans la liste pour commencer la lecture',
+      'quran.pageOf': 'Page {{current}} sur {{total}}',
+      'quran.errorFetchingSurahs': 'Erreur lors du chargement des sourates. Veuillez réessayer.',
+      'quran.errorFetchingSurah': 'Erreur lors du chargement de la sourate. Veuillez réessayer.',
     }
   },
   es: {
@@ -402,6 +460,7 @@ const resources = {
       'nav.morningEveningAdhkar': 'Adhkar Mañana y Tarde',
       'nav.prayerTimes': 'Horarios de Oración',
       'nav.fridayDuas': 'Duas del Viernes',
+      'nav.quran': 'Santo Corán',
       'nav.language': 'Idioma',
       
       // Common
@@ -521,7 +580,24 @@ const resources = {
       'home.description': 'Una colección completa de herramientas islámicas útiles que incluyen conversión de fechas, cálculo de edad, adhkar, horarios de oración y súplicas del viernes',
       'home.useTool': 'Usar Herramienta',
       'home.multilingual': 'Disponible en Múltiples Idiomas',
-      'home.multilingualDesc': 'Todas las herramientas están disponibles en árabe, inglés, francés y español para servir a los musulmanes de todo el mundo'
+      'home.multilingualDesc': 'Todas las herramientas están disponibles en árabe, inglés, francés y español para servir a los musulmanes de todo el mundo',
+      
+      // Quran
+      'quran.title': 'Santo Corán',
+      'quran.subtitle': 'Lee el Santo Corán con hermoso texto árabe y navegación fácil',
+      'quran.surahs': 'Suras',
+      'quran.totalSurahs': '{{count}} Suras',
+      'quran.searchSurahs': 'Buscar suras...',
+      'quran.ayahs': '{{count}} Aleyas',
+      'quran.ayah': 'Aleya',
+      'quran.meccan': 'Mecana',
+      'quran.medinan': 'Medinense',
+      'quran.bismillah': 'En el nombre de Allah, el Enteramente Misericordioso, el Especialmente Misericordioso',
+      'quran.selectSurah': 'Seleccionar una Sura',
+      'quran.selectSurahDescription': 'Elige una sura de la lista para comenzar a leer',
+      'quran.pageOf': 'Página {{current}} de {{total}}',
+      'quran.errorFetchingSurahs': 'Error al cargar las suras. Por favor, inténtalo de nuevo.',
+      'quran.errorFetchingSurah': 'Error al cargar la sura. Por favor, inténtalo de nuevo.',
     }
   }
 };
