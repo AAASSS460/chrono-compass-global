@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { LanguageSelector } from './LanguageSelector';
-import { Calendar, Calculator, Heart, Clock, BookOpen, Menu } from 'lucide-react';
+import { Calendar, Calculator, Heart, Clock, BookOpen, Menu, HelpCircle } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 export function Header() {
@@ -15,6 +15,7 @@ export function Header() {
     { to: '/adhkar', icon: Heart, label: t('nav.morningEveningAdhkar') },
     { to: '/prayer-times', icon: Clock, label: t('nav.prayerTimes') },
     { to: '/friday-duas', icon: BookOpen, label: t('nav.fridayDuas') },
+    { to: '/islamic-quiz', icon: HelpCircle, label: t('nav.islamicQuiz') },
   ];
 
   return (
