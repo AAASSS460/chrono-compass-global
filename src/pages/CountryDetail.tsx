@@ -167,7 +167,6 @@ const countryDetails: Record<string, CountryDetailData> = {
       ]
     }
   },
-  },
   usa: {
     id: 'usa',
     name: 'United States',
