@@ -100,7 +100,7 @@ export default function PrayerTimes() {
       
       const date = getCurrentDate();
       const response = await fetch(
-        `https://api.aladhan.com/v1/timings/${date}?latitude=${latitude}&longitude=${longitude}&method=2`
+        `https://api.aladhan.com/v1/timings/${date}?latitude=${latitude}&longitude=${longitude}&method=4`
       );
       
       if (!response.ok) {
@@ -178,7 +178,7 @@ export default function PrayerTimes() {
             variant: 'destructive'
           });
           // Fallback to Mecca coordinates
-          fetchPrayerTimes(21.3891, 39.8579);
+          fetchPrayerTimes(24.4676039, 39.6054404);
         }
       );
     } else {
@@ -188,7 +188,7 @@ export default function PrayerTimes() {
         variant: 'destructive'
       });
       // Fallback to Mecca coordinates
-      fetchPrayerTimes(21.3891, 39.8579);
+      fetchPrayerTimes(24.4676039, 39.6054404);
     }
   };
 
