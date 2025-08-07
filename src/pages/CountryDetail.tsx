@@ -167,8 +167,117 @@ const countryDetails: Record<string, CountryDetailData> = {
       ]
     }
   },
-  // Add more countries here...
-};
+  },
+  usa: {
+    id: 'usa',
+    name: 'United States',
+    nameAr: 'الولايات المتحدة',
+    flag: '🇺🇸',
+    population: '4.5 million',
+    percentage: '1.3%',
+    capital: 'Washington, D.C.',
+    capitalAr: 'واشنطن العاصمة',
+    language: 'English',
+    languageAr: 'الإنجليزية',
+    currency: 'United States Dollar',
+    currencyAr: 'الدولار الأمريكي',
+    islamicHistory: {
+      arrival: 'Islam arrived in America with enslaved Africans in the 17th century, and later with immigrants from the Middle East and South Asia.',
+      arrivalAr: 'وصل الإسلام إلى أمريكا مع الأفارقة المستعبدين في القرن السابع عشر، ولاحقًا مع المهاجرين من الشرق الأوسط وجنوب آسيا.',
+      keyEvents: [
+        'Arrival of enslaved Muslims (17th-19th centuries)',
+        'Establishment of early Muslim communities (late 19th-early 20th centuries)',
+        'Nation of Islam movement (mid-20th century)',
+        'Post-1965 immigration and growth of diverse Muslim communities'
+      ],
+      keyEventsAr: [
+        'وصول المسلمين المستعبدين (القرنين 17-19)',
+        'تأسيس المجتمعات الإسلامية المبكرة (أواخر القرن 19-أوائل القرن 20)',
+        'حركة أمة الإسلام (منتصف القرن 20)',
+        'الهجرة بعد عام 1965 ونمو المجتمعات الإسلامية المتنوعة'
+      ]
+    },
+    culturalContributions: {
+      title: 'Cultural & Social Contributions',
+      titleAr: 'المساهمات الثقافية والاجتماعية',
+      items: [
+        'Influence on music (e.g., blues, jazz)',
+        'Contributions to civil rights and social justice movements',
+        'Diverse culinary traditions',
+        'Academic and scientific achievements'
+      ],
+      itemsAr: [
+        'التأثير على الموسيقى (مثل البلوز والجاز)',
+        'المساهمات في حركات الحقوق المدنية والعدالة الاجتماعية',
+        'تقاليد الطهي المتنوعة',
+        'الإنجازات الأكاديمية والعلمية'
+      ]
+    },
+    modernChallenges: {
+      title: 'Modern Challenges & Opportunities',
+      titleAr: 'التحديات والفرص الحديثة',
+      items: [
+        'Combating Islamophobia and discrimination',
+        'Political engagement and representation',
+        'Building interfaith relations',
+        'Youth engagement and identity formation'
+      ],
+      itemsAr: [
+        'مكافحة الإسلاموفوبيا والتمييز',
+        'المشاركة السياسية والتمثيل',
+        'بناء العلاقات بين الأديان',
+        'مشاركة الشباب وتشكيل الهوية'
+      ]
+    },
+    inspiringFacts: {
+      title: 'Inspiring Facts',
+      titleAr: 'حقائق ملهمة',
+      facts: [
+        'Home to one of the most diverse Muslim populations globally',
+        'Growing number of Muslim elected officials',
+        'Significant philanthropic contributions to various causes',
+        'Active interfaith dialogue and cooperation'
+      ],
+      factsAr: [
+        'موطن لواحدة من أكثر التجمعات الإسلامية تنوعًا عالميًا',
+        'تزايد عدد المسؤولين المسلمين المنتخبين',
+        'مساهمات خيرية كبيرة لمختلف القضايا',
+        'حوار وتعاون نشط بين الأديان'
+      ]
+    },
+    mosques: {
+      title: 'Famous Mosques',
+      titleAr: 'المساجد الشهيرة',
+      famous: [
+        'Islamic Center of Washington (Washington, D.C.)',
+        'Masjid al-Farooq (Houston, TX)',
+        'King Fahad Mosque (Culver City, CA)',
+        'Dar Al-Hijrah Islamic Center (Falls Church, VA)'
+      ],
+      famousAr: [
+        'المركز الإسلامي بواشنطن (واشنطن العاصمة)',
+        'مسجد الفاروق (هيوستن، تكساس)',
+        'مسجد الملك فهد (كولفر سيتي، كاليفورنيا)',
+        'مركز دار الهجرة الإسلامي (فولز تشيرش، فيرجينيا)'
+      ]
+    },
+    education: {
+      title: 'Islamic Education',
+      titleAr: 'التعليم الإسلامي',
+      institutions: [
+        'Zaytuna College (Berkeley, CA)',
+        'American Islamic College (Chicago, IL)',
+        'Numerous Islamic schools and weekend programs nationwide',
+        'Chairs and programs in Islamic Studies at major universities'
+      ],
+      institutionsAr: [
+        'كلية الزيتونة (بيركلي، كاليفورنيا)',
+        'الكلية الإسلامية الأمريكية (شيكاغو، إلينوي)',
+        'العديد من المدارس الإسلامية والبرامج الأسبوعية في جميع أنحاء البلاد',
+        'كراسي وبرامج في الدراسات الإسلامية بالجامعات الكبرى'
+      ]
+    }
+  },};
 
 export default function CountryDetail() {
   const { countryId } = useParams<{ countryId: string }>();

@@ -166,6 +166,132 @@ const storyData: Record<string, Record<number, StoryData>> = {
         'التقاليد الشفهية والفولكلور'
       ]
     }
+  },
+  usa: {
+    0: {
+      title: 'Early Muslim Presence in America',
+      titleAr: 'الوجود الإسلامي المبكر في أمريكا',
+      country: 'United States',
+      countryAr: 'الولايات المتحدة',
+      period: '17th-19th Century',
+      periodAr: 'القرن السابع عشر - التاسع عشر',
+      category: 'Historical Migration',
+      categoryAr: 'الهجرة التاريخية',
+      summary: 'The often-overlooked history of Muslims in America, starting with enslaved Africans who brought their Islamic faith and traditions to the New World.',
+      summaryAr: 'التاريخ الذي غالباً ما يتم تجاهله للمسلمين في أمريكا، بدءاً من الأفارقة المستعبدين الذين جلبوا إيمانهم وتقاليدهم الإسلامية إلى العالم الجديد.',
+      fullStory: 'The history of Islam in America is far older than many realize, dating back to the transatlantic slave trade. It is estimated that between 10% and 20% of the enslaved Africans brought to the Americas were Muslims. Despite the brutal conditions of slavery and forced conversion, many managed to preserve elements of their Islamic faith, language, and culture.\n\nFigures like Omar ibn Said, a highly educated Fula Muslim scholar, wrote his autobiography in Arabic while enslaved in North Carolina, providing invaluable insights into the lives of these early Muslim Americans. Ayuba Suleiman Diallo, another prominent enslaved Muslim, also documented his experiences.\n\nThese early Muslims contributed significantly to the nascent American society, often in hidden ways. Their knowledge of agriculture, craftsmanship, and even literacy (in Arabic) influenced various aspects of early American life. Their resilience in maintaining their faith against immense pressure is a testament to their strength and devotion.\n\nWhile their presence was largely suppressed and their stories often erased from mainstream narratives, recent scholarship has begun to shed light on this foundational period of Muslim American history. It highlights the enduring legacy of faith and resistance that shaped the diverse tapestry of American Islam.',
+      fullStoryAr: 'تاريخ الإسلام في أمريكا أقدم بكثير مما يدركه الكثيرون، ويعود إلى تجارة الرقيق عبر المحيط الأطلسي. يُقدر أن ما بين 10% و 20% من الأفارقة المستعبدين الذين جلبوا إلى الأمريكتين كانوا مسلمين. على الرغم من الظروف الوحشية للعبودية والتحول القسري، تمكن الكثيرون من الحفاظ على عناصر من إيمانهم الإسلامي ولغتهم وثقافتهم.\n\nشخصيات مثل عمر بن سعيد، وهو عالم مسلم فولاني متعلم تعليماً عالياً، كتب سيرته الذاتية باللغة العربية أثناء استعباده في ولاية كارولينا الشمالية، مما قدم رؤى لا تقدر بثمن في حياة هؤلاء المسلمين الأمريكيين الأوائل. أيوب سليمان ديالو، وهو مسلم مستعبد بارز آخر، وثق أيضاً تجاربه.\n\nساهم هؤلاء المسلمون الأوائل بشكل كبير في المجتمع الأمريكي الناشئ، غالباً بطرق خفية. أثرت معرفتهم بالزراعة والحرف اليدوية وحتى القراءة والكتابة (باللغة العربية) على جوانب مختلفة من الحياة الأمريكية المبكرة. صمودهم في الحفاظ على إيمانهم ضد ضغوط هائلة هو شهادة على قوتهم وتفانيهم.\n\nبينما تم قمع وجودهم إلى حد كبير وغالباً ما تم محو قصصهم من الروايات السائدة، بدأت الدراسات الحديثة تسلط الضوء على هذه الفترة التأسيسية من تاريخ المسلمين الأمريكيين. إنها تسلط الضوء على الإرث الدائم للإيمان والمقاومة الذي شكل النسيج المتنوع للإسلام الأمريكي.',
+      keyFigures: [
+        'Omar ibn Said',
+        'Ayuba Suleiman Diallo',
+        'Bilali Mohammed'
+      ],
+      keyFiguresAr: [
+        'عمر بن سعيد',
+        'أيوب سليمان ديالو',
+        'بلالي محمد'
+      ],
+      historicalContext: 'The transatlantic slave trade brought millions of Africans to the Americas, including a significant number of Muslims. The prevailing social and legal structures aimed to strip enslaved people of their cultural and religious identities.',
+      historicalContextAr: 'جلبت تجارة الرقيق عبر المحيط الأطلسي ملايين الأفارقة إلى الأمريكتين، بما في ذلك عدد كبير من المسلمين. هدفت الهياكل الاجتماعية والقانونية السائدة إلى تجريد المستعبدين من هوياتهم الثقافية والدينية.',
+      lessons: [
+        'Resilience of faith in the face of oppression',
+        'Importance of preserving cultural and religious heritage',
+        'The hidden contributions of marginalized communities',
+        'Understanding the full, complex history of America'
+      ],
+      lessonsAr: [
+        'صمود الإيمان في وجه الاضطهاد',
+        'أهمية الحفاظ على التراث الثقافي والديني',
+        'المساهمات الخفية للمجتمعات المهمشة',
+        'فهم التاريخ الأمريكي الكامل والمعقد'
+      ],
+      modernRelevance: 'This history challenges conventional narratives of American identity and highlights the long-standing diversity of the nation. It underscores the importance of recognizing and celebrating the contributions of all communities.',
+      modernRelevanceAr: 'يتحدى هذا التاريخ الروايات التقليدية للهوية الأمريكية ويسلط الضوء على التنوع طويل الأمد للأمة. ويؤكد على أهمية الاعتراف بمساهمات جميع المجتمعات والاحتفال بها.',
+      relatedEvents: [
+        'Transatlantic Slave Trade',
+        'American Civil War',
+        'Emancipation Proclamation'
+      ],
+      relatedEventsAr: [
+        'تجارة الرقيق عبر المحيط الأطلسي',
+        'الحرب الأهلية الأمريكية',
+        'إعلان تحرير العبيد'
+      ],
+      sources: [
+        'The Autobiography of Omar ibn Said',
+        'Primary historical documents from plantations',
+        'Scholarly works on African American Islam'
+      ],
+      sourcesAr: [
+        'سيرة عمر بن سعيد الذاتية',
+        'وثائق تاريخية أولية من المزارع',
+        'أعمال علمية عن الإسلام الأمريكي الأفريقي'
+      ]
+    },
+    1: {
+      title: 'Civil Rights Movement and Islam in America',
+      titleAr: 'حركة الحقوق المدنية والإسلام في أمريكا',
+      country: 'United States',
+      countryAr: 'الولايات المتحدة',
+      period: 'Mid-20th Century',
+      periodAr: 'منتصف القرن العشرين',
+      category: 'Social Justice',
+      categoryAr: 'العدالة الاجتماعية',
+      summary: 'The pivotal role played by Muslim leaders and communities, particularly Malcolm X and the Nation of Islam, in the struggle for civil rights and racial equality in the United States.',
+      summaryAr: 'الدور المحوري الذي لعبه القادة والمجتمعات المسلمة، وخاصة مالكوم إكس وأمة الإسلام، في النضال من أجل الحقوق المدنية والمساواة العرقية في الولايات المتحدة.',
+      fullStory: 'The mid-20th century witnessed a powerful convergence of the Civil Rights Movement and the rise of Islamic consciousness among African Americans. Disillusioned with the slow pace of racial integration and the hypocrisy of mainstream American society, many African Americans found solace, dignity, and a call to action in Islam.\n\nMalcolm X, initially a prominent figure in the Nation of Islam, became one of the most articulate and fearless advocates for black liberation. His powerful speeches exposed the systemic racism in America and inspired a generation to demand their rights. While his early rhetoric was separatist, his later embrace of orthodox Islam after his pilgrimage to Mecca led him to advocate for a more inclusive human rights agenda.\n\nBeyond Malcolm X, other Muslim individuals and groups actively participated in the Civil Rights Movement. Muslim communities often provided safe spaces, organized protests, and offered social services to their members and the wider community. The principles of equality, justice, and human dignity inherent in Islam resonated deeply with the aspirations of the movement.\n\nThe involvement of Muslims brought a unique dimension to the Civil Rights struggle, emphasizing self-respect, community empowerment, and a global perspective on human rights. Their contributions helped to broaden the scope of the movement and challenge America to live up to its ideals of freedom and justice for all its citizens.',
+      fullStoryAr: 'شهد منتصف القرن العشرين تقارباً قوياً بين حركة الحقوق المدنية وصعود الوعي الإسلامي بين الأمريكيين الأفارقة. فبعد خيبة الأمل من بطء وتيرة الاندماج العرقي ونفاق المجتمع الأمريكي السائد، وجد العديد من الأمريكيين الأفارقة العزاء والكرامة ودعوة للعمل في الإسلام.\n\nأصبح مالكوم إكس، الذي كان في البداية شخصية بارزة في أمة الإسلام، أحد أكثر المدافعين عن تحرير السود بلاغة وشجاعة. كشفت خطبه القوية عن العنصرية المنهجية في أمريكا وألهمت جيلاً للمطالبة بحقوقهم. وبينما كان خطابه المبكر انفصالياً، فإن اعتناقه اللاحق للإسلام الأرثوذكسي بعد حجه إلى مكة دفعه إلى الدعوة إلى أجندة حقوق إنسان أكثر شمولاً.\n\nوبعيداً عن مالكوم إكس، شارك أفراد وجماعات مسلمة أخرى بنشاط في حركة الحقوق المدنية. غالباً ما وفرت المجتمعات المسلمة مساحات آمنة، ونظمت احتجاجات، وقدمت خدمات اجتماعية لأعضائها والمجتمع الأوسع. مبادئ المساواة والعدالة والكرامة الإنسانية المتأصلة في الإسلام لاقت صدى عميقاً مع تطلعات الحركة.\n\nأضفت مشاركة المسلمين بعداً فريداً على نضال الحقوق المدنية، مؤكدة على احترام الذات، وتمكين المجتمع، ومنظور عالمي لحقوق الإنسان. ساعدت مساهماتهم في توسيع نطاق الحركة وتحدي أمريكا للارتقاء إلى مُثلها العليا في الحرية والعدالة لجميع مواطنيها.',
+      keyFigures: [
+        'Malcolm X',
+        'Elijah Muhammad',
+        'Muhammad Ali',
+        'Warith Deen Mohammed'
+      ],
+      keyFiguresAr: [
+        'مالكوم إكس',
+        'إليجا محمد',
+        'محمد علي',
+        'وارث دين محمد'
+      ],
+      historicalContext: 'The Civil Rights Movement aimed to end racial segregation and discrimination against African Americans. The Cold War context also put pressure on the US to address its internal racial issues to maintain its image as a beacon of democracy.',
+      historicalContextAr: 'هدفت حركة الحقوق المدنية إلى إنهاء الفصل العنصري والتمييز ضد الأمريكيين الأفارقة. كما وضع سياق الحرب الباردة ضغطاً على الولايات المتحدة لمعالجة قضاياها العرقية الداخلية للحفاظ على صورتها كمنارة للديمقراطية.',
+      lessons: [
+        'The intersection of faith and social justice',
+        'The power of collective action for change',
+        'Importance of self-determination and empowerment',
+        'Challenging systemic injustice through various means'
+      ],
+      lessonsAr: [
+        'تقاطع الإيمان والعدالة الاجتماعية',
+        'قوة العمل الجماعي من أجل التغيير',
+        'أهمية تقرير المصير والتمكين',
+        'تحدي الظلم المنهجي بوسائل مختلفة'
+      ],
+      modernRelevance: 'The legacy of Muslim involvement in the Civil Rights Movement continues to inspire contemporary movements for racial justice and human rights. It serves as a reminder of the ongoing struggle for equality and the diverse voices that contribute to it.',
+      modernRelevanceAr: 'يستمر إرث مشاركة المسلمين في حركة الحقوق المدنية في إلهام الحركات المعاصرة من أجل العدالة العرقية وحقوق الإنسان. إنه بمثابة تذكير بالنضال المستمر من أجل المساواة والأصوات المتنوعة التي تساهم فيه.',
+      relatedEvents: [
+        'March on Washington (1963)',
+        'Assassination of Malcolm X (1965)',
+        'Civil Rights Act of 1964',
+        'Voting Rights Act of 1965'
+      ],
+      relatedEventsAr: [
+        'المسيرة إلى واشنطن (1963)',
+        'اغتيال مالكوم إكس (1965)',
+        'قانون الحقوق المدنية لعام 1964',
+        'قانون حقوق التصويت لعام 1965'
+      ],
+      sources: [
+        'The Autobiography of Malcolm X',
+        'Eyes on the Prize (documentary series)',
+        'Academic studies on Islam in America and the Civil Rights Movement'
+      ],
+      sourcesAr: [
+        'سيرة مالكوم إكس الذاتية',
+        'عيون على الجائزة (سلسلة وثائقية)',
+        'دراسات أكاديمية حول الإسلام في أمريكا وحركة الحقوق المدنية'
+      ]
+    }
   }
 };
 

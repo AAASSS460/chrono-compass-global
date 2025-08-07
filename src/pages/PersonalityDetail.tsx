@@ -224,6 +224,68 @@ const personalityData: Record<string, Record<number, PersonalityData>> = {
         'مركز محمد علي (لويزفيل)',
         'مهام إنسانية متنوعة'
       ]
+    },
+    1: {
+      name: 'Malcolm X',
+      nameAr: 'مالكوم إكس',
+      country: 'United States',
+      countryAr: 'الولايات المتحدة',
+      birthYear: '1925',
+      deathYear: '1965',
+      era: 'Civil Rights Era',
+      eraAr: 'عصر الحقوق المدنية',
+      title: 'Human Rights Activist and Muslim Minister',
+      titleAr: 'ناشط حقوق الإنسان ووزير مسلم',
+      biography: 'Malcolm X was a prominent African American Muslim minister and human rights activist who was a courageous advocate for the rights of black Americans, a scathing critic of white America, and a powerful spokesman for black pride. He is credited with raising the self-esteem of black Americans and reconnecting them with their African and Islamic heritage.',
+      biographyAr: 'مالكوم إكس كان وزيراً مسلماً أمريكياً أفريقياً بارزاً وناشطاً في مجال حقوق الإنسان، وكان مدافعاً شجاعاً عن حقوق الأمريكيين السود، وناقداً لاذعاً لأمريكا البيضاء، ومتحدثاً قوياً عن الفخر الأسود. يُنسب إليه الفضل في رفع تقدير الذات لدى الأمريكيين السود وإعادة ربطهم بتراثهم الأفريقي والإسلامي.',
+      achievements: [
+        'Inspired black pride and self-reliance',
+        'Challenged racial segregation and discrimination',
+        'Promoted human rights on an international stage',
+        'Influenced the Black Power movement',
+        'Authored \'The Autobiography of Malcolm X\''
+      ],
+      achievementsAr: [
+        'ألهم الفخر الأسود والاعتماد على الذات',
+        'تحدى الفصل العنصري والتمييز',
+        'روج لحقوق الإنسان على الساحة الدولية',
+        'أثر على حركة القوة السوداء',
+        'مؤلف كتاب \'سيرة مالكوم إكس الذاتية\''
+      ],
+      quotes: [
+        'By any means necessary',
+        'If you\'re not careful, the newspapers will have you hating the people who are being oppressed, and loving the people who are doing the oppressing',
+        'Education is the passport to the future, for tomorrow belongs to those who prepare for it today'
+      ],
+      quotesAr: [
+        'بأي وسيلة ضرورية',
+        'إذا لم تكن حذراً، فإن الصحف ستجعلك تكره المضطهدين، وتحب المضطهدين',
+        'التعليم هو جواز سفر المستقبل، فغداً ملك لأولئك الذين يستعدون له اليوم'
+      ],
+      legacy: 'Malcolm X\'s ideas and activism continue to influence movements for racial justice and human rights globally. His transformation from a radical separatist to a more inclusive advocate for human rights remains a powerful narrative.',
+      legacyAr: 'تستمر أفكار مالكوم إكس ونشاطه في التأثير على حركات العدالة العرقية وحقوق الإنسان عالمياً. تحوله من انفصالي راديكالي إلى مدافع أكثر شمولاً عن حقوق الإنسان يظل قصة قوية.',
+      inspiringLessons: [
+        'Power of self-education and transformation',
+        'Importance of challenging injustice',
+        'Courage to evolve one\'s beliefs',
+        'Advocacy for human dignity and self-respect'
+      ],
+      inspiringLessonsAr: [
+        'قوة التعليم الذاتي والتحول',
+        'أهمية تحدي الظلم',
+        'الشجاعة لتطوير معتقدات الفرد',
+        'الدعوة إلى الكرامة الإنسانية واحترام الذات'
+      ],
+      relatedWorks: [
+        'The Autobiography of Malcolm X',
+        'Speeches and Essays of Malcolm X',
+        'Documentary: Malcolm X (1992 film)'
+      ],
+      relatedWorksAr: [
+        'سيرة مالكوم إكس الذاتية',
+        'خطب ومقالات مالكوم إكس',
+        'وثائقي: مالكوم إكس (فيلم 1992)'
+      ]
     }
   }
 };
