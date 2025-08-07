@@ -1,0 +1,29 @@
+name: Gemini AI Assistant
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  run-gemini-cli:
+    if: contains(github.event.comment.body, '@gemini-cli')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Run Gemini CLI
+        uses: google-github-actions/run-gemini-cli@v1
+        with:
+          gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
+          # هذا هو الطلب الذي سيتم إرساله إلى Gemini.
+          # يمكنك تغييره حسب ما تريد أن يفعله النموذج.
+          prompt: |
+            You are a helpful content assistant for a blog.
+            The user wants you to assist with an article.
+            The user's prompt is: ${{ github.event.comment.body }}
+            Please respond directly with a draft for a blog post.
