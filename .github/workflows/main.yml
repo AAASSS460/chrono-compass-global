@@ -1,4 +1,4 @@
-name: Gemini AI Assistant
+name: Gemini AI Assistant for Pull Requests
 
 on:
   issue_comment:
@@ -6,24 +6,53 @@ on:
 
 jobs:
   run-gemini-cli:
+    # هذا الشرط يضمن تشغيل سير العمل فقط عند وجود @gemini-cli
     if: contains(github.event.comment.body, '@gemini-cli')
     runs-on: ubuntu-latest
     permissions:
       contents: write
       issues: write
+      pull-requests: write
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Run Gemini CLI
+      - name: Create a new branch
+        id: create_branch
+        run: |
+          BRANCH_NAME="gemini-$(date +%s)"
+          git checkout -b $BRANCH_NAME
+          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_OUTPUT
+
+      - name: Run Gemini CLI and get suggestions
+        id: gemini_response
         uses: google-github-actions/run-gemini-cli@main
         with:
           gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
-          # هذا هو الطلب الذي سيتم إرساله إلى Gemini.
-          # يمكنك تغييره حسب ما تريد أن يفعله النموذج.
+          # هذا هو الطلب الذي سيتم إرساله إلى Gemini
           prompt: |
-            You are a helpful content assistant for a blog.
-            The user wants you to assist with an article.
+            You are a helpful senior developer assistant.
             The user's prompt is: ${{ github.event.comment.body }}
-            Please respond directly with a draft for a blog post.
+            Please provide the code for the changes in a single code block and explain what you did.
+
+      - name: Commit and push changes
+        run: |
+          git add .
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git commit -m "Gemini AI: Automated changes"
+          git push -u origin ${{ steps.create_branch.outputs.BRANCH_NAME }}
+
+      - name: Create Pull Request
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.pulls.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: "Gemini AI: Pull Request for the requested changes",
+              head: context.env.BRANCH_NAME,
+              base: "main",
+              body: "This pull request was created automatically by Gemini AI based on the user's request. Please review the changes."
+            });
