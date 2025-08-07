@@ -38,6 +38,21 @@ const countries: Country[] = [
     gradient: 'from-green-500 to-emerald-600'
   },
   {
+    id: 'usa',
+    name: 'United States',
+    nameAr: 'الولايات المتحدة',
+    population: '4.5 million',
+    percentage: '1.3%',
+    flag: '🇺🇸',
+    description: 'Home to a diverse Muslim community with growing influence in politics, business, and culture, and a rich history dating back to early immigrants and enslaved Africans.',
+    descriptionAr: 'موطن لمجتمع إسلامي متنوع ذو تأثير متزايد في السياسة والأعمال والثقافة، وتاريخ غني يعود إلى المهاجرين الأوائل والأفارقة المستعبدين.',
+    notablePersonalities: ['Muhammad Ali', 'Malcolm X', 'Ilhan Omar', 'Keith Ellison'],
+    notablePersonalitiesAr: ['محمد علي كلاي', 'مالكوم إكس', 'إلهان عمر', 'كيث إليسون'],
+    stories: ['Early Muslim presence in America', 'Civil Rights Movement and Islam', 'Growth of Muslim American community'],
+    storiesAr: ['الوجود الإسلامي المبكر في أمريكا', 'حركة الحقوق المدنية والإسلام', 'نمو الجالية المسلمة الأمريكية'],
+    gradient: 'from-blue-500 to-red-500'
+  },
+  {
     id: 'india',
     name: 'India',
     nameAr: 'الهند',
