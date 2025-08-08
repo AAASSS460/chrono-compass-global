@@ -662,6 +662,72 @@ export const storyData: Record<string, Record<number, StoryData>> = {
       relatedEventsAr: ['الهجرة 622م', 'فتح مكة 630م'],
       sources: ['Sirah literature', 'Hadith collections'],
       sourcesAr: ['السيرة النبوية', 'كتب الحديث']
+    },
+    1: {
+      title: 'The Two Holy Mosques Expansion',
+      titleAr: 'توسعة الحرمين الشريفين',
+      country: 'Saudi Arabia',
+      countryAr: 'المملكة العربية السعودية',
+      period: '1955 - Present',
+      periodAr: '1955م - حتى اليوم',
+      category: 'Sacred Architecture',
+      categoryAr: 'العمارة المقدسة',
+      summary: 'The remarkable expansion of the Grand Mosque in Mecca and the Prophet\'s Mosque in Medina to accommodate millions of pilgrims.',
+      summaryAr: 'التوسعة الرائعة للمسجد الحرام في مكة والمسجد النبوي في المدينة لاستيعاب ملايين الحجاج.',
+      fullStory: 'Since the establishment of modern Saudi Arabia, successive rulers have undertaken massive expansion projects of the Two Holy Mosques. These projects represent the largest construction efforts in Islamic history, combining traditional Islamic architecture with modern engineering.\n\nThe Grand Mosque expansions began under King Abdul Aziz in 1955 and continued through multiple phases, culminating in the current expansion under King Salman, which can accommodate over 2.5 million worshippers. The projects have preserved the sanctity of the sites while incorporating modern amenities like air conditioning, advanced crowd management systems, and accessibility features.\n\nSimilarly, the Prophet\'s Mosque in Medina has undergone several expansions, with the most recent phase featuring retractable umbrellas and marble courtyards. These expansions reflect the Kingdom\'s commitment to serving the global Muslim community and facilitating the Hajj and Umrah pilgrimages.\n\nThe projects employed Islamic architectural principles while utilizing cutting-edge technology, creating spaces that honor tradition while meeting contemporary needs. The expansions have enabled millions more Muslims to perform their religious obligations in comfort and safety.',
+      fullStoryAr: 'منذ تأسيس المملكة العربية السعودية الحديثة، قام الحكام المتعاقبون بمشاريع توسعة ضخمة للحرمين الشريفين. تمثل هذه المشاريع أكبر جهود البناء في التاريخ الإسلامي، مدمجة العمارة الإسلامية التقليدية مع الهندسة الحديثة.\n\nبدأت توسعات المسجد الحرام في عهد الملك عبد العزيز عام 1955 واستمرت عبر مراحل متعددة، بلغت ذروتها في التوسعة الحالية في عهد الملك سلمان، والتي يمكنها استيعاب أكثر من 2.5 مليون مصلٍ. حافظت المشاريع على قدسية المواقع مع دمج وسائل الراحة الحديثة مثل تكييف الهواء وأنظمة إدارة الحشود المتقدمة وميزات الوصول.\n\nوبالمثل، خضع المسجد النبوي في المدينة لعدة توسعات، مع أحدث مرحلة تتميز بالمظلات القابلة للطي والأفنية الرخامية. تعكس هذه التوسعات التزام المملكة بخدمة المجتمع الإسلامي العالمي وتسهيل رحلات الحج والعمرة.\n\nوظفت المشاريع مبادئ العمارة الإسلامية مع استخدام التكنولوجيا المتطورة، مما خلق مساحات تكرم التقليد مع تلبية الاحتياجات المعاصرة. مكنت التوسعات ملايين أكثر من المسلمين من أداء واجباتهم الدينية بالراحة والأمان.',
+      keyFigures: [
+        'King Abdul Aziz (First expansion initiative)',
+        'King Fahd (Major expansion architect)',
+        'King Abdullah (Modernization efforts)',
+        'King Salman (Current expansion oversight)'
+      ],
+      keyFiguresAr: [
+        'الملك عبد العزيز (مبادرة التوسعة الأولى)',
+        'الملك فهد (مهندس التوسعة الكبرى)',
+        'الملك عبد الله (جهود التحديث)',
+        'الملك سلمان (إشراف التوسعة الحالية)'
+      ],
+      historicalContext: 'The expansions coincided with the growth of global Muslim population and increased accessibility of air travel, leading to exponential growth in pilgrimage numbers requiring larger facilities.',
+      historicalContextAr: 'تزامنت التوسعات مع نمو السكان المسلمين العالميين وزيادة إمكانية الوصول للسفر الجوي، مما أدى إلى نمو أعداد الحجاج بشكل هائل مما تطلب مرافق أكبر.',
+      lessons: [
+        'Balance tradition with modernization',
+        'Service to the global Ummah',
+        'Architecture as worship',
+        'Planning for future generations'
+      ],
+      lessonsAr: [
+        'التوازن بين التقليد والتحديث',
+        'خدمة الأمة الإسلامية العالمية',
+        'العمارة كعبادة',
+        'التخطيط للأجيال القادمة'
+      ],
+      modernRelevance: 'The expansions demonstrate how Islamic heritage can be preserved while embracing modern technology and engineering solutions for contemporary challenges.',
+      modernRelevanceAr: 'تُظهر التوسعات كيف يمكن الحفاظ على التراث الإسلامي مع احتضان التكنولوجيا الحديثة والحلول الهندسية للتحديات المعاصرة.',
+      relatedEvents: [
+        'First Saudi Expansion (1955-1973)',
+        'King Fahd Expansion (1982-1988)',
+        'King Abdullah Expansion (2007-2015)',
+        'King Salman Expansion (2015-ongoing)'
+      ],
+      relatedEventsAr: [
+        'التوسعة السعودية الأولى (1955-1973)',
+        'توسعة الملك فهد (1982-1988)',
+        'توسعة الملك عبد الله (2007-2015)',
+        'توسعة الملك سلمان (2015-مستمرة)'
+      ],
+      sources: [
+        'Saudi Ministry of Hajj and Umrah records',
+        'Architectural documentation',
+        'Pilgrimage statistics',
+        'Historical chronicles'
+      ],
+      sourcesAr: [
+        'سجلات وزارة الحج والعمرة السعودية',
+        'التوثيق المعماري',
+        'إحصائيات الحج',
+        'السجلات التاريخية'
+      ]
     }
   },
   malaysia: {
@@ -992,7 +1058,7 @@ export default function StoryDetail() {
             </CardHeader>
             <CardContent>
               <div className="space-y-3">
-                {(isArabic ? story.lessonsAr : story.lessons).map((lesson, index) => (
+                {(isArabic ? finalStory.lessonsAr : finalStory.lessons).map((lesson, index) => (
                   <div key={index} className="flex items-start gap-2">
                     <div className="w-2 h-2 rounded-full bg-green-500 mt-2 flex-shrink-0" />
                     <span className="text-sm">{lesson}</span>
