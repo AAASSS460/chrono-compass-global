@@ -462,6 +462,9 @@ const resources = {
       'nav.fridayDuas': 'Duas del Viernes',
       'nav.quran': 'Santo Corán',
       'nav.language': 'Idioma',
+      'nav.about': 'Sobre nosotros',
+      'nav.contact': 'Contáctenos',
+      'nav.privacyPolicy': 'Política de privacidad',
       
       // Common
       'common.convert': 'Convertir',

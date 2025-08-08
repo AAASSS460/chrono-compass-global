@@ -17,6 +17,9 @@ import Countries from "./pages/Countries";
 import CountryDetail from "./pages/CountryDetail";
 import PersonalityDetail from "./pages/PersonalityDetail";
 import StoryDetail from "./pages/StoryDetail";
+import AboutUs from "./pages/AboutUs";
+import ContactUs from "./pages/ContactUs";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 import "./i18n";
 
@@ -45,6 +48,9 @@ const App = () => (
               <Route path="/country/:countryId" element={<CountryDetail />} />
               <Route path="/personality/:countryId/:personalityIndex" element={<PersonalityDetail />} />
               <Route path="/story/:countryId/:storyIndex" element={<StoryDetail />} />
+              <Route path="/about" element={<AboutUs />} />
+              <Route path="/contact" element={<ContactUs />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

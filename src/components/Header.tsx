@@ -17,6 +17,9 @@ export function Header() {
     { to: '/friday-duas', icon: BookOpen, label: t('nav.fridayDuas') },
     { to: '/islamic-quiz', icon: HelpCircle, label: t('nav.islamicQuiz') },
     { to: '/quran', icon: BookOpen, label: t('nav.quran') },
+    { to: '/about', icon: HelpCircle, label: t('nav.about') },
+    { to: '/contact', icon: HelpCircle, label: t('nav.contact') },
+    { to: '/privacy-policy', icon: HelpCircle, label: t('nav.privacyPolicy') },
   ];
 
   return (
