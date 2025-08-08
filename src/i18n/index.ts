@@ -141,6 +141,8 @@ const resources = {
       'home.useTool': 'Use Tool',
       'home.multilingual': 'Available in Multiple Languages',
       'home.multilingualDesc': 'All tools are available in Arabic, English, French, and Spanish to serve Muslims worldwide',
+      'home.muslimsAroundTheWorld.title': 'Muslims Around the World',
+      'home.muslimsAroundTheWorld.description': 'Discover Muslim communities, personalities, and stories from different countries',
       
       // Quran
       'quran.title': 'Holy Quran',
@@ -297,6 +299,8 @@ const resources = {
       'home.useTool': 'استخدم الأداة',
       'home.multilingual': 'متوفر بعدة لغات',
       'home.multilingualDesc': 'جميع الأدوات متوفرة باللغات العربية والإنجليزية والفرنسية والإسبانية لخدمة المسلمين حول العالم',
+      'home.muslimsAroundTheWorld.title': 'مسلمون حول العالم',
+      'home.muslimsAroundTheWorld.description': 'اكتشف المجتمعات والشخصيات والقصص الإسلامية من مختلف البلدان',
       
       // Quran
       'quran.title': 'القرآن الكريم',

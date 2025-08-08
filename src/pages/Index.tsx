@@ -44,8 +44,8 @@ export default function Index() {
       gradient: 'from-indigo-500 to-purple-500'
     },
     {
-      title: 'Muslims Around the World',
-      description: 'Discover Muslim communities, personalities, and stories from different countries',
+      title: t('home.muslimsAroundTheWorld.title'),
+      description: t('home.muslimsAroundTheWorld.description'),
       icon: Globe,
       path: '/countries',
       gradient: 'from-teal-500 to-green-500'
