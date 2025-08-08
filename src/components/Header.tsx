@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { LanguageSelector } from './LanguageSelector';
-import { Calendar, Calculator, Heart, Clock, BookOpen, Menu, HelpCircle } from 'lucide-react';
+import { Calendar, Calculator, Heart, Clock, BookOpen, Menu, HelpCircle, Globe, FileText, Mail } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 export function Header() {
@@ -17,9 +17,10 @@ export function Header() {
     { to: '/friday-duas', icon: BookOpen, label: t('nav.fridayDuas') },
     { to: '/islamic-quiz', icon: HelpCircle, label: t('nav.islamicQuiz') },
     { to: '/quran', icon: BookOpen, label: t('nav.quran') },
+    { to: '/countries', icon: Globe, label: 'Muslims Around the World' },
     { to: '/about', icon: HelpCircle, label: t('nav.about') },
-    { to: '/contact', icon: HelpCircle, label: t('nav.contact') },
-    { to: '/privacy-policy', icon: HelpCircle, label: t('nav.privacyPolicy') },
+    { to: '/contact', icon: Mail, label: t('nav.contact') },
+    { to: '/privacy-policy', icon: FileText, label: t('nav.privacyPolicy') },
   ];
 
   return (
@@ -34,48 +35,48 @@ export function Header() {
 
         <div className="flex items-center gap-4">
           <LanguageSelector />
+          
+          {/* Mobile Menu - Now shown on all screen sizes */}
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="outline" size="icon" className="lg:hidden">
+              <Button variant="outline" size="icon">
                 <Menu className="h-6 w-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[250px] sm:w-[300px]">
-              <nav className="flex flex-col gap-2 pt-8">
-                {navLinks.map((link) => (
-                  <Button
-                    key={link.to}
-                    asChild
-                    variant={location.pathname === link.to ? 'default' : 'ghost'}
-                    className="justify-start gap-2"
-                  >
-                    <Link to={link.to}>
-                      <link.icon className="h-4 w-4" />
-                      <span>{link.label}</span>
-                    </Link>
-                  </Button>
-                ))}
-              </nav>
+            <SheetContent side="right" className="w-[280px] sm:w-[320px]">
+              <div className="flex flex-col h-full">
+                {/* Header in menu */}
+                <div className="border-b pb-4 mb-4">
+                  <h2 className="text-lg font-semibold text-primary">القائمة الرئيسية</h2>
+                  <p className="text-sm text-muted-foreground">أدوات إسلامية شاملة</p>
+                </div>
+                
+                {/* Navigation Links */}
+                <nav className="flex flex-col gap-1 flex-1">
+                  {navLinks.map((link) => (
+                    <Button
+                      key={link.to}
+                      asChild
+                      variant={location.pathname === link.to ? 'default' : 'ghost'}
+                      className="justify-start gap-3 h-12"
+                    >
+                      <Link to={link.to}>
+                        <link.icon className="h-5 w-5" />
+                        <span className="text-sm">{link.label}</span>
+                      </Link>
+                    </Button>
+                  ))}
+                </nav>
+                
+                {/* Footer in menu */}
+                <div className="border-t pt-4 mt-4">
+                  <p className="text-xs text-muted-foreground text-center">
+                    منصة ChronoCompass
+                  </p>
+                </div>
+              </div>
             </SheetContent>
           </Sheet>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-2">
-            {navLinks.map((link) => (
-              <Button
-                key={link.to}
-                asChild
-                variant={location.pathname === link.to ? 'default' : 'ghost'}
-                size="sm"
-                className="gap-2"
-              >
-                <Link to={link.to}>
-                  <link.icon className="h-4 w-4" />
-                  <span>{link.label}</span>
-                </Link>
-              </Button>
-            ))}
-          </nav>
         </div>
       </div>
     </header>
