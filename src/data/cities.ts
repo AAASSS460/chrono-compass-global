@@ -1,0 +1,98 @@
+export const citiesData = [
+  {
+    country: "Saudi Arabia",
+    city: "Makkah",
+    countryAr: "المملكة العربية السعودية",
+    cityAr: "مكة المكرمة",
+  },
+  {
+    country: "Saudi Arabia",
+    city: "Madinah",
+    countryAr: "المملكة العربية السعودية",
+    cityAr: "المدينة المنورة",
+  },
+  {
+    country: "Egypt",
+    city: "Cairo",
+    countryAr: "مصر",
+    cityAr: "القاهرة",
+  },
+  {
+    country: "United Arab Emirates",
+    city: "Dubai",
+    countryAr: "الإمارات العربية المتحدة",
+    cityAr: "دبي",
+  },
+  {
+    country: "United Kingdom",
+    city: "London",
+    countryAr: "المملكة المتحدة",
+    cityAr: "لندن",
+  },
+  {
+    country: "United States",
+    city: "New York",
+    countryAr: "الولايات المتحدة",
+    cityAr: "نيويورك",
+  },
+  {
+    country: "Turkey",
+    city: "Istanbul",
+    countryAr: "تركيا",
+    cityAr: "اسطنبول",
+  },
+  {
+    country: "Malaysia",
+    city: "Kuala Lumpur",
+    countryAr: "ماليزيا",
+    cityAr: "كوالالمبور",
+  },
+  {
+    country: "Indonesia",
+    city: "Jakarta",
+    countryAr: "إندونيسيا",
+    cityAr: "جاكرتا",
+  },
+  {
+    country: "Pakistan",
+    city: "Karachi",
+    countryAr: "باكستان",
+    cityAr: "كراتشي",
+  },
+  {
+    country: "India",
+    city: "Delhi",
+    countryAr: "الهند",
+    cityAr: "دلهي",
+  },
+  {
+    country: "Canada",
+    city: "Toronto",
+    countryAr: "كندا",
+    cityAr: "تورونتو",
+  },
+  {
+    country: "France",
+    city: "Paris",
+    countryAr: "فرنسا",
+    cityAr: "باريس",
+  },
+  {
+    country: "Germany",
+    city: "Berlin",
+    countryAr: "ألمانيا",
+    cityAr: "برلين",
+  },
+  {
+    country: "Australia",
+    city: "Sydney",
+    countryAr: "أستراليا",
+    cityAr: "سيدني",
+  },
+  {
+    country: "South Africa",
+    city: "Cape Town",
+    countryAr: "جنوب أفريقيا",
+    cityAr: "كيب تاون",
+  },
+];

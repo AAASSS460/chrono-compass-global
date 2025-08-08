@@ -19,6 +19,7 @@ const resources = {
       'nav.privacyPolicy': 'Privacy Policy',
                   'nav.language': 'اللغة',
       'nav.countries': 'Muslims Around the World',
+      'nav.countriesPrayerTimes': 'Prayer Times by Country',
       
       // Common
       'common.convert': 'Convert',
@@ -179,6 +180,7 @@ const resources = {
       'nav.privacyPolicy': 'سياسة الخصوصية',
       'nav.language': 'اللغة',
       'nav.countries': 'مسلمون حول العالم',
+      'nav.countriesPrayerTimes': 'مواقيت الصلاة حسب الدولة',
       
       // Common
       'common.convert': 'تحويل',

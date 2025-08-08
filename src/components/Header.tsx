@@ -18,6 +18,7 @@ export function Header() {
     { to: '/islamic-quiz', icon: HelpCircle, label: t('nav.islamicQuiz') },
     { to: '/quran', icon: BookOpen, label: t('nav.quran') },
     { to: '/countries', icon: Globe, label: t('nav.countries') },
+    { to: '/countries-prayer-times', icon: Globe, label: t('nav.countriesPrayerTimes') },
     { to: '/about', icon: HelpCircle, label: t('nav.about') },
     { to: '/contact', icon: Mail, label: t('nav.contact') },
     { to: '/privacy-policy', icon: FileText, label: t('nav.privacyPolicy') },
