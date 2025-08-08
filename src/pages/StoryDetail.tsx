@@ -905,22 +905,22 @@ export default function StoryDetail() {
               <BookOpen className="h-12 w-12 text-white" />
             </div>
             <h1 className="text-4xl font-bold mb-4">
-              {isArabic ? story.titleAr : story.title}
+              {isArabic ? finalStory.titleAr : finalStory.title}
             </h1>
             <p className="text-xl text-muted-foreground mb-6 max-w-2xl mx-auto">
-              {isArabic ? story.summaryAr : story.summary}
+              {isArabic ? finalStory.summaryAr : finalStory.summary}
             </p>
             <div className="flex justify-center gap-3 flex-wrap">
               <Badge variant="secondary" className="flex items-center gap-1">
                 <MapPin className="h-3 w-3" />
-                {isArabic ? story.countryAr : story.country}
+                {isArabic ? finalStory.countryAr : finalStory.country}
               </Badge>
               <Badge variant="outline" className="flex items-center gap-1">
                 <Calendar className="h-3 w-3" />
-                {isArabic ? story.periodAr : story.period}
+                {isArabic ? finalStory.periodAr : finalStory.period}
               </Badge>
               <Badge variant="outline">
-                {isArabic ? story.categoryAr : story.category}
+                {isArabic ? finalStory.categoryAr : finalStory.category}
               </Badge>
             </div>
           </div>
@@ -936,7 +936,7 @@ export default function StoryDetail() {
           </CardHeader>
           <CardContent>
             <p className="text-lg leading-relaxed">
-              {isArabic ? story.historicalContextAr : story.historicalContext}
+              {isArabic ? finalStory.historicalContextAr : finalStory.historicalContext}
             </p>
           </CardContent>
         </Card>
@@ -951,7 +951,7 @@ export default function StoryDetail() {
           </CardHeader>
           <CardContent>
             <div className="prose prose-lg max-w-none dark:prose-invert">
-              {(isArabic ? story.fullStoryAr : story.fullStory).split('\n\n').map((paragraph, index) => (
+              {(isArabic ? finalStory.fullStoryAr : finalStory.fullStory).split('\n\n').map((paragraph, index) => (
                 <p key={index} className="mb-6 text-lg leading-relaxed">
                   {paragraph}
                 </p>
@@ -970,7 +970,7 @@ export default function StoryDetail() {
           </CardHeader>
           <CardContent>
             <div className="grid gap-3 md:grid-cols-2">
-              {(isArabic ? story.keyFiguresAr : story.keyFigures).map((figure, index) => (
+              {(isArabic ? finalStory.keyFiguresAr : finalStory.keyFigures).map((figure, index) => (
                 <div key={index} className="flex items-start gap-3 bg-accent/20 rounded-lg p-4">
                   <Star className="h-5 w-5 text-amber-500 mt-0.5 flex-shrink-0" />
                   <span className="font-medium">{figure}</span>
@@ -1012,7 +1012,7 @@ export default function StoryDetail() {
             </CardHeader>
             <CardContent>
               <div className="space-y-3">
-                {(isArabic ? story.relatedEventsAr : story.relatedEvents).map((event, index) => (
+                {(isArabic ? finalStory.relatedEventsAr : finalStory.relatedEvents).map((event, index) => (
                   <div key={index} className="bg-primary/10 rounded-lg p-3">
                     <span className="text-sm font-medium">{event}</span>
                   </div>
@@ -1032,7 +1032,7 @@ export default function StoryDetail() {
           </CardHeader>
           <CardContent>
             <p className="text-lg leading-relaxed">
-              {isArabic ? story.modernRelevanceAr : story.modernRelevance}
+              {isArabic ? finalStory.modernRelevanceAr : finalStory.modernRelevance}
             </p>
           </CardContent>
         </Card>
@@ -1047,7 +1047,7 @@ export default function StoryDetail() {
           </CardHeader>
           <CardContent>
             <div className="grid gap-2 md:grid-cols-2">
-              {(isArabic ? story.sourcesAr : story.sources).map((source, index) => (
+              {(isArabic ? finalStory.sourcesAr : finalStory.sources).map((source, index) => (
                 <div key={index} className="text-sm bg-muted/50 rounded-lg px-3 py-2">
                   {source}
                 </div>
