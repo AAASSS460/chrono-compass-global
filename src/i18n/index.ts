@@ -18,6 +18,7 @@ const resources = {
       'nav.contact': 'Contact Us',
       'nav.privacyPolicy': 'Privacy Policy',
                   'nav.language': 'اللغة',
+      'nav.countries': 'Muslims Around the World',
       
       // Common
       'common.convert': 'Convert',
@@ -176,6 +177,7 @@ const resources = {
       'nav.contact': 'اتصل بنا',
       'nav.privacyPolicy': 'سياسة الخصوصية',
       'nav.language': 'اللغة',
+      'nav.countries': 'مسلمون حول العالم',
       
       // Common
       'common.convert': 'تحويل',

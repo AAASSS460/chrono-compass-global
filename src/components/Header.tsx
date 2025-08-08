@@ -17,7 +17,7 @@ export function Header() {
     { to: '/friday-duas', icon: BookOpen, label: t('nav.fridayDuas') },
     { to: '/islamic-quiz', icon: HelpCircle, label: t('nav.islamicQuiz') },
     { to: '/quran', icon: BookOpen, label: t('nav.quran') },
-    { to: '/countries', icon: Globe, label: 'Muslims Around the World' },
+    { to: '/countries', icon: Globe, label: t('nav.countries') },
     { to: '/about', icon: HelpCircle, label: t('nav.about') },
     { to: '/contact', icon: Mail, label: t('nav.contact') },
     { to: '/privacy-policy', icon: FileText, label: t('nav.privacyPolicy') },
@@ -52,7 +52,7 @@ export function Header() {
                 </div>
                 
                 {/* Navigation Links */}
-                <nav className="flex flex-col gap-1 flex-1">
+                <nav className="flex flex-col gap-1 flex-1 overflow-y-auto">
                   {navLinks.map((link) => (
                     <Button
                       key={link.to}
