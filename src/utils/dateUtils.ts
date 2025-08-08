@@ -31,6 +31,20 @@ const HIJRI_YEAR_LENGTH = 354.367;
 // Days in each Hijri month (for non-leap years)
 const HIJRI_MONTH_DAYS = [30, 29, 30, 29, 30, 29, 30, 29, 30, 29, 30, 29];
 
+// Convert numbers to Arabic numerals
+function convertToArabicNumerals(num: number): string {
+  const arabicNumerals = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
+  return num.toString().replace(/\d/g, (d) => arabicNumerals[parseInt(d)]);
+}
+
+// Convert numbers to the specified locale
+function convertNumbers(num: number, locale: string): string {
+  if (locale === 'ar') {
+    return convertToArabicNumerals(num);
+  }
+  return num.toString();
+}
+
 // Convert Hijri to Gregorian
 export function hijriToGregorian(hijriDate: HijriDate): GregorianDate {
   const { day, month, year } = hijriDate;
@@ -99,14 +113,13 @@ export function calculateAge(birthDate: Date, currentDate: Date = new Date()): A
   const birth = new Date(birthDate);
   const current = new Date(currentDate);
   
-  // Calculate exact age
   let years = current.getFullYear() - birth.getFullYear();
   let months = current.getMonth() - birth.getMonth();
   let days = current.getDate() - birth.getDate();
   
   if (days < 0) {
     months--;
-    const lastMonth = new Date(current.getFullYear(), current.getMonth(), 0);
+    const lastMonth = new Date(current.getFullYear(), current.getMonth() - 1, 0);
     days += lastMonth.getDate();
   }
   
@@ -193,7 +206,21 @@ export function formatDate(date: HijriDate | GregorianDate, locale: string = 'en
     monthName = hijriMonthNames[currentLocale]?.[month - 1] || hijriMonthNames.en[month - 1];
   }
   
-  return `${day} ${monthName} ${year}`;
+  const formattedDay = convertNumbers(day, locale);
+  const formattedYear = convertNumbers(year, locale);
+  
+  return `${formattedDay} ${monthName} ${formattedYear}`;
+}
+
+// Format numeric date (DD/MM/YYYY)
+export function formatNumericDate(date: HijriDate | GregorianDate, locale: string = 'en'): string {
+  const { day, month, year } = date;
+  
+  const formattedDay = convertNumbers(day, locale);
+  const formattedMonth = convertNumbers(month, locale);
+  const formattedYear = convertNumbers(year, locale);
+  
+  return `${formattedDay}/${formattedMonth}/${formattedYear}`;
 }
 
 // Validate date

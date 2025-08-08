@@ -13,6 +13,7 @@ import {
   getCurrentHijriDate,
   getCurrentGregorianDate,
   formatDate,
+  formatNumericDate,
   isValidDate,
   type HijriDate,
   type GregorianDate
@@ -109,30 +110,20 @@ export default function DateConverter() {
   };
 
   return (
-    <div className="container max-w-4xl mx-auto py-8 px-4">
+    <div className="container mx-auto p-4 md:p-8 max-w-4xl">
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-primary-hover bg-clip-text text-transparent">
-          {t('dateConverter.title')}
-        </h1>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          {t('dateConverter.subtitle')}
-        </p>
+        <h1 className="text-4xl font-bold text-primary mb-4">{t('dateConverter.title')}</h1>
+        <p className="text-xl text-muted-foreground">{t('dateConverter.subtitle')}</p>
       </div>
 
-      <Tabs defaultValue="hijri-to-gregorian" className="space-y-6">
+      <Tabs defaultValue="hijri-to-gregorian" className="w-full">
         <TabsList className="grid w-full grid-cols-2">
-          <TabsTrigger value="hijri-to-gregorian" className="gap-2">
-            <Calendar className="h-4 w-4" />
-            {t('dateConverter.convertToGregorian')}
-          </TabsTrigger>
-          <TabsTrigger value="gregorian-to-hijri" className="gap-2">
-            <Calendar className="h-4 w-4" />
-            {t('dateConverter.convertToHijri')}
-          </TabsTrigger>
+          <TabsTrigger value="hijri-to-gregorian">{t('dateConverter.convertToGregorian')}</TabsTrigger>
+          <TabsTrigger value="gregorian-to-hijri">{t('dateConverter.convertToHijri')}</TabsTrigger>
         </TabsList>
 
         <TabsContent value="hijri-to-gregorian">
-          <Card className="shadow-lg border-0 bg-gradient-to-br from-card to-accent/5">
+          <Card className="shadow-lg border-0 bg-gradient-to-br from-card to-secondary/10">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Calendar className="h-5 w-5 text-primary" />
@@ -193,18 +184,33 @@ export default function DateConverter() {
               </div>
 
               {gregorianResult && (
-                <Card className="bg-secondary border-secondary-foreground/20">
-                  <CardContent className="pt-6">
-                    <div className="text-center">
-                      <p className="text-sm text-muted-foreground mb-2">
-                        {t('dateConverter.gregorianDate')}
-                      </p>
-                      <p className="text-2xl font-bold text-secondary-foreground">
-                        {formatDate(gregorianResult, i18n.language, 'gregorian')}
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
+                <div className="space-y-4">
+                  <Card className="bg-secondary border-secondary-foreground/20">
+                    <CardContent className="pt-6">
+                      <div className="text-center">
+                        <p className="text-sm text-muted-foreground mb-2">
+                          {t('dateConverter.gregorianDate')}
+                        </p>
+                        <p className="text-2xl font-bold text-secondary-foreground">
+                          {formatDate(gregorianResult, i18n.language, 'gregorian')}
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                  
+                  <Card className="bg-primary/5 border-primary/20">
+                    <CardContent className="pt-6">
+                      <div className="text-center">
+                        <p className="text-sm text-muted-foreground mb-2">
+                          {t('dateConverter.numericResult')}
+                        </p>
+                        <p className="text-lg font-mono text-primary">
+                          {formatNumericDate(gregorianResult, i18n.language)}
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
               )}
             </CardContent>
           </Card>
@@ -272,18 +278,33 @@ export default function DateConverter() {
               </div>
 
               {hijriResult && (
-                <Card className="bg-primary-light border-primary/20">
-                  <CardContent className="pt-6">
-                    <div className="text-center">
-                      <p className="text-sm text-muted-foreground mb-2">
-                        {t('dateConverter.hijriDate')}
-                      </p>
-                      <p className="text-2xl font-bold text-primary">
-                        {formatDate(hijriResult, i18n.language, 'hijri')}
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
+                <div className="space-y-4">
+                  <Card className="bg-secondary border-secondary-foreground/20">
+                    <CardContent className="pt-6">
+                      <div className="text-center">
+                        <p className="text-sm text-muted-foreground mb-2">
+                          {t('dateConverter.hijriDate')}
+                        </p>
+                        <p className="text-2xl font-bold text-secondary-foreground">
+                          {formatDate(hijriResult, i18n.language, 'hijri')}
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                  
+                  <Card className="bg-primary/5 border-primary/20">
+                    <CardContent className="pt-6">
+                      <div className="text-center">
+                        <p className="text-sm text-muted-foreground mb-2">
+                          {t('dateConverter.numericResult')}
+                        </p>
+                        <p className="text-lg font-mono text-primary">
+                          {formatNumericDate(hijriResult, i18n.language)}
+                        </p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
               )}
             </CardContent>
           </Card>

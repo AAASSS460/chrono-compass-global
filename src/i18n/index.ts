@@ -13,6 +13,10 @@ const resources = {
       'nav.prayerTimes': 'Prayer Times',
       'nav.fridayDuas': 'Friday Duas',
       'nav.quran': 'Holy Quran',
+      'nav.islamicQuiz': 'Islamic Quiz',
+      'nav.about': 'About Us',
+      'nav.contact': 'Contact Us',
+      'nav.privacyPolicy': 'Privacy Policy',
       'nav.language': 'Language',
       
       // Common
@@ -39,6 +43,7 @@ const resources = {
       'dateConverter.convertToHijri': 'Convert to Hijri',
       'dateConverter.invalidDate': 'Please enter a valid date',
       'dateConverter.conversionError': 'An error occurred during date conversion',
+      'dateConverter.numericResult': 'Numeric Result',
       
       // Age Calculator
       'ageCalculator.title': 'Age Calculator',
@@ -57,6 +62,7 @@ const resources = {
       'ageCalculator.birthDateRequired': 'Birth date is required',
       'ageCalculator.futureDate': 'Birth date cannot be in the future',
       'ageCalculator.calculationError': 'An error occurred while calculating age',
+      'ageCalculator.numericResult': 'Numeric Result',
       
       // Morning & Evening Adhkar
       'adhkar.title': 'Morning & Evening Adhkar',
@@ -163,6 +169,10 @@ const resources = {
       'nav.prayerTimes': 'مواقيت الصلاة',
       'nav.fridayDuas': 'أدعية يوم الجمعة',
       'nav.quran': 'القرآن الكريم',
+      'nav.islamicQuiz': 'اختبار إسلامي',
+      'nav.about': 'من نحن',
+      'nav.contact': 'اتصل بنا',
+      'nav.privacyPolicy': 'سياسة الخصوصية',
       'nav.language': 'اللغة',
       
       // Common
@@ -189,6 +199,7 @@ const resources = {
       'dateConverter.convertToHijri': 'تحويل إلى هجري',
       'dateConverter.invalidDate': 'يرجى إدخال تاريخ صحيح',
       'dateConverter.conversionError': 'حدث خطأ أثناء تحويل التاريخ',
+      'dateConverter.numericResult': 'النتيجة الرقمية',
       
       // Age Calculator
       'ageCalculator.title': 'حاسبة العمر',
@@ -207,6 +218,7 @@ const resources = {
       'ageCalculator.birthDateRequired': 'تاريخ الميلاد مطلوب',
       'ageCalculator.futureDate': 'تاريخ الميلاد لا يمكن أن يكون في المستقبل',
       'ageCalculator.calculationError': 'حدث خطأ أثناء حساب العمر',
+      'ageCalculator.numericResult': 'النتيجة الرقمية',
       
       // Morning & Evening Adhkar
       'adhkar.title': 'أذكار الصباح والمساء',
@@ -245,7 +257,7 @@ const resources = {
       
       // Friday Duas - Importance Section
       'fridayDuas.importanceSection.title1': 'يوم الجمعة سيد الأيام',
-      'fridayDuas.importanceSection.content1': 'قال رسول الله صلى الله عليه وسلم: (خير يوم طلعت عليه الشمس يوم الجمعة، فيه خلق آدم، وفيه أدخل الجنة، وفيه أخرج منها)',
+      'fridayDuas.importanceSection.content1': 'قال رسول الله صلى الله عليه وسلم: "خير يوم طلعت عليه الشمس يوم الجمعة، فيه خلق آدم، وفيه أدخل الجنة، وفيه أخرج منها"',
       'fridayDuas.importanceSection.reference1': 'رواه مسلم',
       'fridayDuas.importanceSection.title2': 'ساعة الإجابة',
       'fridayDuas.importanceSection.content2': 'في يوم الجمعة ساعة لا يوافقها عبد مسلم وهو قائم يصلي يسأل الله تعالى شيئاً إلا أعطاه إياه',
@@ -260,7 +272,7 @@ const resources = {
       'fridayDuas.suraAlKahf.virtueTitle': 'فضل قراءة سورة الكهف:',
       
       // Friday Duas - Individual Duas
-      'fridayDuas.dua1.transliteration': 'اللَّهُمَّ صَلِّ وَسَلِّمْ وَبَارِكْ عَلَى نَبِيِّنَا مُحَمَّدٍ وَعَلَى آلِهِ وَصَحْبِهِ أَجْمَعِينَ',
+      'fridayDuas.dua1.transliteration': 'اللَّهُمَّ صَلِّ وَسَلِّمْ وَبَارِكْ عَلَى نَبِيِّنَا مُحَمَّدٍ وَعَلَى آلِهِ وَصَحْبِهِ أَجْمَعِين',
       'fridayDuas.dua1.translation': 'اللهم صل وسلم وبارك على نبينا محمد وعلى آله وصحبه أجمعين',
       'fridayDuas.dua1.virtue': 'من أفضل الأعمال يوم الجمعة',
       'fridayDuas.dua2.transliteration': 'رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ',
@@ -313,6 +325,10 @@ const resources = {
       'nav.prayerTimes': 'Heures de Prière',
       'nav.fridayDuas': 'Duas du Vendredi',
       'nav.quran': 'Saint Coran',
+      'nav.islamicQuiz': 'Quiz Islamique',
+      'nav.about': 'À Propos',
+      'nav.contact': 'Contact',
+      'nav.privacyPolicy': 'Politique de Confidentialité',
       'nav.language': 'Langue',
       
       // Common
@@ -325,6 +341,8 @@ const resources = {
       'common.year': 'Année',
       'common.today': 'Aujourd\'hui',
       'common.error': 'Erreur',
+      'common.next': 'Suivant',
+      'common.previous': 'Précédent',
       
       // Date Converter
       'dateConverter.title': 'Convertisseur de Date Hijri vers Grégorien',
@@ -337,6 +355,7 @@ const resources = {
       'dateConverter.convertToHijri': 'Convertir en Hijri',
       'dateConverter.invalidDate': 'Veuillez entrer une date valide',
       'dateConverter.conversionError': 'Une erreur s\'est produite lors de la conversion de date',
+      'dateConverter.numericResult': 'Résultat Numérique',
       
       // Age Calculator
       'ageCalculator.title': 'Calculateur d\'Âge',
@@ -355,77 +374,7 @@ const resources = {
       'ageCalculator.birthDateRequired': 'La date de naissance est requise',
       'ageCalculator.futureDate': 'La date de naissance ne peut pas être dans le futur',
       'ageCalculator.calculationError': 'Une erreur s\'est produite lors du calcul de l\'âge',
-      
-      // Morning & Evening Adhkar
-      'adhkar.title': 'Adhkar Matin & Soir',
-      'adhkar.subtitle': 'Rappels islamiques quotidiens pour la connexion spirituelle',
-      'adhkar.morning': 'Adhkar du Matin',
-      'adhkar.evening': 'Adhkar du Soir',
-      'adhkar.morningTitle': 'Rappels du Matin',
-      'adhkar.eveningTitle': 'Rappels du Soir',
-      'adhkar.morningDescription': 'Réciter ces rappels chaque matin après la prière du Fajr',
-      'adhkar.eveningDescription': 'Réciter ces rappels chaque soir après la prière du Maghrib',
-      'adhkar.once': 'Une fois',
-      'adhkar.times': '{{count}} fois',
-      
-      // Prayer Times
-      'prayer.title': 'Heures de Prière',
-      'prayer.subtitle': 'Obtenez les heures de prière précises selon votre localisation',
-      'prayer.fajr': 'Fajr',
-      'prayer.dhuhr': 'Dhuhr',
-      'prayer.asr': 'Asr',
-      'prayer.maghrib': 'Maghrib',
-      'prayer.isha': 'Isha',
-      'prayer.location': 'Localisation',
-      'prayer.loading': 'Chargement des heures de prière...',
-      'prayer.error': 'Erreur lors du chargement des heures de prière',
-      'prayer.enableLocation': 'Activer la Localisation',
-      'prayer.today': 'Heures de Prière d\'Aujourd\'hui',
-      
-      // Friday Duas
-      'fridayDuas.title': 'Duas du Vendredi',
-      'fridayDuas.subtitle': 'Supplications spéciales pour le jour béni du vendredi',
-      'fridayDuas.importance': 'Importance du Vendredi',
-      'fridayDuas.supplications': 'Supplications du Vendredi',
-      'fridayDuas.importanceDesc': 'Vertus du vendredi en Islam',
-      'fridayDuas.supplicationsDesc': 'Invocations exaucées pour le vendredi béni',
-      'fridayDuas.note': 'Il est recommandé d\'augmenter le dhikr, les invocations et les prières sur le Prophète (paix soit sur lui) le vendredi',
-      
-      // Friday Duas - Importance Section
-      'fridayDuas.importanceSection.title1': 'Le Vendredi est le Maître des Jours',
-      'fridayDuas.importanceSection.content1': 'Le Prophète (paix soit sur lui) a dit : "Le meilleur jour sur lequel le soleil s\'est levé est le vendredi ; en ce jour Adam fut créé, en ce jour il fut admis au Paradis, et en ce jour il en fut expulsé."',
-      'fridayDuas.importanceSection.reference1': 'Rapporté par Muslim',
-      'fridayDuas.importanceSection.title2': 'L\'Heure de Réponse',
-      'fridayDuas.importanceSection.content2': 'Le vendredi, il y a une heure où aucun serviteur musulman ne se tient debout en priant, demandant quelque chose à Allah, sans qu\'Allah ne le lui donne.',
-      'fridayDuas.importanceSection.reference2': 'Convenu',
-      'fridayDuas.importanceSection.title3': 'Vertu de Prier sur le Prophète',
-      'fridayDuas.importanceSection.content3': 'L\'une des meilleures actions du vendredi est d\'augmenter les prières sur le Prophète (paix soit sur lui).',
-      
-      // Friday Duas - Sura Al-Kahf
-      'fridayDuas.suraAlKahf.title': 'Sourate Al-Kahf',
-      'fridayDuas.suraAlKahf.virtue': 'Quiconque lit la Sourate Al-Kahf le vendredi, une lumière brillera pour lui entre les deux vendredis.',
-      'fridayDuas.suraAlKahf.description': 'Il est recommandé de lire la Sourate Al-Kahf complète le vendredi, qui est le dix-huitième chapitre du Saint Coran.',
-      'fridayDuas.suraAlKahf.virtueTitle': 'Vertu de lire la Sourate Al-Kahf :',
-      
-      // Friday Duas - Individual Duas
-      'fridayDuas.dua1.transliteration': 'Allaahumma salli wa sallim wa baarik \'alaa nabiyyinaa Muhammadin wa \'alaa aalihi wa sahbihi ajma\'een',
-      'fridayDuas.dua1.translation': 'Ô Allah, envoie des prières, la paix et les bénédictions sur notre Prophète Muhammad et sur sa famille et tous ses compagnons.',
-      'fridayDuas.dua1.virtue': 'L\'une des meilleures actions du vendredi',
-      'fridayDuas.dua2.transliteration': 'Rabbanaa aatinaa fil-dunyaa hasanatan wa fil-aakhirati hasanatan wa qinaa \'adhaab an-naar',
-      'fridayDuas.dua2.translation': 'Notre Seigneur, donne-nous en ce monde [ce qui est] bien et dans l\'au-delà [ce qui est] bien et protège-nous du châtiment du Feu.',
-      'fridayDuas.dua2.virtue': 'Une invocation complète pour le bien de ce monde et de l\'au-delà',
-      'fridayDuas.dua3.transliteration': 'Allaahummaghfir lee dhanbee wa wassi\' lee fee daaree wa baarik lee fee rizqee',
-      'fridayDuas.dua3.translation': 'Ô Allah, pardonne mon péché, élargis ma maison pour moi et bénis ma subsistance.',
-      'fridayDuas.dua3.virtue': 'Une invocation complète pour le pardon et les bénédictions',
-      'fridayDuas.dua4.transliteration': 'Allaahumma aslih lee deeneel-ladhee huwa \'ismatu amree, wa aslih lee dunyaayal-latee feehaa ma\'aashee, wa aslih lee aakhirateel-latee feehaa ma\'aadee',
-      'fridayDuas.dua4.translation': 'Ô Allah, améliore ma religion qui est la sauvegarde de mes affaires. Améliore ma vie mondaine dans laquelle est ma subsistance. Améliore mon au-delà qui est mon retour.',
-      'fridayDuas.dua4.virtue': 'Une invocation pour réformer la religion, la vie mondaine et l\'au-delà',
-      'fridayDuas.dua5.transliteration': 'Allaahumma innee as\'alukal-hudaa wat-tuqaa wal-\'afaafa wal-ghinaa',
-      'fridayDuas.dua5.translation': 'Ô Allah, je Te demande la guidance, la piété, la chasteté et le contentement.',
-      'fridayDuas.dua5.virtue': 'Une invocation pour la guidance et la piété',
-      'fridayDuas.dua6.transliteration': 'Allaahumma baarik lanaa feemaa razaqtanaa, wa qinaa \'adhaab an-naar',
-      'fridayDuas.dua6.translation': 'Ô Allah, bénis-nous dans ce que Tu nous as fourni et protège-nous du châtiment du Feu.',
-      'fridayDuas.dua6.virtue': 'Une invocation pour les bénédictions dans la subsistance',
+      'ageCalculator.numericResult': 'Résultat Numérique',
       
       // Home
       'home.title': 'Outils Islamiques Complets',
@@ -433,23 +382,6 @@ const resources = {
       'home.useTool': 'Utiliser l\'Outil',
       'home.multilingual': 'Disponible en Plusieurs Langues',
       'home.multilingualDesc': 'Tous les outils sont disponibles en arabe, anglais, français et espagnol pour servir les musulmans du monde entier',
-      
-      // Quran
-      'quran.title': 'Saint Coran',
-      'quran.subtitle': 'Lisez le Saint Coran avec un beau texte arabe et une navigation facile',
-      'quran.surahs': 'Sourates',
-      'quran.totalSurahs': '{{count}} Sourates',
-      'quran.searchSurahs': 'Rechercher des sourates...',
-      'quran.ayahs': '{{count}} Versets',
-      'quran.ayah': 'Verset',
-      'quran.meccan': 'Mecquoise',
-      'quran.medinan': 'Médinoise',
-      'quran.bismillah': 'Au nom d\'Allah, le Tout Miséricordieux, le Très Miséricordieux',
-      'quran.selectSurah': 'Sélectionner une Sourate',
-      'quran.selectSurahDescription': 'Choisissez une sourate dans la liste pour commencer la lecture',
-      'quran.pageOf': 'Page {{current}} sur {{total}}',
-      'quran.errorFetchingSurahs': 'Erreur lors du chargement des sourates. Veuillez réessayer.',
-      'quran.errorFetchingSurah': 'Erreur lors du chargement de la sourate. Veuillez réessayer.',
     }
   },
   es: {
@@ -457,14 +389,15 @@ const resources = {
       // Navigation
       'nav.dateConverter': 'Convertidor de Fecha',
       'nav.ageCalculator': 'Calculadora de Edad',
-      'nav.morningEveningAdhkar': 'Adhkar Mañana y Tarde',
+      'nav.morningEveningAdhkar': 'Adhkar de Mañana y Tarde',
       'nav.prayerTimes': 'Horarios de Oración',
       'nav.fridayDuas': 'Duas del Viernes',
-      'nav.quran': 'Santo Corán',
+      'nav.quran': 'Sagrado Corán',
+      'nav.islamicQuiz': 'Quiz Islámico',
+      'nav.about': 'Acerca de',
+      'nav.contact': 'Contacto',
+      'nav.privacyPolicy': 'Política de Privacidad',
       'nav.language': 'Idioma',
-      'nav.about': 'Sobre nosotros',
-      'nav.contact': 'Contáctenos',
-      'nav.privacyPolicy': 'Política de privacidad',
       
       // Common
       'common.convert': 'Convertir',
@@ -476,18 +409,21 @@ const resources = {
       'common.year': 'Año',
       'common.today': 'Hoy',
       'common.error': 'Error',
+      'common.next': 'Siguiente',
+      'common.previous': 'Anterior',
       
       // Date Converter
       'dateConverter.title': 'Convertidor de Fecha Hijri a Gregoriano',
-      'dateConverter.subtitle': 'Convierte fechas entre calendarios hijri y gregoriano fácilmente',
+      'dateConverter.subtitle': 'Convierte fechas entre calendarios Hijri y Gregoriano fácilmente',
       'dateConverter.hijriDate': 'Fecha Hijri',
       'dateConverter.gregorianDate': 'Fecha Gregoriana',
-      'dateConverter.enterHijriDate': 'Ingresa la fecha hijri',
-      'dateConverter.enterGregorianDate': 'Ingresa la fecha gregoriana',
+      'dateConverter.enterHijriDate': 'Ingresa la Fecha Hijri',
+      'dateConverter.enterGregorianDate': 'Ingresa la Fecha Gregoriana',
       'dateConverter.convertToGregorian': 'Convertir a Gregoriano',
       'dateConverter.convertToHijri': 'Convertir a Hijri',
       'dateConverter.invalidDate': 'Por favor ingresa una fecha válida',
       'dateConverter.conversionError': 'Ocurrió un error durante la conversión de fecha',
+      'dateConverter.numericResult': 'Resultado Numérico',
       
       // Age Calculator
       'ageCalculator.title': 'Calculadora de Edad',
@@ -506,101 +442,14 @@ const resources = {
       'ageCalculator.birthDateRequired': 'La fecha de nacimiento es requerida',
       'ageCalculator.futureDate': 'La fecha de nacimiento no puede estar en el futuro',
       'ageCalculator.calculationError': 'Ocurrió un error al calcular la edad',
-      
-      // Morning & Evening Adhkar
-      'adhkar.title': 'Adhkar Mañana y Tarde',
-      'adhkar.subtitle': 'Recordatorios islámicos diarios para la conexión espiritual',
-      'adhkar.morning': 'Adhkar de la Mañana',
-      'adhkar.evening': 'Adhkar de la Tarde',
-      'adhkar.morningTitle': 'Recordatorios de la Mañana',
-      'adhkar.eveningTitle': 'Recordatorios de la Tarde',
-      'adhkar.morningDescription': 'Recita estos recordatorios cada mañana después de la oración del Fajr',
-      'adhkar.eveningDescription': 'Recita estos recordatorios cada tarde después de la oración del Maghrib',
-      'adhkar.once': 'Una vez',
-      'adhkar.times': '{{count}} veces',
-      
-      // Prayer Times
-      'prayer.title': 'Horarios de Oración',
-      'prayer.subtitle': 'Obtén horarios de oración precisos basados en tu ubicación',
-      'prayer.fajr': 'Fajr',
-      'prayer.dhuhr': 'Dhuhr',
-      'prayer.asr': 'Asr',
-      'prayer.maghrib': 'Maghrib',
-      'prayer.isha': 'Isha',
-      'prayer.location': 'Ubicación',
-      'prayer.loading': 'Cargando horarios de oración...',
-      'prayer.error': 'Error al cargar horarios de oración',
-      'prayer.enableLocation': 'Habilitar Ubicación',
-      'prayer.today': 'Horarios de Oración de Hoy',
-      
-      // Friday Duas
-      'fridayDuas.title': 'Duas del Viernes',
-      'fridayDuas.subtitle': 'Súplicas especiales para el día bendito del viernes',
-      'fridayDuas.importance': 'Importancia del Viernes',
-      'fridayDuas.supplications': 'Súplicas del Viernes',
-      'fridayDuas.importanceDesc': 'Virtudes del viernes en el Islam',
-      'fridayDuas.supplicationsDesc': 'Invocaciones respondidas para el viernes bendito',
-      'fridayDuas.note': 'Se recomienda aumentar el dhikr, la súplica y enviar oraciones sobre el Profeta (la paz sea con él) el viernes',
-      
-      // Friday Duas - Importance Section
-      'fridayDuas.importanceSection.title1': 'El Viernes es el Señor de los Días',
-      'fridayDuas.importanceSection.content1': 'El Profeta (la paz sea con él) dijo: "El mejor día en el que ha salido el sol es el viernes; en él fue creado Adán, en él fue admitido al Paraíso, y en él fue expulsado de él."',
-      'fridayDuas.importanceSection.reference1': 'Narrado por Muslim',
-      'fridayDuas.importanceSection.title2': 'La Hora de Respuesta',
-      'fridayDuas.importanceSection.content2': 'El viernes hay una hora en la que ningún siervo musulmán se para y ora, pidiendo algo a Allah, excepto que Allah se lo da.',
-      'fridayDuas.importanceSection.reference2': 'Acordado',
-      'fridayDuas.importanceSection.title3': 'Virtud de Orar sobre el Profeta',
-      'fridayDuas.importanceSection.content3': 'Una de las mejores acciones del viernes es aumentar las oraciones sobre el Profeta (la paz sea con él).',
-      
-      // Friday Duas - Sura Al-Kahf
-      'fridayDuas.suraAlKahf.title': 'Sura Al-Kahf',
-      'fridayDuas.suraAlKahf.virtue': 'Quien lea la Sura Al-Kahf el viernes, la luz brillará para él entre los dos viernes.',
-      'fridayDuas.suraAlKahf.description': 'Se recomienda leer la Sura Al-Kahf completa el viernes, que es el decimoctavo capítulo del Sagrado Corán.',
-      'fridayDuas.suraAlKahf.virtueTitle': 'Virtud de leer la Sura Al-Kahf:',
-      
-      // Friday Duas - Individual Duas
-      'fridayDuas.dua1.transliteration': 'Allaahumma salli wa sallim wa baarik \'alaa nabiyyinaa Muhammadin wa \'alaa aalihi wa sahbihi ajma\'een',
-      'fridayDuas.dua1.translation': 'Oh Allah, envía oraciones, paz y bendiciones sobre nuestro Profeta Muhammad y sobre su familia y todos sus compañeros.',
-      'fridayDuas.dua1.virtue': 'Una de las mejores acciones del viernes',
-      'fridayDuas.dua2.transliteration': 'Rabbanaa aatinaa fil-dunyaa hasanatan wa fil-aakhirati hasanatan wa qinaa \'adhaab an-naar',
-      'fridayDuas.dua2.translation': 'Señor nuestro, danos en este mundo [lo que es] bueno y en el Más Allá [lo que es] bueno y protégenos del castigo del Fuego.',
-      'fridayDuas.dua2.virtue': 'Una súplica integral para el bien de este mundo y el próximo',
-      'fridayDuas.dua3.transliteration': 'Allaahummaghfir lee dhanbee wa wassi\' lee fee daaree wa baarik lee fee rizqee',
-      'fridayDuas.dua3.translation': 'Oh Allah, perdona mi pecado, amplía mi hogar para mí y bendice mi sustento.',
-      'fridayDuas.dua3.virtue': 'Una súplica integral para el perdón y las bendiciones',
-      'fridayDuas.dua4.transliteration': 'Allaahumma aslih lee deeneel-ladhee huwa \'ismatu amree, wa aslih lee dunyaayal-latee feehaa ma\'aashee, wa aslih lee aakhirateel-latee feehaa ma\'aadee',
-      'fridayDuas.dua4.translation': 'Oh Allah, mejora mi religión que es la salvaguarda de mis asuntos. Mejora mi vida mundana en la que está mi sustento. Mejora mi Más Allá que es mi retorno.',
-      'fridayDuas.dua4.virtue': 'Una súplica para reformar la religión, la vida mundana y el Más Allá',
-      'fridayDuas.dua5.transliteration': 'Allaahumma innee as\'alukal-hudaa wat-tuqaa wal-\'afaafa wal-ghinaa',
-      'fridayDuas.dua5.translation': 'Oh Allah, te pido guía, piedad, castidad y contentamiento.',
-      'fridayDuas.dua5.virtue': 'Una súplica para la guía y la piedad',
-      'fridayDuas.dua6.transliteration': 'Allaahumma baarik lanaa feemaa razaqtanaa, wa qinaa \'adhaab an-naar',
-      'fridayDuas.dua6.translation': 'Oh Allah, bendícenos en lo que nos has proporcionado y protégenos del castigo del Fuego.',
-      'fridayDuas.dua6.virtue': 'Una súplica para las bendiciones en el sustento',
+      'ageCalculator.numericResult': 'Resultado Numérico',
       
       // Home
       'home.title': 'Herramientas Islámicas Integrales',
-      'home.description': 'Una colección completa de herramientas islámicas útiles que incluyen conversión de fechas, cálculo de edad, adhkar, horarios de oración y súplicas del viernes',
+      'home.description': 'Una colección completa de herramientas islámicas útiles incluyendo conversión de fecha, cálculo de edad, adhkar, horarios de oración y duas del viernes',
       'home.useTool': 'Usar Herramienta',
       'home.multilingual': 'Disponible en Múltiples Idiomas',
-      'home.multilingualDesc': 'Todas las herramientas están disponibles en árabe, inglés, francés y español para servir a los musulmanes de todo el mundo',
-      
-      // Quran
-      'quran.title': 'Santo Corán',
-      'quran.subtitle': 'Lee el Santo Corán con hermoso texto árabe y navegación fácil',
-      'quran.surahs': 'Suras',
-      'quran.totalSurahs': '{{count}} Suras',
-      'quran.searchSurahs': 'Buscar suras...',
-      'quran.ayahs': '{{count}} Aleyas',
-      'quran.ayah': 'Aleya',
-      'quran.meccan': 'Mecana',
-      'quran.medinan': 'Medinense',
-      'quran.bismillah': 'En el nombre de Allah, el Enteramente Misericordioso, el Especialmente Misericordioso',
-      'quran.selectSurah': 'Seleccionar una Sura',
-      'quran.selectSurahDescription': 'Elige una sura de la lista para comenzar a leer',
-      'quran.pageOf': 'Página {{current}} de {{total}}',
-      'quran.errorFetchingSurahs': 'Error al cargar las suras. Por favor, inténtalo de nuevo.',
-      'quran.errorFetchingSurah': 'Error al cargar la sura. Por favor, inténtalo de nuevo.',
+      'home.multilingualDesc': 'Todas las herramientas están disponibles en árabe, inglés, francés y español para servir a musulmanes de todo el mundo',
     }
   }
 };
