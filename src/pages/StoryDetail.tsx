@@ -32,7 +32,7 @@ interface StoryData {
   sourcesAr: string[];
 }
 
-const storyData: Record<string, Record<number, StoryData>> = {
+export const storyData: Record<string, Record<number, StoryData>> = {
   indonesia: {
     0: {
       title: 'Peaceful Conversion Through Trade',
@@ -505,31 +505,20 @@ export default function StoryDetail() {
   const story = countryId && storyIndex ? 
     storyData[countryId]?.[parseInt(storyIndex)] : null;
 
-  if (!story) {
+  // توجيه بديل في حال عدم وجود القصة
+  if (!story && countryId) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-background to-accent/20 flex items-center justify-center">
-        <Card className="max-w-md mx-auto">
-          <CardContent className="p-8 text-center">
-            <h2 className="text-2xl font-bold mb-4">
-              {isArabic ? 'القصة غير موجودة' : 'Story Not Found'}
-            </h2>
-            <p className="text-muted-foreground mb-6">
-              {isArabic 
-                ? 'عذراً، لم نتمكن من العثور على تفاصيل هذه القصة.'
-                : 'Sorry, we could not find details for this story.'
-              }
-            </p>
-            <Link to="/countries">
-              <Button variant="outline" className="gap-2">
-                <ArrowLeft className="h-4 w-4" />
-                {isArabic ? 'العودة للدول' : 'Back to Countries'}
-              </Button>
-            </Link>
-          </CardContent>
-        </Card>
+        <Link to={`/country/${countryId}`}>
+          <Button variant="outline">
+            {isArabic ? 'العودة لتفاصيل الدولة' : 'Back to Country Details'}
+          </Button>
+        </Link>
       </div>
     );
   }
+
+  if (!story) return null;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-accent/20">

@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { personalityData } from './PersonalityDetail';
+import { storyData } from './StoryDetail';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -296,7 +298,20 @@ export default function Countries() {
               <CardHeader className="relative">
                 <Link to={`/country/${country.id}`} className="block">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-4xl">{country.flag}</span>
+                    <div className="relative w-12 h-12 rounded-md overflow-hidden bg-muted flex items-center justify-center">
+                      <span className="text-3xl select-none" aria-hidden>
+                        {country.flag}
+                      </span>
+                      <img
+                        src={`/countries/${country.id}.jpg`}
+                        alt={isArabic ? `${country.nameAr} صورة` : `${country.name} image`}
+                        className="absolute inset-0 w-full h-full object-cover"
+                        onError={(e) => {
+                          // Hide the image element if not found so the flag remains visible
+                          (e.currentTarget as HTMLImageElement).style.display = 'none';
+                        }}
+                      />
+                    </div>
                     <div>
                       <CardTitle className="text-2xl group-hover:text-primary transition-colors">
                         {isArabic ? country.nameAr : country.name}
@@ -327,18 +342,25 @@ export default function Countries() {
                     {isArabic ? 'شخصيات بارزة' : 'Notable Personalities'}
                   </h4>
                   <div className="space-y-2">
-                    {(isArabic ? country.notablePersonalitiesAr : country.notablePersonalities).map((person, index) => (
-                      <Link 
+                    {(isArabic ? country.notablePersonalitiesAr : country.notablePersonalities).map((person, index) => {
+                      const hasData = Boolean(personalityData[country.id]?.[index]);
+                      const Wrapper: React.ElementType = hasData ? Link : 'div';
+                      const wrapperProps = hasData ? { to: `/personality/${country.id}/${index}` } : {};
+                      return (
+                      <Wrapper 
                         key={index} 
-                        to={`/personality/${country.id}/${index}`}
-                        className="block text-sm bg-muted/50 rounded-lg px-3 py-2 hover:bg-muted transition-colors cursor-pointer group/person"
+                        {...wrapperProps}
+                        className={`block text-sm rounded-lg px-3 py-2 transition-colors cursor-${hasData ? 'pointer' : 'default'} group/person ${hasData ? 'bg-muted/50 hover:bg-muted' : 'bg-muted/20 opacity-60'}`}
                       >
                         <div className="flex items-center justify-between">
                           <span>{person}</span>
-                          <ExternalLink className="h-3 w-3 opacity-0 group-hover/person:opacity-100 transition-opacity" />
+                          {hasData && (
+                            <ExternalLink className="h-3 w-3 opacity-0 group-hover/person:opacity-100 transition-opacity" />
+                          )}
                         </div>
-                      </Link>
-                    ))}
+                      </Wrapper>
+                      );
+                    })}
                   </div>
                 </div>
 
@@ -349,18 +371,25 @@ export default function Countries() {
                     {isArabic ? 'قصص بارزة' : 'Notable Stories'}
                   </h4>
                   <div className="space-y-2">
-                    {(isArabic ? country.storiesAr : country.stories).map((story, index) => (
-                      <Link 
+                    {(isArabic ? country.storiesAr : country.stories).map((story, index) => {
+                      const hasData = Boolean(storyData[country.id]?.[index]);
+                      const Wrapper: React.ElementType = hasData ? Link : 'div';
+                      const wrapperProps = hasData ? { to: `/story/${country.id}/${index}` } : {};
+                      return (
+                      <Wrapper 
                         key={index} 
-                        to={`/story/${country.id}/${index}`}
-                        className="block text-sm bg-accent/20 rounded-lg px-3 py-2 hover:bg-accent/30 transition-colors cursor-pointer group/story"
+                        {...wrapperProps}
+                        className={`block text-sm rounded-lg px-3 py-2 transition-colors cursor-${hasData ? 'pointer' : 'default'} group/story ${hasData ? 'bg-accent/20 hover:bg-accent/30' : 'bg-accent/10 opacity-60'}`}
                       >
                         <div className="flex items-center justify-between">
                           <span>{story}</span>
-                          <ExternalLink className="h-3 w-3 opacity-0 group-hover/story:opacity-100 transition-opacity" />
+                          {hasData && (
+                            <ExternalLink className="h-3 w-3 opacity-0 group-hover/story:opacity-100 transition-opacity" />
+                          )}
                         </div>
-                      </Link>
-                    ))}
+                      </Wrapper>
+                      );
+                    })}
                   </div>
                 </div>
 

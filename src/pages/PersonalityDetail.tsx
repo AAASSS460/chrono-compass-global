@@ -30,7 +30,7 @@ interface PersonalityData {
   relatedWorksAr: string[];
 }
 
-const personalityData: Record<string, Record<number, PersonalityData>> = {
+export const personalityData: Record<string, Record<number, PersonalityData>> = {
   indonesia: {
     0: {
       name: 'Wali Songo (Nine Saints)',
@@ -558,31 +558,20 @@ export default function PersonalityDetail() {
   const personality = countryId && personalityIndex ? 
     personalityData[countryId]?.[parseInt(personalityIndex)] : null;
 
-  if (!personality) {
+  // إذا لم تكن البيانات موجودة، أعد التوجيه إلى صفحة الدولة بدل عرض رسالة خطأ
+  if (!personality && countryId) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-background to-accent/20 flex items-center justify-center">
-        <Card className="max-w-md mx-auto">
-          <CardContent className="p-8 text-center">
-            <h2 className="text-2xl font-bold mb-4">
-              {isArabic ? 'الشخصية غير موجودة' : 'Personality Not Found'}
-            </h2>
-            <p className="text-muted-foreground mb-6">
-              {isArabic 
-                ? 'عذراً، لم نتمكن من العثور على تفاصيل هذه الشخصية.'
-                : 'Sorry, we could not find details for this personality.'
-              }
-            </p>
-            <Link to="/countries">
-              <Button variant="outline" className="gap-2">
-                <ArrowLeft className="h-4 w-4" />
-                {isArabic ? 'العودة للدول' : 'Back to Countries'}
-              </Button>
-            </Link>
-          </CardContent>
-        </Card>
+        <Link to={`/country/${countryId}`}>
+          <Button variant="outline">
+            {isArabic ? 'العودة لتفاصيل الدولة' : 'Back to Country Details'}
+          </Button>
+        </Link>
       </div>
     );
   }
+
+  if (!personality) return null;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-accent/20">
