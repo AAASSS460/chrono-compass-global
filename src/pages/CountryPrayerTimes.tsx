@@ -391,7 +391,7 @@ export default function CountryPrayerTimes() {
                 {/* Prayer Times */}
                 {Object.entries(prayerTimes).filter(([prayer]) => 
                   ['Fajr', 'Dhuhr', 'Asr', 'Maghrib', 'Isha'].includes(prayer)
-                ).map((['prayer', time]) => (
+                ).map(([prayer, time]) => (
                   <Card key={prayer} className={`border-0 shadow-md hover:shadow-lg transition-all duration-300 ${getPrayerBg(prayer)}`}>
                     <CardContent className="p-6">
                       <div className="flex items-center justify-between mb-4">
