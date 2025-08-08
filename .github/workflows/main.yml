@@ -1,54 +1,27 @@
-name: Gemini AI Assistant
-
+name: Apply Patch
 on:
-  issue_comment:
-    types: [created]
-
+  workflow_dispatch:
+    inputs:
+      patch:
+        description: "Unified diff patch"
+        required: true
+        type: string
+permissions:
+  contents: write
 jobs:
-  run-gemini-action:
-    if: contains(github.event.comment.body, '@gemini-cli')
+  apply:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
-      issues: write
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Create a new branch
-        id: create_branch
+      - uses: actions/checkout@v4
+      - name: Apply patch
+        shell: bash
         run: |
-          BRANCH_NAME="gemini-$(date +%s)"
-          git checkout -b $BRANCH_NAME
-          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_OUTPUT
-
-      - name: Run Gemini CLI with the specified prompt
-        uses: google-github-actions/run-gemini-cli@main
-        with:
-          gemini_api_key: ${{ secrets.GEMINI_API_KEY }}
-          prompt: |
-            You are a senior developer assistant. The user's request is: ${{ github.event.comment.body }}
-            Please respond with a clear code change and explain the reasoning.
-
-      - name: Commit changes and push
-        run: |
-          git add .
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git commit -m "Gemini AI: Automated changes" || echo "No changes to commit."
-          git push -u origin ${{ steps.create_branch.outputs.BRANCH_NAME }}
-
-      - name: Create Pull Request
-        uses: actions/github-script@v6
-        with:
-          script: |
-            github.rest.pulls.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: "Gemini AI: Pull Request for the requested changes",
-              head: context.env.BRANCH_NAME,
-              base: "main",
-              body: "This pull request was created by Gemini AI. Please review and merge if satisfied."
-            });
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          cat > patch.diff << 'PATCH'
+${{ github.event.inputs.patch }}
+PATCH
+          git apply --whitespace=fix patch.diff
+          git add -A
+          git commit -m "Apply patch via workflow" || echo "No changes to commit"
+          git push
