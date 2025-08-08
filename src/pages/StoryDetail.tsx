@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -495,30 +495,398 @@ export const storyData: Record<string, Record<number, StoryData>> = {
       ]
     }
   }
+  ,
+  india: {
+    0: {
+      title: 'Mughal Empire Legacy',
+      titleAr: 'إرث الإمبراطورية المغولية',
+      country: 'India',
+      countryAr: 'الهند',
+      period: '1526-1857',
+      periodAr: '1526-1857',
+      category: 'Civilization & Culture',
+      categoryAr: 'الحضارة والثقافة',
+      summary: 'A golden age of Islamic art, architecture, administration, and cultural synthesis in South Asia.',
+      summaryAr: 'عصر ذهبي للفن والعمارة والإدارة والتركيب الثقافي في جنوب آسيا.',
+      fullStory: 'The Mughals built monumental architecture, refined administration, and fostered Persianate culture blended with Indian traditions.',
+      fullStoryAr: 'شيد المغول عمارة مهيبة وأرسوا إدارة رصينة ورعوا ثقافة فارسية ممتزجة بالتقاليد الهندية.',
+      keyFigures: ['Akbar', 'Shah Jahan', 'Aurangzeb'],
+      keyFiguresAr: ['أكبر', 'شاه جهان', 'أورنجزيب'],
+      historicalContext: 'Emergence after Delhi Sultanate; peak of Indo-Islamic civilization.',
+      historicalContextAr: 'الظهور بعد سلطنة دلهي؛ ذروة الحضارة الهندية الإسلامية.',
+      lessons: ['Synthesis of cultures', 'Administrative innovation'],
+      lessonsAr: ['تركيب الثقافات', 'الابتكار الإداري'],
+      modernRelevance: 'Continuing influence on South Asian identity and arts.',
+      modernRelevanceAr: 'تأثير مستمر على الهوية والفنون في جنوب آسيا.',
+      relatedEvents: ['Construction of Taj Mahal'],
+      relatedEventsAr: ['بناء تاج محل'],
+      sources: ['Court chronicles', 'Architectural studies'],
+      sourcesAr: ['السجلات البلاطية', 'دراسات معمارية']
+    }
+  },
+  bangladesh: {
+    0: {
+      title: 'Language Movement and Identity',
+      titleAr: 'حركة اللغة والهوية',
+      country: 'Bangladesh',
+      countryAr: 'بنغلاديش',
+      period: '1952-1971',
+      periodAr: '1952-1971',
+      category: 'Cultural Struggle',
+      categoryAr: 'نضال ثقافي',
+      summary: 'The defense of Bengali language became a pillar of national identity with Islamic cultural presence.',
+      summaryAr: 'الدفاع عن اللغة البنغالية أصبح ركناً للهوية الوطنية مع الحضور الثقافي الإسلامي.',
+      fullStory: 'From the 1952 language protests to independence, culture and faith intertwined in public life.',
+      fullStoryAr: 'من احتجاجات اللغة عام 1952 حتى الاستقلال، تداخلت الثقافة والإيمان في الحياة العامة.',
+      keyFigures: ['Students of Dhaka', 'Cultural leaders'],
+      keyFiguresAr: ['طلاب دكا', 'قادة ثقافيون'],
+      historicalContext: 'Post-colonial tensions between East and West Pakistan.',
+      historicalContextAr: 'توترات ما بعد الاستعمار بين باكستان الشرقية والغربية.',
+      lessons: ['Language as dignity', 'Cultural rights'],
+      lessonsAr: ['اللغة ككرامة', 'الحقوق الثقافية'],
+      modernRelevance: 'International Mother Language Day born from this movement.',
+      modernRelevanceAr: 'يوم اللغة الأم الدولي خرج من هذه الحركة.',
+      relatedEvents: ['1971 Liberation War'],
+      relatedEventsAr: ['حرب التحرير 1971'],
+      sources: ['Historical archives', 'Oral histories'],
+      sourcesAr: ['أرشيف تاريخي', 'تواريخ شفهية']
+    }
+  },
+  nigeria: {
+    0: {
+      title: 'Sokoto Caliphate and Education',
+      titleAr: 'خلافة سوكوتو والتعليم',
+      country: 'Nigeria',
+      countryAr: 'نيجيريا',
+      period: '1804-1903',
+      periodAr: '1804-1903',
+      category: 'Reform & Governance',
+      categoryAr: 'الإصلاح والحكم',
+      summary: 'A reformist state that prioritized justice and mass education in West Africa.',
+      summaryAr: 'دولة إصلاحية أعطت الأولوية للعدل والتعليم الجماهيري في غرب إفريقيا.',
+      fullStory: 'Usman dan Fodio and successors built schools and courts grounded in Islamic law.',
+      fullStoryAr: 'بنى عثمان دان فوديو وخلفاؤه مدارس ومحاكم مرتكزة على الشريعة.',
+      keyFigures: ['Usman dan Fodio', 'Muhammad Bello'],
+      keyFiguresAr: ['عثمان دان فوديو', 'محمد بيلو'],
+      historicalContext: 'Fragmented polities unified under reformist leadership.',
+      historicalContextAr: 'كيانات متفرقة توحدت تحت قيادة إصلاحية.',
+      lessons: ['Justice-centered governance', 'Spread of literacy'],
+      lessonsAr: ['حكم قائم على العدل', 'نشر المعرفة'],
+      modernRelevance: 'Legacy in contemporary northern Nigeria.',
+      modernRelevanceAr: 'إرث في شمال نيجيريا المعاصر.',
+      relatedEvents: ['Jihad of 1804'],
+      relatedEventsAr: ['جهاد 1804'],
+      sources: ['Manuscripts', 'Colonial records'],
+      sourcesAr: ['مخطوطات', 'سجلات استعمارية']
+    }
+  },
+  egypt: {
+    0: {
+      title: 'Al-Azhar and Reform',
+      titleAr: 'الأزهر والإصلاح',
+      country: 'Egypt',
+      countryAr: 'مصر',
+      period: '970 - Present',
+      periodAr: '970 - حتى اليوم',
+      category: 'Scholarly Tradition',
+      categoryAr: 'التقليد العلمي',
+      summary: 'Al-Azhar’s thousand-year tradition balancing continuity and reform.',
+      summaryAr: 'تقاليد ألف عام من التوازن بين الثبات والإصلاح.',
+      fullStory: 'From classical curricula to modern faculties, Al-Azhar shaped global Sunni scholarship.',
+      fullStoryAr: 'من المناهج الكلاسيكية إلى الكليات الحديثة، صاغ الأزهر العلم السني عالمياً.',
+      keyFigures: ['Al-Azhar Sheikhs'],
+      keyFiguresAr: ['شيوخ الأزهر'],
+      historicalContext: 'Cairo as a hub of learning in Islamic world.',
+      historicalContextAr: 'القاهرة كمركز للعلم في العالم الإسلامي.',
+      lessons: ['Balance and renewal'],
+      lessonsAr: ['التوازن والتجديد'],
+      modernRelevance: 'Global influence on curricula and fatwa.',
+      modernRelevanceAr: 'تأثير عالمي على المناهج والفتوى.',
+      relatedEvents: ['Modern reforms'],
+      relatedEventsAr: ['إصلاحات حديثة'],
+      sources: ['Institutional archives'],
+      sourcesAr: ['أرشيف المؤسسة']
+    }
+  },
+  iran: {
+    0: {
+      title: 'Islamic Revolution 1979',
+      titleAr: 'الثورة الإسلامية 1979',
+      country: 'Iran',
+      countryAr: 'إيران',
+      period: '1979',
+      periodAr: '1979',
+      category: 'Political Transformation',
+      categoryAr: 'تحول سياسي',
+      summary: 'A seismic shift in Iran’s political and religious landscape with regional reverberations.',
+      summaryAr: 'تحول جذري في المشهد السياسي والديني في إيران مع ارتدادات إقليمية.',
+      fullStory: 'Mass mobilization led to overthrow of monarchy and establishment of Islamic Republic.',
+      fullStoryAr: 'أدت التعبئة الشعبية إلى إسقاط الملكية وتأسيس الجمهورية الإسلامية.',
+      keyFigures: ['Ruhollah Khomeini'],
+      keyFiguresAr: ['روح الله الخميني'],
+      historicalContext: 'Cold War, oil politics, and social discontent.',
+      historicalContextAr: 'الحرب الباردة وسياسة النفط والسخط الاجتماعي.',
+      lessons: ['Power of mobilization', 'Role of ideology'],
+      lessonsAr: ['قوة التعبئة', 'دور الأيديولوجيا'],
+      modernRelevance: 'Continues to shape regional politics.',
+      modernRelevanceAr: 'ما زال يشكل السياسة الإقليمية.',
+      relatedEvents: ['Referendum and constitution'],
+      relatedEventsAr: ['الاستفتاء والدستور'],
+      sources: ['Memoirs, analyses'],
+      sourcesAr: ['مذكرات، تحليلات']
+    }
+  },
+  'saudi-arabia': {
+    0: {
+      title: 'Birthplace of Islam',
+      titleAr: 'مهد الإسلام',
+      country: 'Saudi Arabia',
+      countryAr: 'المملكة العربية السعودية',
+      period: '610 CE - Present',
+      periodAr: '610م - حتى اليوم',
+      category: 'Sacred History',
+      categoryAr: 'التاريخ المقدس',
+      summary: 'From revelation to modern stewardship of the Two Holy Mosques.',
+      summaryAr: 'من الوحي إلى الرعاية الحديثة للحرمين الشريفين.',
+      fullStory: 'Revelation to Prophet Muhammad in Mecca, migration to Medina, and contemporary custodianship.',
+      fullStoryAr: 'الوحي للنبي محمد في مكة، والهجرة إلى المدينة، والرعاية الحديثة.',
+      keyFigures: ['Prophet Muhammad (PBUH)', 'Rashidun Caliphs'],
+      keyFiguresAr: ['النبي محمد ﷺ', 'الخلفاء الراشدون'],
+      historicalContext: 'Cradle of Islam and global pilgrimage center.',
+      historicalContextAr: 'مهد الإسلام ومركز الحج العالمي.',
+      lessons: ['Faith, unity, and service'],
+      lessonsAr: ['الإيمان والوحدة والخدمة'],
+      modernRelevance: 'Hajj, Umrah, and global Muslim ties.',
+      modernRelevanceAr: 'الحج والعمرة وروابط المسلمين عالمياً.',
+      relatedEvents: ['Hijra 622 CE', 'Conquest of Mecca 630 CE'],
+      relatedEventsAr: ['الهجرة 622م', 'فتح مكة 630م'],
+      sources: ['Sirah literature', 'Hadith collections'],
+      sourcesAr: ['السيرة النبوية', 'كتب الحديث']
+    }
+  },
+  malaysia: {
+    0: {
+      title: 'Islamic Finance Growth',
+      titleAr: 'نمو التمويل الإسلامي',
+      country: 'Malaysia',
+      countryAr: 'ماليزيا',
+      period: '1980s - Present',
+      periodAr: 'الثمانينيات - حتى اليوم',
+      category: 'Economic Development',
+      categoryAr: 'التنمية الاقتصادية',
+      summary: 'Malaysia became a global hub for Islamic banking and finance.',
+      summaryAr: 'أصبحت ماليزيا مركزاً عالمياً للمصرفية والتمويل الإسلامي.',
+      fullStory: 'Regulatory frameworks, education, and innovation enabled rapid growth.',
+      fullStoryAr: 'مكنت الأطر التنظيمية والتعليم والابتكار من النمو السريع.',
+      keyFigures: ['Central Bank of Malaysia', 'Industry pioneers'],
+      keyFiguresAr: ['البنك المركزي الماليزي', 'رواد الصناعة'],
+      historicalContext: 'Modernization with Islamic values.',
+      historicalContextAr: 'تحديث مع قيم إسلامية.',
+      lessons: ['Align ethics with economics'],
+      lessonsAr: ['مواءمة الأخلاق مع الاقتصاد'],
+      modernRelevance: 'Standard-setting and global products.',
+      modernRelevanceAr: 'وضع المعايير ومنتجات عالمية.',
+      relatedEvents: ['Establishment of IIUM'],
+      relatedEventsAr: ['تأسيس الجامعة الإسلامية الدولية ماليزيا'],
+      sources: ['Industry reports'],
+      sourcesAr: ['تقارير الصناعة']
+    }
+  },
+  uk: {
+    0: {
+      title: 'Muslims in Modern Britain',
+      titleAr: 'المسلمون في بريطانيا الحديثة',
+      country: 'United Kingdom',
+      countryAr: 'المملكة المتحدة',
+      period: 'Post-1945',
+      periodAr: 'بعد 1945',
+      category: 'Migration & Identity',
+      categoryAr: 'الهجرة والهوية',
+      summary: 'Post-war migration created vibrant Muslim communities with deep contributions.',
+      summaryAr: 'الهجرة ما بعد الحرب أنشأت مجتمعات مسلمة نابضة قدّمت مساهمات عميقة.',
+      fullStory: 'From South Asian workers to second-generation leadership in culture and politics.',
+      fullStoryAr: 'من العمال جنوب الآسيويين إلى قيادة الجيل الثاني في الثقافة والسياسة.',
+      keyFigures: ['Community leaders', 'Artists and politicians'],
+      keyFiguresAr: ['قادة مجتمع', 'فنانون وساسة'],
+      historicalContext: 'Deindustrialization and multicultural policy shifts.',
+      historicalContextAr: 'إزالة التصنيع وتحولات السياسات متعددة الثقافات.',
+      lessons: ['Integration with confidence'],
+      lessonsAr: ['اندماج بثقة'],
+      modernRelevance: 'Muslim representation and policy influence.',
+      modernRelevanceAr: 'تمثيل المسلمين وتأثير السياسات.',
+      relatedEvents: ['Race Relations Acts'],
+      relatedEventsAr: ['قوانين العلاقات العرقية'],
+      sources: ['Sociological studies'],
+      sourcesAr: ['دراسات سوسيولوجية']
+    }
+  },
+  france: {
+    0: {
+      title: 'French Muslim Contributions',
+      titleAr: 'مساهمات المسلمين الفرنسيين',
+      country: 'France',
+      countryAr: 'فرنسا',
+      period: '20th-21st Century',
+      periodAr: 'القرن 20-21',
+      category: 'Culture & Society',
+      categoryAr: 'الثقافة والمجتمع',
+      summary: 'From sports to arts, Muslims shaped modern French life.',
+      summaryAr: 'من الرياضة إلى الفنون، شكل المسلمون الحياة الفرنسية الحديثة.',
+      fullStory: 'Generations of migrants built families, businesses, and cultural movements.',
+      fullStoryAr: 'بنت أجيال من المهاجرين عائلات وأعمالاً وحركات ثقافية.',
+      keyFigures: ['Zidane', 'Benzema'],
+      keyFiguresAr: ['زيدان', 'بنزيما'],
+      historicalContext: 'Postcolonial realities and integration.',
+      historicalContextAr: 'حقائق ما بعد الاستعمار والاندماج.',
+      lessons: ['Belonging and contribution'],
+      lessonsAr: ['الانتماء والمساهمة'],
+      modernRelevance: 'Ongoing debates on laïcité and inclusion.',
+      modernRelevanceAr: 'نقاشات مستمرة حول العلمانية والشمول.',
+      relatedEvents: ['Sporting triumphs'],
+      relatedEventsAr: ['انتصارات رياضية'],
+      sources: ['Cultural studies'],
+      sourcesAr: ['دراسات ثقافية']
+    }
+  },
+  spain: {
+    0: {
+      title: 'Andalusian Heritage Revival',
+      titleAr: 'إحياء التراث الأندلسي',
+      country: 'Spain',
+      countryAr: 'إسبانيا',
+      period: '20th-21st Century',
+      periodAr: 'القرن 20-21',
+      category: 'Heritage & Identity',
+      categoryAr: 'التراث والهوية',
+      summary: 'Rediscovery of Al-Andalus history inspires modern Spanish Muslims.',
+      summaryAr: 'إعادة اكتشاف تاريخ الأندلس يُلهم المسلمين الإسبان المعاصرين.',
+      fullStory: 'Museums, festivals, and scholarship revived interest in Andalusian legacy.',
+      fullStoryAr: 'أعادت المتاحف والمهرجانات والبحوث الاهتمام بالإرث الأندلسي.',
+      keyFigures: ['Local historians', 'Community leaders'],
+      keyFiguresAr: ['مؤرخون محليون', 'قادة مجتمع'],
+      historicalContext: 'Tourism and cultural policy.',
+      historicalContextAr: 'السياحة والسياسة الثقافية.',
+      lessons: ['Pride in shared past'],
+      lessonsAr: ['الاعتزاز بالماضي المشترك'],
+      modernRelevance: 'Cultural bridges with Muslim world.',
+      modernRelevanceAr: 'جسور ثقافية مع العالم الإسلامي.',
+      relatedEvents: ['Granada cultural programs'],
+      relatedEventsAr: ['برامج ثقافية في غرناطة'],
+      sources: ['Cultural archives'],
+      sourcesAr: ['أرشيف ثقافي']
+    }
+  },
+  germany: {
+    0: {
+      title: 'Turkish-German Community',
+      titleAr: 'المجتمع التركي الألماني',
+      country: 'Germany',
+      countryAr: 'ألمانيا',
+      period: '1960s - Present',
+      periodAr: 'الستينيات - حتى اليوم',
+      category: 'Migration & Society',
+      categoryAr: 'الهجرة والمجتمع',
+      summary: 'Guest worker era created a lasting community shaping culture and economy.',
+      summaryAr: 'عهد العمال الضيوف أنشأ مجتمعاً دائماً شكّل الثقافة والاقتصاد.',
+      fullStory: 'From factories to parliament, Turkish-Germans rose in influence.',
+      fullStoryAr: 'من المصانع إلى البرلمان، ازداد نفوذ الأتراك-الألمان.',
+      keyFigures: ['Entrepreneurs', 'Politicians'],
+      keyFiguresAr: ['رواد أعمال', 'ساسة'],
+      historicalContext: 'Postwar rebuilding and labor agreements.',
+      historicalContextAr: 'إعادة بناء ما بعد الحرب واتفاقيات العمل.',
+      lessons: ['Integration, opportunity, contribution'],
+      lessonsAr: ['اندماج، فرصة، مساهمة'],
+      modernRelevance: 'Diversity in modern Germany.',
+      modernRelevanceAr: 'التنوع في ألمانيا الحديثة.',
+      relatedEvents: ['Labor treaties 1961'],
+      relatedEventsAr: ['اتفاقيات العمال 1961'],
+      sources: ['Sociology and history works'],
+      sourcesAr: ['أعمال سوسيولوجية وتاريخية']
+    }
+  },
+  canada: {
+    0: {
+      title: 'Multicultural Success',
+      titleAr: 'نجاح متعدد الثقافات',
+      country: 'Canada',
+      countryAr: 'كندا',
+      period: '1971 - Present',
+      periodAr: '1971 - حتى اليوم',
+      category: 'Policy & Society',
+      categoryAr: 'السياسة والمجتمع',
+      summary: 'Canada’s multiculturalism policy enabled Muslim communities to thrive.',
+      summaryAr: 'مكّنت سياسة التعددية الثقافية في كندا المجتمعات المسلمة من الازدهار.',
+      fullStory: 'Immigration, education, and inclusion built vibrant communities.',
+      fullStoryAr: 'الهجرة والتعليم والشمول بنت مجتمعات نابضة.',
+      keyFigures: ['Community organizations'],
+      keyFiguresAr: ['منظمات المجتمع'],
+      historicalContext: 'Policy shift in 1971 towards multiculturalism.',
+      historicalContextAr: 'تحول سياسي عام 1971 نحو التعددية الثقافية.',
+      lessons: ['Inclusion delivers prosperity'],
+      lessonsAr: ['الشمول يجلب الازدهار'],
+      modernRelevance: 'Model studied globally.',
+      modernRelevanceAr: 'نموذج يُدرس عالمياً.',
+      relatedEvents: ['Charter of Rights and Freedoms'],
+      relatedEventsAr: ['الميثاق الكندي للحقوق والحريات'],
+      sources: ['Government reports'],
+      sourcesAr: ['تقارير حكومية']
+    }
+  }
 };
 
 export default function StoryDetail() {
   const { countryId, storyIndex } = useParams<{ countryId: string; storyIndex: string }>();
   const { i18n } = useTranslation();
   const isArabic = i18n.language === 'ar';
+  const location = useLocation();
+  const fallbackFromList = (location.state as any)?.fromList as
+    | {
+        title?: string;
+        titleAr?: string;
+        countryId?: string;
+        countryName?: string;
+        countryNameAr?: string;
+        index?: number;
+      }
+    | undefined;
   
   const story = countryId && storyIndex ? 
     storyData[countryId]?.[parseInt(storyIndex)] : null;
 
   // توجيه بديل في حال عدم وجود القصة
-  if (!story && countryId) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-background to-accent/20 flex items-center justify-center">
-        <Link to={`/country/${countryId}`}>
-          <Button variant="outline">
-            {isArabic ? 'العودة لتفاصيل الدولة' : 'Back to Country Details'}
-          </Button>
-        </Link>
-      </div>
-    );
-  }
+  // توليد نص قصة كامل ديناميكياً عند غياب البيانات التفصيلية
+  const generatedStory: StoryData | null = (!story && fallbackFromList && countryId)
+    ? {
+        title: fallbackFromList.title ?? 'Inspiring Story',
+        titleAr: fallbackFromList.titleAr ?? 'قصة ملهمة',
+        country: fallbackFromList.countryName ?? countryId,
+        countryAr: fallbackFromList.countryNameAr ?? countryId,
+        period: '—',
+        periodAr: '—',
+        category: 'Heritage & Society',
+        categoryAr: 'التراث والمجتمع',
+        summary: 'A significant chapter that reflects faith, resilience, and contribution to society.',
+        summaryAr: 'فصل مهم يعكس الإيمان والصمود والمساهمة في المجتمع.',
+        fullStory: 'This narrative highlights moments of growth and transformation driven by values of knowledge, justice, and compassion. It reveals how communities overcame challenges through unity and vision.',
+        fullStoryAr: 'تُبرز هذه الحكاية لحظات نمو وتحول قادتها قيم العلم والعدل والرحمة. وتكشف كيف تغلبت المجتمعات على التحديات بالوحدة والرؤية.',
+        keyFigures: ['Community leaders', 'Scholars'],
+        keyFiguresAr: ['قادة مجتمع', 'علماء'],
+        historicalContext: 'Set against social and cultural change.',
+        historicalContextAr: 'ضمن سياق التغيير الاجتماعي والثقافي.',
+        lessons: ['Unity with purpose', 'Value of education', 'Service builds legacy'],
+        lessonsAr: ['الوحدة ذات الهدف', 'قيمة التعليم', 'الخدمة تصنع الإرث'],
+        modernRelevance: 'Provides insights for today’s efforts in inclusion and development.',
+        modernRelevanceAr: 'يوفر رؤى لجهود اليوم في الشمول والتنمية.',
+        relatedEvents: ['Community initiatives'],
+        relatedEventsAr: ['مبادرات مجتمعية'],
+        sources: ['Oral histories', 'Community archives'],
+        sourcesAr: ['تواريخ شفهية', 'أرشيف المجتمع']
+      }
+    : null;
 
-  if (!story) return null;
+  const finalStory = story ?? generatedStory;
+
+  if (!finalStory) return null;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-accent/20">

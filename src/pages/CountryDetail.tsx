@@ -829,446 +829,7 @@ const countryDetails: Record<string, CountryDetailData> = {
       ]
     }
   },
-  pakistan: {
-    id: 'pakistan',
-    name: 'Pakistan',
-    nameAr: 'باكستان',
-    flag: '🇵🇰',
-    population: '215 million',
-    percentage: '97%',
-    capital: 'Islamabad',
-    capitalAr: 'إسلام آباد',
-    language: 'Urdu',
-    languageAr: 'الأردية',
-    currency: 'Pakistani Rupee',
-    currencyAr: 'الروبية الباكستانية',
-    islamicHistory: {
-      arrival: 'Islam arrived in the region with Arab traders and later flourished under various Muslim dynasties',
-      arrivalAr: 'وصل الإسلام إلى المنطقة مع التجار العرب وازدهر لاحقاً تحت مختلف السلالات الإسلامية',
-      keyEvents: [
-        'Arrival of Islam in Sindh (8th century)',
-        'Delhi Sultanate period (1206-1526)',
-        'Mughal Empire rule (1526-1857)',
-        'Creation of Pakistan (1947)'
-      ],
-      keyEventsAr: [
-        'وصول الإسلام إلى السند (القرن الثامن)',
-        'فترة سلطنة دلهي (1206-1526)',
-        'حكم الإمبراطورية المغولية (1526-1857)',
-        'إنشاء باكستان (1947)'
-      ]
-    },
-    culturalContributions: {
-      title: 'Cultural & Religious Contributions',
-      titleAr: 'المساهمات الثقافية والدينية',
-      items: [
-        'Rich tradition of Islamic scholarship',
-        'Beautiful mosque architecture',
-        'Islamic art and calligraphy',
-        'Sufi traditions and poetry'
-      ],
-      itemsAr: [
-        'تقليد غني في العلوم الإسلامية',
-        'عمارة المساجد الجميلة',
-        'الفن الإسلامي والخط العربي',
-        'التقاليد الصوفية والشعر'
-      ]
-    },
-    modernChallenges: {
-      title: 'Modern Challenges & Opportunities',
-      titleAr: 'التحديات والفرص الحديثة',
-      items: [
-        'Economic development and stability',
-        'Education and youth empowerment',
-        'Regional cooperation and peace',
-        'Preservation of Islamic heritage'
-      ],
-      itemsAr: [
-        'التنمية الاقتصادية والاستقرار',
-        'التعليم وتمكين الشباب',
-        'التعاون الإقليمي والسلام',
-        'الحفاظ على التراث الإسلامي'
-      ]
-    },
-    inspiringFacts: {
-      title: 'Inspiring Facts',
-      titleAr: 'حقائق ملهمة',
-      facts: [
-        'Home to the world\'s highest peaks',
-        'Rich cultural and linguistic diversity',
-        'Strong tradition of Islamic education',
-        'Strategic location connecting Asia'
-      ],
-      factsAr: [
-        'موطن لأعلى قمم في العالم',
-        'تنوع ثقافي ولغوي غني',
-        'تقليد قوي في التعليم الإسلامي',
-        'موقع استراتيجي يربط آسيا'
-      ]
-    },
-    mosques: {
-      title: 'Famous Mosques',
-      titleAr: 'المساجد الشهيرة',
-      famous: [
-        'Faisal Mosque - Islamabad',
-        'Badshahi Mosque - Lahore',
-        'Wazir Khan Mosque - Lahore',
-        'Shah Jahan Mosque - Thatta'
-      ],
-      famousAr: [
-        'مسجد فيصل - إسلام آباد',
-        'مسجد بادشاهي - لاهور',
-        'مسجد وزير خان - لاهور',
-        'مسجد شاه جهان - تهته'
-      ]
-    },
-    education: {
-      title: 'Islamic Education',
-      titleAr: 'التعليم الإسلامي',
-      institutions: [
-        'International Islamic University Islamabad',
-        'University of Karachi',
-        'Religious schools and madrasas nationwide',
-        'Research centers for Islamic studies'
-      ],
-      institutionsAr: [
-        'الجامعة الإسلامية الدولية إسلام آباد',
-        'جامعة كراتشي',
-        'المدارس الدينية والكتاتيب في جميع أنحاء البلاد',
-        'مراكز البحث في الدراسات الإسلامية'
-      ]
-    }
-  },
-  turkey: {
-    id: 'turkey',
-    name: 'Turkey',
-    nameAr: 'تركيا',
-    flag: '🇹🇷',
-    population: '75 million',
-    percentage: '99%',
-    capital: 'Ankara',
-    capitalAr: 'أنقرة',
-    language: 'Turkish',
-    languageAr: 'التركية',
-    currency: 'Turkish Lira',
-    currencyAr: 'الليرة التركية',
-    islamicHistory: {
-      arrival: 'Islam arrived in Anatolia through Seljuk conquests, later flourishing under the Ottoman Empire',
-      arrivalAr: 'وصل الإسلام إلى الأناضول من خلال فتوحات السلاجقة، وازدهر لاحقاً تحت الإمبراطورية العثمانية',
-      keyEvents: [
-        'Seljuk conquest of Anatolia (1071)',
-        'Ottoman Empire period (1299-1923)',
-        'Conquest of Constantinople (1453)',
-        'Republic of Turkey (1923)'
-      ],
-      keyEventsAr: [
-        'فتح السلاجقة للأناضول (1071)',
-        'فترة الإمبراطورية العثمانية (1299-1923)',
-        'فتح القسطنطينية (1453)',
-        'جمهورية تركيا (1923)'
-      ]
-    },
-    culturalContributions: {
-      title: 'Cultural & Religious Contributions',
-      titleAr: 'المساهمات الثقافية والدينية',
-      items: [
-        'Ottoman architecture and art',
-        'Islamic calligraphy and miniature art',
-        'Sufi traditions and poetry',
-        'Bridge between East and West'
-      ],
-      itemsAr: [
-        'العمارة والفن العثماني',
-        'الخط الإسلامي وفن المنمنمات',
-        'التقاليد الصوفية والشعر',
-        'جسر بين الشرق والغرب'
-      ]
-    },
-    modernChallenges: {
-      title: 'Modern Challenges & Opportunities',
-      titleAr: 'التحديات والفرص الحديثة',
-      items: [
-        'Balancing secularism with Islamic values',
-        'Economic development and innovation',
-        'Regional leadership and diplomacy',
-        'Youth education and employment'
-      ],
-      itemsAr: [
-        'الموازنة بين العلمانية والقيم الإسلامية',
-        'التنمية الاقتصادية والابتكار',
-        'القيادة الإقليمية والدبلوماسية',
-        'تعليم وتوظيف الشباب'
-      ]
-    },
-    inspiringFacts: {
-      title: 'Inspiring Facts',
-      titleAr: 'حقائق ملهمة',
-      facts: [
-        'Home to the world\'s largest mosque complex',
-        'Rich history spanning three continents',
-        'Advanced technology and industry',
-        'Cultural bridge between civilizations'
-      ],
-      factsAr: [
-        'موطن لأكبر مجمع مساجد في العالم',
-        'تاريخ غني يمتد عبر ثلاث قارات',
-        'التكنولوجيا والصناعة المتقدمة',
-        'جسر ثقافي بين الحضارات'
-      ]
-    },
-    mosques: {
-      title: 'Famous Mosques',
-      titleAr: 'المساجد الشهيرة',
-      famous: [
-        'Hagia Sophia - Istanbul',
-        'Blue Mosque - Istanbul',
-        'Suleymaniye Mosque - Istanbul',
-        'Selimiye Mosque - Edirne'
-      ],
-      famousAr: [
-        'آيا صوفيا - إسطنبول',
-        'المسجد الأزرق - إسطنبول',
-        'مسجد سليمانية - إسطنبول',
-        'مسجد السليمية - أدرنة'
-      ]
-    },
-    education: {
-      title: 'Islamic Education',
-      titleAr: 'التعليم الإسلامي',
-      institutions: [
-        'Istanbul University',
-        'Ankara University',
-        'Religious schools and madrasas nationwide',
-        'Research centers for Islamic studies'
-      ],
-      institutionsAr: [
-        'جامعة إسطنبول',
-        'جامعة أنقرة',
-        'المدارس الدينية والكتاتيب في جميع أنحاء البلاد',
-        'مراكز البحث في الدراسات الإسلامية'
-      ]
-    }
-  },
-  iran: {
-    id: 'iran',
-    name: 'Iran',
-    nameAr: 'إيران',
-    flag: '🇮🇷',
-    population: '82 million',
-    percentage: '99%',
-    capital: 'Tehran',
-    capitalAr: 'طهران',
-    language: 'Persian',
-    languageAr: 'الفارسية',
-    currency: 'Iranian Rial',
-    currencyAr: 'الريال الإيراني',
-    islamicHistory: {
-      arrival: 'Islam arrived in Persia through Arab conquests, but Persian culture deeply influenced Islamic civilization',
-      arrivalAr: 'وصل الإسلام إلى فارس من خلال الفتوحات العربية، لكن الثقافة الفارسية أثرت بعمق في الحضارة الإسلامية',
-      keyEvents: [
-        'Arab conquest of Persia (651 CE)',
-        'Safavid Empire and Shia Islam (1501-1736)',
-        'Qajar dynasty period (1789-1925)',
-        'Islamic Revolution (1979)'
-      ],
-      keyEventsAr: [
-        'الفتح العربي لفارس (651 م)',
-        'الإمبراطورية الصفوية والإسلام الشيعي (1501-1736)',
-        'فترة سلالة القاجار (1789-1925)',
-        'الثورة الإسلامية (1979)'
-      ]
-    },
-    culturalContributions: {
-      title: 'Cultural & Religious Contributions',
-      titleAr: 'المساهمات الثقافية والدينية',
-      items: [
-        'Persian poetry and literature (Rumi, Hafez)',
-        'Islamic philosophy and theology',
-        'Persian miniature art and calligraphy',
-        'Sufi traditions and mystical poetry'
-      ],
-      itemsAr: [
-        'الشعر والأدب الفارسي (الرومي، حافظ)',
-        'الفلسفة واللاهوت الإسلامي',
-        'فن المنمنمات والخط الفارسي',
-        'التقاليد الصوفية والشعر الصوفي'
-      ]
-    },
-    modernChallenges: {
-      title: 'Modern Challenges & Opportunities',
-      titleAr: 'التحديات والفرص الحديثة',
-      items: [
-        'Balancing tradition with modernity',
-        'Scientific and technological advancement',
-        'Regional influence and diplomacy',
-        'Youth education and cultural preservation'
-      ],
-      itemsAr: [
-        'الموازنة بين التقليد والحداثة',
-        'التقدم العلمي والتكنولوجي',
-        'النفوذ الإقليمي والدبلوماسية',
-        'تعليم الشباب والحفاظ على الثقافة'
-      ]
-    },
-    inspiringFacts: {
-      title: 'Inspiring Facts',
-      titleAr: 'حقائق ملهمة',
-      facts: [
-        'Home to some of the world\'s most beautiful mosques',
-        'Rich tradition of Islamic philosophy and science',
-        'Persian poetry translated into many languages',
-        'Ancient cities with deep Islamic heritage'
-      ],
-      factsAr: [
-        'موطن لبعض أجمل مساجد العالم',
-        'تقليد غني في الفلسفة والعلوم الإسلامية',
-        'الشعر الفارسي مترجم إلى العديد من اللغات',
-        'مدن قديمة بتراث إسلامي عميق'
-      ]
-    },
-    mosques: {
-      title: 'Famous Mosques',
-      titleAr: 'المساجد الشهيرة',
-      famous: [
-        'Imam Mosque - Isfahan (Safavid masterpiece)',
-        'Shah Mosque - Isfahan (Blue tiles and architecture)',
-        'Nasir al-Mulk Mosque - Shiraz (Pink Mosque)',
-        'Vakil Mosque - Shiraz (Qajar era beauty)'
-      ],
-      famousAr: [
-        'مسجد الإمام - أصفهان (تحفة صفوية)',
-        'مسجد الشاه - أصفهان (البلاط الأزرق والعمارة)',
-        'مسجد ناصر الملك - شيراز (المسجد الوردي)',
-        'مسجد وكيل - شيراز (جمال عصر القاجار)'
-      ]
-    },
-    education: {
-      title: 'Islamic Education',
-      titleAr: 'التعليم الإسلامي',
-      institutions: [
-        'University of Tehran Faculty of Theology',
-        'Qom Seminary (Hawza)',
-        'Traditional madrasas and modern Islamic schools',
-        'Research centers for Islamic studies'
-      ],
-      institutionsAr: [
-        'كلية الإلهيات بجامعة طهران',
-        'الحوزة العلمية في قم',
-        'المدارس الدينية التقليدية والمدارس الإسلامية الحديثة',
-        'مراكز البحث في الدراسات الإسلامية'
-      ]
-    }
-  },
-  malaysia: {
-    id: 'malaysia',
-    name: 'Malaysia',
-    nameAr: 'ماليزيا',
-    flag: '🇲🇾',
-    population: '20 million',
-    percentage: '61%',
-    capital: 'Kuala Lumpur',
-    capitalAr: 'كوالا لومبور',
-    language: 'Malay',
-    languageAr: 'الملايو',
-    currency: 'Malaysian Ringgit',
-    currencyAr: 'الرينغيت الماليزي',
-    islamicHistory: {
-      arrival: 'Islam arrived in Malaysia through Arab and Indian traders, spreading peacefully through trade and cultural exchange',
-      arrivalAr: 'وصل الإسلام إلى ماليزيا عبر التجار العرب والهنود، منتشراً سلمياً عبر التجارة والتبادل الثقافي',
-      keyEvents: [
-        'Early Muslim traders in Malacca (1400s)',
-        'Establishment of Malacca Sultanate (1400)',
-        'Spread to other Malay kingdoms',
-        'Modern Islamic revival and development'
-      ],
-      keyEventsAr: [
-        'التجار المسلمون الأوائل في ملقا (1400s)',
-        'تأسيس سلطنة ملقا (1400)',
-        'الانتشار إلى الممالك الملايو الأخرى',
-        'النهضة الإسلامية الحديثة والتطوير'
-      ]
-    },
-    culturalContributions: {
-      title: 'Cultural & Religious Contributions',
-      titleAr: 'المساهمات الثقافية والدينية',
-      items: [
-        'Islamic banking and finance leadership',
-        'Multi-ethnic harmony and tolerance',
-        'Modern Islamic architecture',
-        'Educational excellence and innovation'
-      ],
-      itemsAr: [
-        'القيادة في المصرفية والتمويل الإسلامي',
-        'الوئام والتسامح متعدد الأعراق',
-        'العمارة الإسلامية الحديثة',
-        'التميز التعليمي والابتكار'
-      ]
-    },
-    modernChallenges: {
-      title: 'Modern Challenges & Opportunities',
-      titleAr: 'التحديات والفرص الحديثة',
-      items: [
-        'Balancing Islamic values with multicultural society',
-        'Economic development and Islamic finance',
-        'Youth education and religious identity',
-        'Regional leadership in Islamic cooperation'
-      ],
-      itemsAr: [
-        'الموازنة بين القيم الإسلامية والمجتمع متعدد الثقافات',
-        'التنمية الاقتصادية والتمويل الإسلامي',
-        'تعليم الشباب والهوية الدينية',
-        'القيادة الإقليمية في التعاون الإسلامي'
-      ]
-    },
-    inspiringFacts: {
-      title: 'Inspiring Facts',
-      titleAr: 'حقائق ملهمة',
-      facts: [
-        'Pioneer in Islamic banking and finance',
-        'Exemplary model of multi-ethnic harmony',
-        'Modern Islamic architecture and urban planning',
-        'Strong commitment to education and development'
-      ],
-      factsAr: [
-        'رائد في المصرفية والتمويل الإسلامي',
-        'نموذج مثالي للوئام متعدد الأعراق',
-        'العمارة الإسلامية الحديثة والتخطيط الحضري',
-        'التزام قوي بالتعليم والتنمية'
-      ]
-    },
-    mosques: {
-      title: 'Famous Mosques',
-      titleAr: 'المساجد الشهيرة',
-      famous: [
-        'National Mosque - Kuala Lumpur (Modern design)',
-        'Putra Mosque - Putrajaya (Pink granite beauty)',
-        'Crystal Mosque - Terengganu (Glass architecture)',
-        'Malacca Straits Mosque - Malacca (Floating mosque)'
-      ],
-      famousAr: [
-        'المسجد الوطني - كوالا لومبور (تصميم حديث)',
-        'مسجد بوترا - بوتراجايا (جمال الجرانيت الوردي)',
-        'مسجد الكريستال - ترينغانو (عمارة زجاجية)',
-        'مسجد مضيق ملقا - ملقا (مسجد عائم)'
-      ]
-    },
-    education: {
-      title: 'Islamic Education',
-      titleAr: 'التعليم الإسلامي',
-      institutions: [
-        'International Islamic University Malaysia',
-        'Universiti Sains Islam Malaysia',
-        'Islamic schools and madrasas nationwide',
-        'Research centers for Islamic studies'
-      ],
-      institutionsAr: [
-        'الجامعة الإسلامية الدولية ماليزيا',
-        'جامعة العلوم الإسلامية ماليزيا',
-        'المدارس الإسلامية والكتاتيب في جميع أنحاء البلاد',
-        'مراكز البحث في الدراسات الإسلامية'
-      ]
-    }
-  }
+  
 };
 
 export default function CountryDetail() {

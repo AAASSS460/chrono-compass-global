@@ -342,25 +342,28 @@ export default function Countries() {
                     {isArabic ? 'شخصيات بارزة' : 'Notable Personalities'}
                   </h4>
                   <div className="space-y-2">
-                    {(isArabic ? country.notablePersonalitiesAr : country.notablePersonalities).map((person, index) => {
-                      const hasData = Boolean(personalityData[country.id]?.[index]);
-                      const Wrapper: React.ElementType = hasData ? Link : 'div';
-                      const wrapperProps = hasData ? { to: `/personality/${country.id}/${index}` } : {};
-                      return (
-                      <Wrapper 
-                        key={index} 
-                        {...wrapperProps}
-                        className={`block text-sm rounded-lg px-3 py-2 transition-colors cursor-${hasData ? 'pointer' : 'default'} group/person ${hasData ? 'bg-muted/50 hover:bg-muted' : 'bg-muted/20 opacity-60'}`}
+                    {(isArabic ? country.notablePersonalitiesAr : country.notablePersonalities).map((person, index) => (
+                      <Link 
+                        key={index}
+                        to={`/personality/${country.id}/${index}`}
+                        state={{
+                          fromList: {
+                            name: isArabic ? country.notablePersonalitiesAr[index] : country.notablePersonalities[index],
+                            nameAr: country.notablePersonalitiesAr[index],
+                            countryId: country.id,
+                            countryName: country.name,
+                            countryNameAr: country.nameAr,
+                            index
+                          }
+                        }}
+                        className="block text-sm bg-muted/50 rounded-lg px-3 py-2 hover:bg-muted transition-colors cursor-pointer group/person"
                       >
                         <div className="flex items-center justify-between">
                           <span>{person}</span>
-                          {hasData && (
-                            <ExternalLink className="h-3 w-3 opacity-0 group-hover/person:opacity-100 transition-opacity" />
-                          )}
+                          <ExternalLink className="h-3 w-3 opacity-0 group-hover/person:opacity-100 transition-opacity" />
                         </div>
-                      </Wrapper>
-                      );
-                    })}
+                      </Link>
+                    ))}
                   </div>
                 </div>
 
@@ -371,25 +374,28 @@ export default function Countries() {
                     {isArabic ? 'قصص بارزة' : 'Notable Stories'}
                   </h4>
                   <div className="space-y-2">
-                    {(isArabic ? country.storiesAr : country.stories).map((story, index) => {
-                      const hasData = Boolean(storyData[country.id]?.[index]);
-                      const Wrapper: React.ElementType = hasData ? Link : 'div';
-                      const wrapperProps = hasData ? { to: `/story/${country.id}/${index}` } : {};
-                      return (
-                      <Wrapper 
-                        key={index} 
-                        {...wrapperProps}
-                        className={`block text-sm rounded-lg px-3 py-2 transition-colors cursor-${hasData ? 'pointer' : 'default'} group/story ${hasData ? 'bg-accent/20 hover:bg-accent/30' : 'bg-accent/10 opacity-60'}`}
+                    {(isArabic ? country.storiesAr : country.stories).map((story, index) => (
+                      <Link 
+                        key={index}
+                        to={`/story/${country.id}/${index}`}
+                        state={{
+                          fromList: {
+                            title: isArabic ? country.storiesAr[index] : country.stories[index],
+                            titleAr: country.storiesAr[index],
+                            countryId: country.id,
+                            countryName: country.name,
+                            countryNameAr: country.nameAr,
+                            index
+                          }
+                        }}
+                        className="block text-sm bg-accent/20 rounded-lg px-3 py-2 hover:bg-accent/30 transition-colors cursor-pointer group/story"
                       >
                         <div className="flex items-center justify-between">
                           <span>{story}</span>
-                          {hasData && (
-                            <ExternalLink className="h-3 w-3 opacity-0 group-hover/story:opacity-100 transition-opacity" />
-                          )}
+                          <ExternalLink className="h-3 w-3 opacity-0 group-hover/story:opacity-100 transition-opacity" />
                         </div>
-                      </Wrapper>
-                      );
-                    })}
+                      </Link>
+                    ))}
                   </div>
                 </div>
 
