@@ -9,18 +9,8 @@ import { Calculator, Calendar, RotateCcw, Gift } from 'lucide-react';
 import { calculateAge, type Age } from '@/utils/dateUtils';
 import { toast } from '@/hooks/use-toast';
 
-// Convert numbers to Arabic numerals
-function convertToArabicNumerals(num: number): string {
-  const arabicNumerals = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
-  return num.toString().replace(/\d/g, (d) => arabicNumerals[parseInt(d)]);
-}
-
-// Convert numbers to the specified locale
 function convertNumbers(num: number, locale: string): string {
-  if (locale === 'ar') {
-    return convertToArabicNumerals(num);
-  }
-  return num.toString();
+  return num.toLocaleString(locale);
 }
 
 export default function AgeCalculator() {
