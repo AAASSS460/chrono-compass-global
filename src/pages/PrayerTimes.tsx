@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Clock, MapPin, Sunrise, Sun, Sunset, Moon, Stars, Calendar, Globe, Compass } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 interface PrayerTimesData {
   Fajr: string;
@@ -28,6 +29,32 @@ interface QiblaData {
   distance: number;
 }
 
+const calculationMethods = [
+  { id: 3, name: "Muslim World League" },
+  { id: 2, name: "Islamic Society of North America (ISNA)" },
+  { id: 5, name: "Egyptian General Authority of Survey" },
+  { id: 4, name: "Umm Al-Qura University, Makkah" },
+  { id: 1, name: "University of Islamic Sciences, Karachi" },
+  { id: 7, name: "Institute of Geophysics, University of Tehran" },
+  { id: 0, name: "Shia Ithna-Ashari, Leva Institute, Qum" },
+  { id: 8, name: "Gulf Region" },
+  { id: 9, name: "Kuwait" },
+  { id: 10, name: "Qatar" },
+  { id: 11, name: "Majlis Ugama Islam Singapura, Singapore" },
+  { id: 12, name: "Union Organization Islamic de France" },
+  { id: 13, name: "Diyanet İşleri Başkanlığı, Turkey (experimental)" },
+  { id: 14, name: "Spiritual Administration of Muslims of Russia" },
+  { id: 15, name: "Moonsighting Committee Worldwide (Moonsighting.com)" },
+  { id: 16, name: "Dubai (experimental)" },
+  { id: 17, name: "Jabatan Kemajuan Islam Malaysia (JAKIM)" },
+  { id: 18, name: "Tunisia" },
+  { id: 19, name: "Algeria" },
+  { id: 20, name: "Kementerian Agama Republik Indonesia" },
+  { id: 21, name: "Morocco" },
+  { id: 22, name: "Comunidade Islamica de Lisboa" },
+  { id: 23, name: "Ministry of Awqaf, Islamic Affairs and Holy Places, Jordan" },
+];
+
 export default function PrayerTimes() {
   const { t, i18n } = useTranslation();
   const [prayerTimes, setPrayerTimes] = useState<PrayerTimesData | null>(null);
@@ -36,6 +63,7 @@ export default function PrayerTimes() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [nextPrayer, setNextPrayer] = useState<{ name: string; time: string; remaining: string } | null>(null);
+  const [selectedMethod, setSelectedMethod] = useState<number>(4); // Default to Umm Al-Qura (ID 4)
   const isArabic = i18n.language === 'ar';
 
   const getCurrentDate = () => {
@@ -93,14 +121,14 @@ export default function PrayerTimes() {
     };
   };
 
-  const fetchPrayerTimes = async (latitude: number, longitude: number) => {
+  const fetchPrayerTimes = async (latitude: number, longitude: number, method: number) => {
     try {
       setLoading(true);
       setError(null);
       
       const date = getCurrentDate();
       const response = await fetch(
-        `https://api.aladhan.com/v1/timings/${date}?latitude=${latitude}&longitude=${longitude}&method=4`
+        `https://api.aladhan.com/v1/timings/${date}?latitude=${latitude}&longitude=${longitude}&method=${method}`
       );
       
       if (!response.ok) {
@@ -168,7 +196,7 @@ export default function PrayerTimes() {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           const { latitude, longitude } = position.coords;
-          fetchPrayerTimes(latitude, longitude);
+          fetchPrayerTimes(latitude, longitude, selectedMethod);
         },
         (error) => {
           console.error('Geolocation error:', error);
@@ -178,7 +206,7 @@ export default function PrayerTimes() {
             variant: 'destructive'
           });
           // Fallback to Mecca coordinates
-          fetchPrayerTimes(24.4676039, 39.6054404);
+          fetchPrayerTimes(24.4676039, 39.6054404, selectedMethod);
         }
       );
     } else {
@@ -188,14 +216,18 @@ export default function PrayerTimes() {
         variant: 'destructive'
       });
       // Fallback to Mecca coordinates
-      fetchPrayerTimes(24.4676039, 39.6054404);
+      fetchPrayerTimes(24.4676039, 39.6054404, selectedMethod);
     }
   };
 
   useEffect(() => {
+    const savedMethod = localStorage.getItem('prayerCalculationMethod');
+    if (savedMethod) {
+      setSelectedMethod(parseInt(savedMethod));
+    }
     // Auto-request location on component mount
     requestLocation();
-  }, []);
+  }, [selectedMethod]);
 
   const formatTime = (time: string) => {
     const [hours, minutes] = time.split(':');
@@ -264,6 +296,24 @@ export default function PrayerTimes() {
               : 'Get accurate prayer times for your location with Qibla direction and countdown to next prayer'
             }
           </p>
+          <div className="mt-6 flex justify-center">
+            <Select onValueChange={(value) => {
+              setSelectedMethod(parseInt(value));
+              localStorage.setItem('prayerCalculationMethod', value);
+              requestLocation(); // Re-fetch prayer times with new method
+            }} value={selectedMethod.toString()}>
+              <SelectTrigger className="w-[240px]">
+                <SelectValue placeholder={t('prayer.calculationMethod')} />
+              </SelectTrigger>
+              <SelectContent>
+                {calculationMethods.map((method) => (
+                  <SelectItem key={method.id} value={method.id.toString()}>
+                    {method.name}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
         </div>
 
         {/* Location and Next Prayer Cards */}
@@ -385,7 +435,7 @@ export default function PrayerTimes() {
                   </CardDescription>
                 </div>
                 <Badge variant="outline" className="text-sm">
-                  {isArabic ? 'طريقة الحساب: أم القرى' : 'Method: Umm al-Qura'}
+                  {isArabic ? `طريقة الحساب: ${calculationMethods.find(m => m.id === selectedMethod)?.name || 'غير معروف'}` : `Method: ${calculationMethods.find(m => m.id === selectedMethod)?.name || 'Unknown'}`}
                 </Badge>
               </div>
             </CardHeader>

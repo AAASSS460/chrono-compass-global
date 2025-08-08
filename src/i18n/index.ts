@@ -90,6 +90,7 @@ const resources = {
       'prayer.error': 'Error loading prayer times',
       'prayer.enableLocation': 'Enable Location',
       'prayer.today': 'Today\'s Prayer Times',
+      'prayer.calculationMethod': 'Calculation Method',
       
       // Friday Duas
       'fridayDuas.title': 'Friday Duas',
@@ -249,6 +250,7 @@ const resources = {
       'prayer.error': 'خطأ في تحميل مواقيت الصلاة',
       'prayer.enableLocation': 'تفعيل الموقع',
       'prayer.today': 'مواقيت صلاة اليوم',
+      'prayer.calculationMethod': 'طريقة الحساب',
       
       // Friday Duas
       'fridayDuas.title': 'أدعية يوم الجمعة',
