@@ -287,6 +287,266 @@ const personalityData: Record<string, Record<number, PersonalityData>> = {
         'وثائقي: مالكوم إكس (فيلم 1992)'
       ]
     }
+  },
+  pakistan: {
+    0: {
+      name: 'Abul A\'la Maududi',
+      nameAr: 'أبو الأعلى المودودي',
+      country: 'Pakistan',
+      countryAr: 'باكستان',
+      birthYear: '1903',
+      deathYear: '1979',
+      era: 'Islamic Revival Movement',
+      eraAr: 'حركة النهضة الإسلامية',
+      title: 'Islamic Scholar and Political Thinker',
+      titleAr: 'عالم إسلامي ومفكر سياسي',
+      biography: 'Abul A\'la Maududi was a prominent Islamic scholar, journalist, and political philosopher who founded the Jamaat-e-Islami party. He advocated for an Islamic state based on Islamic principles and wrote extensively on Islamic governance, economics, and social issues.',
+      biographyAr: 'أبو الأعلى المودودي كان عالماً إسلامياً بارزاً وصحفياً وفيلسوفاً سياسياً أسس حزب الجماعة الإسلامية. دعا إلى دولة إسلامية مبنية على المبادئ الإسلامية وكتب بشكل واسع عن الحكم الإسلامي والاقتصاد والقضايا الاجتماعية.',
+      achievements: [
+        'Founded Jamaat-e-Islami (1941)',
+        'Authored over 120 books on Islamic topics',
+        'Influenced Islamic political thought globally',
+        'Established Islamic educational institutions',
+        'Advocated for Islamic banking and economics'
+      ],
+      achievementsAr: [
+        'أسس الجماعة الإسلامية (1941)',
+        'ألف أكثر من 120 كتاباً في المواضيع الإسلامية',
+        'أثر على الفكر السياسي الإسلامي عالمياً',
+        'أنشأ المؤسسات التعليمية الإسلامية',
+        'دعا إلى المصرفية والاقتصاد الإسلامي'
+      ],
+      quotes: [
+        'Islam is not a religion in the common sense of the word',
+        'The purpose of Islam is to establish a social order',
+        'Islamic state is not a theocracy but a democracy'
+      ],
+      quotesAr: [
+        'الإسلام ليس ديناً بالمعنى الشائع للكلمة',
+        'هدف الإسلام هو إقامة نظام اجتماعي',
+        'الدولة الإسلامية ليست ثيوقراطية بل ديمقراطية'
+      ],
+      legacy: 'Maududi\'s ideas continue to influence Islamic political thought and movements worldwide. His writings on Islamic governance and economics remain relevant for contemporary Muslim societies.',
+      legacyAr: 'تستمر أفكار المودودي في التأثير على الفكر والحركات السياسية الإسلامية عالمياً. كتاباته عن الحكم الإسلامي والاقتصاد تبقى ذات صلة للمجتمعات المسلمة المعاصرة.',
+      inspiringLessons: [
+        'Importance of intellectual leadership in Islamic revival',
+        'Balance between tradition and modern governance',
+        'Comprehensive approach to Islamic reform',
+        'Scholarly activism for social change'
+      ],
+      inspiringLessonsAr: [
+        'أهمية القيادة الفكرية في النهضة الإسلامية',
+        'التوازن بين التقليد والحكم الحديث',
+        'النهج الشامل للإصلاح الإسلامي',
+        'النشاط العلمي من أجل التغيير الاجتماعي'
+      ],
+      relatedWorks: [
+        'Towards Understanding Islam',
+        'Islamic Law and Constitution',
+        'The Islamic Way of Life',
+        'Economic System of Islam'
+      ],
+      relatedWorksAr: [
+        'نحو فهم الإسلام',
+        'القانون والدستور الإسلامي',
+        'الطريقة الإسلامية للحياة',
+        'النظام الاقتصادي في الإسلام'
+      ]
+    },
+    1: {
+      name: 'Allama Iqbal',
+      nameAr: 'علامة إقبال',
+      country: 'Pakistan',
+      countryAr: 'باكستان',
+      birthYear: '1877',
+      deathYear: '1938',
+      era: 'Poetry and Philosophy',
+      eraAr: 'الشعر والفلسفة',
+      title: 'Poet, Philosopher, and National Poet of Pakistan',
+      titleAr: 'شاعر وفيلسوف والشاعر الوطني لباكستان',
+      biography: 'Allama Iqbal was a renowned poet, philosopher, and politician who is considered the spiritual father of Pakistan. His poetry in Urdu and Persian inspired the Pakistan Movement and emphasized the revival of Islamic thought and culture.',
+      biographyAr: 'علامة إقبال كان شاعراً وفيلسوفاً وسياسياً مشهوراً يعتبر الأب الروحي لباكستان. شعره بالأردية والفارسية ألهم حركة باكستان وأكد على إحياء الفكر والثقافة الإسلامية.',
+      achievements: [
+        'National poet of Pakistan',
+        'Inspired Pakistan Movement',
+        'Revolutionary Islamic philosophy',
+        'Master of Urdu and Persian poetry',
+        'Advocated for Muslim unity and identity'
+      ],
+      achievementsAr: [
+        'الشاعر الوطني لباكستان',
+        'ألهم حركة باكستان',
+        'فلسفة إسلامية ثورية',
+        'أستاذ الشعر الأردي والفارسي',
+        'دعا إلى وحدة الهوية المسلمة'
+      ],
+      quotes: [
+        'Khudi ko kar buland itna ke har taqdeer se pehle',
+        'The ultimate aim of the ego is not to see something, but to be something',
+        'Islam is itself destiny and will not suffer destiny'
+      ],
+      quotesAr: [
+        'اجعل نفسك عالية جداً حتى قبل كل قدر',
+        'الهدف النهائي للأنا ليس رؤية شيء بل أن تكون شيئاً',
+        'الإسلام نفسه قدر ولن يعاني من القدر'
+      ],
+      legacy: 'Iqbal\'s poetry and philosophy continue to inspire Muslims worldwide. His vision of a modern Islamic society that balances tradition with progress remains relevant.',
+      legacyAr: 'يستمر شعر وفلسفة إقبال في إلهام المسلمين عالمياً. رؤيته لمجتمع إسلامي حديث يوازن بين التقليد والتقدم تبقى ذات صلة.',
+      inspiringLessons: [
+        'Power of poetry in social and political change',
+        'Importance of self-realization and khudi',
+        'Balance between Islamic tradition and modernity',
+        'Unity of Muslim ummah'
+      ],
+      inspiringLessonsAr: [
+        'قوة الشعر في التغيير الاجتماعي والسياسي',
+        'أهمية تحقيق الذات والخودي',
+        'التوازن بين التقليد الإسلامي والحداثة',
+        'وحدة الأمة المسلمة'
+      ],
+      relatedWorks: [
+        'Bang-e-Dara (The Call of the Marching Bell)',
+        'Zarb-e-Kalim (The Rod of Moses)',
+        'Javed Nama (Book of Eternity)',
+        'Reconstruction of Religious Thought in Islam'
+      ],
+      relatedWorksAr: [
+        'بانگ درا (نداء الجرس المتقدم)',
+        'ضرب كليم (عصا موسى)',
+        'جاويد نامه (كتاب الخلود)',
+        'إعادة بناء الفكر الديني في الإسلام'
+      ]
+    }
+  },
+  turkey: {
+    0: {
+      name: 'Sultan Mehmed II',
+      nameAr: 'السلطان محمد الثاني',
+      country: 'Turkey',
+      countryAr: 'تركيا',
+      birthYear: '1432',
+      deathYear: '1481',
+      era: 'Ottoman Empire',
+      eraAr: 'الإمبراطورية العثمانية',
+      title: 'The Conqueror (Fatih Sultan Mehmed)',
+      titleAr: 'الفاتح (فاتح سلطان محمد)',
+      biography: 'Mehmed II, known as Mehmed the Conqueror, was the Ottoman Sultan who conquered Constantinople in 1453, ending the Byzantine Empire. He was a patron of arts, sciences, and Islamic scholarship, transforming Istanbul into a major cultural center.',
+      biographyAr: 'محمد الثاني، المعروف بمحمد الفاتح، كان السلطان العثماني الذي فتح القسطنطينية عام 1453، منهياً الإمبراطورية البيزنطية. كان راعياً للفنون والعلوم والعلوم الإسلامية، محولاً إسطنبول إلى مركز ثقافي رئيسي.',
+      achievements: [
+        'Conquered Constantinople (1453)',
+        'Ended Byzantine Empire',
+        'Established Istanbul as Ottoman capital',
+        'Patron of arts and sciences',
+        'Built numerous mosques and institutions'
+      ],
+      achievementsAr: [
+        'فتح القسطنطينية (1453)',
+        'أنهى الإمبراطورية البيزنطية',
+        'أسس إسطنبول كعاصمة عثمانية',
+        'راعٍ للفنون والعلوم',
+        'بنى العديد من المساجد والمؤسسات'
+      ],
+      quotes: [
+        'Either I shall conquer Constantinople or Constantinople shall conquer me',
+        'The sword and the pen are the two eyes of the sultan',
+        'I am not a sultan of the sword, but a sultan of the pen'
+      ],
+      quotesAr: [
+        'إما أن أفهم القسطنطينية أو تفهمني القسطنطينية',
+        'السيف والقلم هما عينا السلطان',
+        'لست سلطان السيف بل سلطان القلم'
+      ],
+      legacy: 'Mehmed II\'s conquest of Constantinople marked the beginning of a new era in world history. His patronage of arts and sciences helped preserve and develop Islamic culture during the Ottoman period.',
+      legacyAr: 'فتح محمد الثاني للقسطنطينية مثل بداية عصر جديد في تاريخ العالم. رعايته للفنون والعلوم ساعدت في الحفاظ على الثقافة الإسلامية وتطويرها خلال الفترة العثمانية.',
+      inspiringLessons: [
+        'Strategic vision and military leadership',
+        'Patronage of arts and sciences',
+        'Tolerance and cultural diversity',
+        'Legacy of conquest and civilization'
+      ],
+      inspiringLessonsAr: [
+        'الرؤية الاستراتيجية والقيادة العسكرية',
+        'رعاية الفنون والعلوم',
+        'التسامح والتنوع الثقافي',
+        'إرث الفتح والحضارة'
+      ],
+      relatedWorks: [
+        'Topkapi Palace - Istanbul',
+        'Fatih Mosque Complex',
+        'Ottoman architectural legacy',
+        'Islamic calligraphy and art'
+      ],
+      relatedWorksAr: [
+        'قصر طوب كابي - إسطنبول',
+        'مجمع مسجد الفاتح',
+        'إرث العمارة العثمانية',
+        'الخط العربي والفن الإسلامي'
+      ]
+    },
+    1: {
+      name: 'Mustafa Kemal Atatürk',
+      nameAr: 'مصطفى كمال أتاتورك',
+      country: 'Turkey',
+      countryAr: 'تركيا',
+      birthYear: '1881',
+      deathYear: '1938',
+      era: 'Modern Turkey',
+      eraAr: 'تركيا الحديثة',
+      title: 'Founder of Modern Turkey',
+      titleAr: 'مؤسس تركيا الحديثة',
+      biography: 'Mustafa Kemal Atatürk was the founder and first President of the Republic of Turkey. He led the Turkish War of Independence and implemented sweeping reforms to modernize Turkey, including secularization, women\'s rights, and educational reforms.',
+      biographyAr: 'مصطفى كمال أتاتورك كان مؤسس وأول رئيس لجمهورية تركيا. قاد حرب الاستقلال التركية ونفذ إصلاحات شاملة لتحديث تركيا، بما في ذلك العلمنة وحقوق المرأة والإصلاحات التعليمية.',
+      achievements: [
+        'Led Turkish War of Independence (1919-1923)',
+        'Founded Republic of Turkey (1923)',
+        'Implemented secular reforms',
+        'Established modern education system',
+        'Granted women voting rights (1934)'
+      ],
+      achievementsAr: [
+        'قاد حرب الاستقلال التركية (1919-1923)',
+        'أسس جمهورية تركيا (1923)',
+        'نفذ الإصلاحات العلمانية',
+        'أنشأ نظام التعليم الحديث',
+        'منح النساء حق التصويت (1934)'
+      ],
+      quotes: [
+        'Peace at home, peace in the world',
+        'The truest mentor in life is science',
+        'Sovereignty belongs to the people unconditionally'
+      ],
+      quotesAr: [
+        'السلام في الداخل، السلام في العالم',
+        'أصدق مرشد في الحياة هو العلم',
+        'السيادة تنتمي للشعب بلا شروط'
+      ],
+      legacy: 'Atatürk\'s reforms transformed Turkey into a modern, secular nation while preserving its cultural heritage. His vision of a modern Turkish state continues to influence the country\'s development.',
+      legacyAr: 'إصلاحات أتاتورك حولت تركيا إلى أمة حديثة وعلمانية مع الحفاظ على تراثها الثقافي. رؤيته للدولة التركية الحديثة تستمر في التأثير على تطور البلاد.',
+      inspiringLessons: [
+        'Leadership in times of crisis and change',
+        'Balance between tradition and modernity',
+        'Importance of education and science',
+        'National unity and independence'
+      ],
+      inspiringLessonsAr: [
+        'القيادة في أوقات الأزمات والتغيير',
+        'التوازن بين التقليد والحداثة',
+        'أهمية التعليم والعلم',
+        'الوحدة الوطنية والاستقلال'
+      ],
+      relatedWorks: [
+        'Republic of Turkey Constitution',
+        'Modern Turkish education system',
+        'Secular reforms and institutions',
+        'Turkish nationalism and identity'
+      ],
+      relatedWorksAr: [
+        'دستور جمهورية تركيا',
+        'نظام التعليم التركي الحديث',
+        'الإصلاحات والمؤسسات العلمانية',
+        'القومية والهوية التركية'
+      ]
+    }
   }
 };
 

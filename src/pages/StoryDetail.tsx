@@ -292,6 +292,208 @@ const storyData: Record<string, Record<number, StoryData>> = {
         'دراسات أكاديمية حول الإسلام في أمريكا وحركة الحقوق المدنية'
       ]
     }
+  },
+  pakistan: {
+    0: {
+      title: 'Partition and Independence',
+      titleAr: 'التقسيم والاستقلال',
+      country: 'Pakistan',
+      countryAr: 'باكستان',
+      period: '1947',
+      periodAr: '1947',
+      category: 'National Independence',
+      categoryAr: 'الاستقلال الوطني',
+      summary: 'The dramatic story of Pakistan\'s creation as a homeland for Muslims of the Indian subcontinent, marking one of the largest mass migrations in human history.',
+      summaryAr: 'القصة الدرامية لإنشاء باكستان كوطن للمسلمين في شبه القارة الهندية، مما مثل واحدة من أكبر الهجرات الجماعية في تاريخ البشرية.',
+      fullStory: 'In the aftermath of World War II, the Indian subcontinent stood at a crossroads. The British Empire, weakened by war, was preparing to leave India. However, the question of how to govern a region with such diverse religious and cultural communities became increasingly urgent.\n\nMuhammad Ali Jinnah, the leader of the All-India Muslim League, argued passionately for a separate homeland for Muslims. He believed that Muslims, as a distinct community with their own culture, traditions, and way of life, needed their own state to flourish and practice their faith freely.\n\nThe demand for Pakistan was not born out of hatred for other communities, but from a deep desire for self-determination and the preservation of Islamic identity. Jinnah\'s vision was of a modern, democratic state where Muslims could live according to their values while respecting the rights of all citizens.\n\nWhen the British finally announced their intention to leave India in 1947, the subcontinent was divided into two nations: India and Pakistan. This partition triggered one of the largest mass migrations in human history, as millions of people moved across the new borders to join their religious communities.\n\nThe creation of Pakistan on August 14, 1947, was a moment of both joy and sorrow. While Muslims celebrated the birth of their homeland, the human cost of partition was enormous. Families were separated, homes were lost, and countless lives were affected by the violence that accompanied the division.\n\nDespite the challenges, Pakistan emerged as a beacon of hope for Muslims worldwide. It demonstrated that Muslims could establish and govern their own modern state, balancing Islamic values with contemporary governance. The country\'s founding principles of faith, unity, and discipline continue to guide its development.',
+      fullStoryAr: 'في أعقاب الحرب العالمية الثانية، وقفت شبه القارة الهندية عند مفترق طرق. الإمبراطورية البريطانية، المضعفة من الحرب، كانت تستعد لمغادرة الهند. ومع ذلك، أصبح السؤال حول كيفية حكم منطقة بمجتمعات دينية وثقافية متنوعة للغاية ملحاً بشكل متزايد.\n\nجادل محمد علي جناح، زعيم عصبة مسلمي عموم الهند، بحماس من أجل وطن منفصل للمسلمين. اعتقد أن المسلمين، كمجتمع متميز بثقافتهم وتقاليدهم وأسلوب حياتهم الخاص، يحتاجون إلى دولتهم الخاصة ليزدهروا ويمارسوا إيمانهم بحرية.\n\nلم يولد طلب باكستان من كراهية المجتمعات الأخرى، بل من رغبة عميقة في تقرير المصير والحفاظ على الهوية الإسلامية. كانت رؤية جناح لدولة حديثة وديمقراطية حيث يمكن للمسلمين العيش وفقاً لقيمهم مع احترام حقوق جميع المواطنين.\n\nعندما أعلن البريطانيون أخيراً نيتهم في مغادرة الهند عام 1947، تم تقسيم شبه القارة إلى دولتين: الهند وباكستان. أثار هذا التقسيم واحدة من أكبر الهجرات الجماعية في تاريخ البشرية، حيث انتقل ملايين الأشخاص عبر الحدود الجديدة للانضمام إلى مجتمعاتهم الدينية.\n\nكان إنشاء باكستان في 14 أغسطس 1947 لحظة من الفرح والحزن. بينما احتفل المسلمون بميلاد وطنهم، كانت التكلفة البشرية للتقسيم هائلة. تم فصل العائلات، وفقدت المنازل، وتأثرت حياة لا تحصى بالعنف الذي رافق التقسيم.\n\nعلى الرغم من التحديات، ظهرت باكستان كمنارة أمل للمسلمين في جميع أنحاء العالم. أثبتت أن المسلمين يمكنهم إنشاء وحكم دولتهم الحديثة الخاصة، موازنين القيم الإسلامية مع الحكم المعاصر. مبادئ البلاد التأسيسية للإيمان والوحدة والانضباط تستمر في توجيه تطورها.',
+      keyFigures: [
+        'Muhammad Ali Jinnah (Quaid-e-Azam)',
+        'Allama Iqbal (Spiritual Father)',
+        'Liaquat Ali Khan (First Prime Minister)',
+        'Sir Syed Ahmad Khan (Educational Pioneer)'
+      ],
+      keyFiguresAr: [
+        'محمد علي جناح (قائد الأعظم)',
+        'علامة إقبال (الأب الروحي)',
+        'لياقت علي خان (أول رئيس وزراء)',
+        'السير سيد أحمد خان (رائد التعليم)'
+      ],
+      historicalContext: 'The partition of India was one of the most significant events of the 20th century, reshaping the political and cultural landscape of South Asia. It occurred against the backdrop of decolonization and the rise of nationalist movements.',
+      historicalContextAr: 'كان تقسيم الهند أحد أهم أحداث القرن العشرين، مما أعاد تشكيل المشهد السياسي والثقافي لجنوب آسيا. حدث ذلك على خلفية إنهاء الاستعمار وصعود الحركات القومية.',
+      lessons: [
+        'Importance of self-determination for religious communities',
+        'Complexity of nation-building in diverse societies',
+        'Human cost of political decisions',
+        'Balance between religious identity and modern governance'
+      ],
+      lessonsAr: [
+        'أهمية تقرير المصير للمجتمعات الدينية',
+        'تعقيد بناء الأمة في المجتمعات المتنوعة',
+        'التكلفة البشرية للقرارات السياسية',
+        'التوازن بين الهوية الدينية والحكم الحديث'
+      ],
+      modernRelevance: 'Pakistan\'s creation continues to inspire discussions about religious freedom, minority rights, and the relationship between faith and governance. It serves as a case study in nation-building and the challenges of creating inclusive societies.',
+      modernRelevanceAr: 'يستمر إنشاء باكستان في إلهام المناقشات حول الحرية الدينية وحقوق الأقليات والعلاقة بين الإيمان والحكم. إنه بمثابة دراسة حالة في بناء الأمة وتحديات إنشاء مجتمعات شاملة.',
+      relatedEvents: [
+        'All-India Muslim League formation (1906)',
+        'Lahore Resolution (1940)',
+        'Mountbatten Plan (1947)',
+        'Independence Day (August 14, 1947)'
+      ],
+      relatedEventsAr: [
+        'تأسيس عصبة مسلمي عموم الهند (1906)',
+        'قرار لاهور (1940)',
+        'خطة مونتباتن (1947)',
+        'يوم الاستقلال (14 أغسطس 1947)'
+      ],
+      sources: [
+        'Jinnah\'s speeches and writings',
+        'Official documents of partition',
+        'Historical accounts of migration',
+        'Academic studies on nation-building'
+      ],
+      sourcesAr: [
+        'خطب وكتابات جناح',
+        'الوثائق الرسمية للتقسيم',
+        'الحسابات التاريخية للهجرة',
+        'الدراسات الأكاديمية حول بناء الأمة'
+      ]
+    },
+    1: {
+      title: 'Islamic Scholarship Tradition',
+      titleAr: 'تقليد العلوم الإسلامية',
+      country: 'Pakistan',
+      countryAr: 'باكستان',
+      period: '8th Century - Present',
+      periodAr: 'القرن الثامن - الحاضر',
+      category: 'Intellectual Heritage',
+      categoryAr: 'التراث الفكري',
+      summary: 'The rich tradition of Islamic scholarship in Pakistan, from the early Sufi saints to modern Islamic universities, preserving and developing Islamic knowledge.',
+      summaryAr: 'التقليد الغني للعلوم الإسلامية في باكستان، من الأولياء الصوفيين الأوائل إلى الجامعات الإسلامية الحديثة، الحفاظ على المعرفة الإسلامية وتطويرها.',
+      fullStory: 'Pakistan\'s Islamic scholarship tradition is one of the richest and most diverse in the Muslim world. This intellectual heritage spans over a thousand years, beginning with the arrival of Islam in the region and continuing to the present day.\n\nThe foundation of this tradition was laid by early Muslim scholars and Sufi saints who arrived in the Indian subcontinent. These spiritual and intellectual pioneers established madrasas (Islamic schools) and khanqahs (Sufi centers) that became centers of learning and spiritual development.\n\nAmong the most influential early figures was Data Ganj Bakhsh, whose shrine in Lahore remains a major center of spiritual pilgrimage. His teachings emphasized the inner dimensions of Islam, combining rigorous scholarship with spiritual insight.\n\nThe tradition continued to flourish during the Mughal period, when emperors like Akbar and Aurangzeb patronized Islamic learning. Great scholars like Shah Waliullah Dehlawi worked to preserve and systematize Islamic knowledge, writing comprehensive works on various Islamic sciences.\n\nIn the modern era, Pakistan has become home to some of the world\'s most prestigious Islamic educational institutions. The International Islamic University in Islamabad, for example, attracts students from around the world, offering programs that combine traditional Islamic learning with modern academic methods.\n\nThis scholarly tradition is not limited to religious studies alone. Pakistani Islamic scholars have made significant contributions to fields as diverse as philosophy, medicine, astronomy, and literature. Their work demonstrates that Islamic scholarship can be both deeply traditional and thoroughly modern.\n\nThe tradition continues to evolve, with contemporary scholars addressing new challenges while remaining rooted in classical Islamic learning. This balance between tradition and innovation ensures that Pakistan\'s Islamic scholarship remains relevant and vibrant.',
+      fullStoryAr: 'تقليد العلوم الإسلامية في باكستان هو واحد من أغنى وأكثر تنوعاً في العالم الإسلامي. يمتد هذا التراث الفكري لأكثر من ألف عام، بدءاً من وصول الإسلام إلى المنطقة واستمراراً حتى يومنا هذا.\n\nتم وضع أساس هذا التقليد من قبل العلماء المسلمين الأوائل والأولياء الصوفيين الذين وصلوا إلى شبه القارة الهندية. أسس هؤلاء الرواد الروحيون والفكريون المدارس الدينية والخوانق (مراكز صوفية) التي أصبحت مراكز للتعلم والتطور الروحي.\n\nمن بين أكثر الشخصيات المبكرة تأثيراً كان داتا غنج بخش، الذي يبقى ضريحه في لاهور مركزاً رئيسياً للحج الروحي. ركزت تعاليمه على الأبعاد الداخلية للإسلام، مدمجة العلوم الصارمة مع البصيرة الروحية.\n\nاستمر التقليد في الازدهار خلال الفترة المغولية، عندما رعى الأباطرة مثل أكبر وأورنجزيب التعلم الإسلامي. عمل علماء عظام مثل شاه ولي الله الدهلوي للحفاظ على المعرفة الإسلامية وتنظيمها، مؤلفين أعمالاً شاملة في مختلف العلوم الإسلامية.\n\nفي العصر الحديث، أصبحت باكستان موطناً لبعض أعرق المؤسسات التعليمية الإسلامية في العالم. الجامعة الإسلامية الدولية في إسلام آباد، على سبيل المثال، تجذب طلاباً من جميع أنحاء العالم، مقدمة برامج تجمع بين التعلم الإسلامي التقليدي والطرق الأكاديمية الحديثة.\n\nهذا التقليد العلمي لا يقتصر على الدراسات الدينية وحدها. قدم العلماء المسلمون الباكستانيون مساهمات مهمة في مجالات متنوعة مثل الفلسفة والطب والفلك والأدب. عملهم يظهر أن العلوم الإسلامية يمكن أن تكون تقليدية عميقة وحديثة تماماً.\n\nيستمر التقليد في التطور، مع معالجة العلماء المعاصرين لتحديات جديدة مع البقاء متجذرين في التعلم الإسلامي الكلاسيكي. هذا التوازن بين التقليد والابتكار يضمن أن العلوم الإسلامية الباكستانية تبقى ذات صلة ونابضة بالحياة.',
+      keyFigures: [
+        'Data Ganj Bakhsh (Sufi Saint)',
+        'Shah Waliullah Dehlawi (Scholar)',
+        'Abul A\'la Maududi (Modern Thinker)',
+        'Contemporary Islamic scholars'
+      ],
+      keyFiguresAr: [
+        'داتا غنج بخش (ولي صوفي)',
+        'شاه ولي الله الدهلوي (عالم)',
+        'أبو الأعلى المودودي (مفكر حديث)',
+        'العلماء المسلمون المعاصرون'
+      ],
+      historicalContext: 'Islamic scholarship in the region has evolved through various historical periods, adapting to changing circumstances while maintaining core Islamic values and methodologies.',
+      historicalContextAr: 'تطورت العلوم الإسلامية في المنطقة عبر فترات تاريخية مختلفة، متكيفة مع الظروف المتغيرة مع الحفاظ على القيم والمنهجيات الإسلامية الأساسية.',
+      lessons: [
+        'Enduring value of traditional Islamic learning',
+        'Adaptability of Islamic scholarship to modern contexts',
+        'Importance of preserving intellectual heritage',
+        'Balance between tradition and innovation'
+      ],
+      lessonsAr: [
+        'القيمة الدائمة للتعلم الإسلامي التقليدي',
+        'قدرة العلوم الإسلامية على التكيف مع السياقات الحديثة',
+        'أهمية الحفاظ على التراث الفكري',
+        'التوازن بين التقليد والابتكار'
+      ],
+      modernRelevance: 'Pakistan\'s Islamic scholarship tradition provides a model for how traditional learning can remain relevant in the modern world, offering insights into education, spirituality, and intellectual development.',
+      modernRelevanceAr: 'يوفر تقليد العلوم الإسلامية الباكستاني نموذجاً لكيفية بقاء التعلم التقليدي ذا صلة في العالم الحديث، مقدماً رؤى في التعليم والروحانية والتطور الفكري.',
+      relatedEvents: [
+        'Arrival of Islam in Sindh (8th century)',
+        'Establishment of early madrasas',
+        'Mughal patronage of learning',
+        'Modern Islamic universities'
+      ],
+      relatedEventsAr: [
+        'وصول الإسلام إلى السند (القرن الثامن)',
+        'تأسيس المدارس الدينية المبكرة',
+        'رعاية المغول للتعلم',
+        'الجامعات الإسلامية الحديثة'
+      ],
+      sources: [
+        'Classical Islamic texts and commentaries',
+        'Biographies of Sufi saints',
+        'Modern Islamic scholarship',
+        'University archives and records'
+      ],
+      sourcesAr: [
+        'النصوص والتعليقات الإسلامية الكلاسيكية',
+        'سير الأولياء الصوفيين',
+        'العلوم الإسلامية الحديثة',
+        'أرشيف الجامعات والسجلات'
+      ]
+    }
+  },
+  turkey: {
+    0: {
+      title: 'Ottoman Empire Glory',
+      titleAr: 'مجد الإمبراطورية العثمانية',
+      country: 'Turkey',
+      countryAr: 'تركيا',
+      period: '1299-1922',
+      periodAr: '1299-1922',
+      category: 'Imperial History',
+      categoryAr: 'التاريخ الإمبراطوري',
+      summary: 'The rise and fall of the Ottoman Empire, one of the most powerful and influential Islamic empires in history, spanning six centuries of rule.',
+      summaryAr: 'صعود وسقوط الإمبراطورية العثمانية، إحدى أقوى وأكثر الإمبراطوريات الإسلامية تأثيراً في التاريخ، ممتدة على ستة قرون من الحكم.',
+      fullStory: 'The Ottoman Empire began as a small principality in northwestern Anatolia in 1299, founded by Osman I. What started as a modest Turkish state grew into one of the most powerful and longest-lasting empires in world history, spanning three continents and ruling over diverse peoples and cultures.\n\nThe empire\'s golden age came during the reign of Suleiman the Magnificent (1520-1566), when it reached its greatest territorial extent. The Ottomans controlled much of southeastern Europe, western Asia, and northern Africa, creating a truly global empire that connected East and West.\n\nWhat made the Ottoman Empire unique was its ability to govern such a diverse population. The empire was home to Muslims, Christians, Jews, and people of many other faiths. Rather than forcing conversion, the Ottomans developed a sophisticated system of religious tolerance, allowing different communities to govern themselves according to their own laws and customs.\n\nThe empire was also a center of learning and culture. Ottoman scholars made significant contributions to fields as diverse as astronomy, medicine, mathematics, and literature. The empire\'s architectural achievements, particularly in mosques and palaces, remain among the most beautiful in the world.\n\nHowever, by the 19th century, the empire began to decline. Internal corruption, external pressure from European powers, and the rise of nationalism among subject peoples all contributed to its weakening. The empire\'s participation in World War I on the side of Germany and Austria-Hungary proved disastrous.\n\nThe final blow came in 1922, when the Turkish War of Independence led by Mustafa Kemal Atatürk resulted in the abolition of the sultanate and the establishment of the Republic of Turkey. While the empire was gone, its legacy continues to influence the modern world in countless ways.',
+      fullStoryAr: 'بدأت الإمبراطورية العثمانية كإمارة صغيرة في شمال غرب الأناضول عام 1299، أسسها عثمان الأول. ما بدأ كدولة تركية متواضعة نما إلى واحدة من أقوى وأطول الإمبراطوريات في تاريخ العالم، ممتدة على ثلاث قارات وحاكمة على شعوب وثقافات متنوعة.\n\nجاء العصر الذهبي للإمبراطورية خلال حكم سليمان القانوني (1520-1566)، عندما وصلت إلى أقصى امتداد إقليمي لها. سيطر العثمانيون على معظم جنوب شرق أوروبا وغرب آسيا وشمال إفريقيا، مخلقين إمبراطورية عالمية حقيقية تربط الشرق والغرب.\n\nما جعل الإمبراطورية العثمانية فريدة هو قدرتها على حكم مثل هذا السكان المتنوعين. كانت الإمبراطورية موطناً للمسلمين والمسيحيين واليهود وأشخاص من أديان أخرى عديدة. بدلاً من إجبار التحول، طور العثمانيون نظاماً متطوراً من التسامح الديني، مما سمح للمجتمعات المختلفة بحكم أنفسهم وفقاً لقوانينهم وعاداتهم الخاصة.\n\nكانت الإمبراطورية أيضاً مركزاً للتعلم والثقافة. قدم العلماء العثمانيون مساهمات مهمة في مجالات متنوعة مثل الفلك والطب والرياضيات والأدب. الإنجازات المعمارية للإمبراطورية، خاصة في المساجد والقصور، تبقى من أجمل ما في العالم.\n\nومع ذلك، بحلول القرن التاسع عشر، بدأت الإمبراطورية في التراجع. الفساد الداخلي والضغط الخارجي من القوى الأوروبية وصعود القومية بين الشعوب الخاضعة كلها ساهمت في إضعافها. مشاركة الإمبراطورية في الحرب العالمية الأولى إلى جانب ألمانيا والنمسا-المجر أثبتت كارثية.\n\nجاء الضربة النهائية عام 1922، عندما أدت حرب الاستقلال التركية بقيادة مصطفى كمال أتاتورك إلى إلغاء السلطنة وتأسيس جمهورية تركيا. بينما ذهبت الإمبراطورية، إرثها يستمر في التأثير على العالم الحديث بطرق لا تحصى.',
+      keyFigures: [
+        'Osman I (Founder)',
+        'Mehmed II (The Conqueror)',
+        'Suleiman the Magnificent',
+        'Selim I (The Grim)'
+      ],
+      keyFiguresAr: [
+        'عثمان الأول (المؤسس)',
+        'محمد الثاني (الفاتح)',
+        'سليمان القانوني',
+        'سليم الأول (القاطع)'
+      ],
+      historicalContext: 'The Ottoman Empire emerged during a period of great change in the Islamic world, as the Abbasid Caliphate was declining and new powers were emerging in Anatolia and the Balkans.',
+      historicalContextAr: 'ظهرت الإمبراطورية العثمانية خلال فترة تغيير كبير في العالم الإسلامي، حيث كانت الخلافة العباسية في تراجع وقوى جديدة كانت تظهر في الأناضول والبلقان.',
+      lessons: [
+        'Importance of tolerance in governing diverse populations',
+        'Balance between military power and cultural achievement',
+        'Adaptability and resilience of political systems',
+        'Legacy of empire and its impact on modern states'
+      ],
+      lessonsAr: [
+        'أهمية التسامح في حكم السكان المتنوعين',
+        'التوازن بين القوة العسكرية والإنجاز الثقافي',
+        'القدرة على التكيف والمرونة للأنظمة السياسية',
+        'إرث الإمبراطورية وتأثيرها على الدول الحديثة'
+      ],
+      modernRelevance: 'The Ottoman Empire\'s approach to governance, particularly its system of religious tolerance and cultural diversity, offers valuable lessons for modern multicultural societies and international relations.',
+      modernRelevanceAr: 'نهج الإمبراطورية العثمانية في الحكم، خاصة نظام التسامح الديني والتنوع الثقافي، يقدم دروساً قيمة للمجتمعات متعددة الثقافات والعلاقات الدولية الحديثة.',
+      relatedEvents: [
+        'Fall of Constantinople (1453)',
+        'Battle of Lepanto (1571)',
+        'Siege of Vienna (1683)',
+        'Tanzimat reforms (1839-1876)'
+      ],
+      relatedEventsAr: [
+        'سقوط القسطنطينية (1453)',
+        'معركة ليبانتو (1571)',
+        'حصار فيينا (1683)',
+        'إصلاحات التنظيمات (1839-1876)'
+      ],
+      sources: [
+        'Ottoman chronicles and official documents',
+        'European diplomatic reports',
+        'Archaeological evidence',
+        'Modern historical scholarship'
+      ],
+      sourcesAr: [
+        'السجلات العثمانية والوثائق الرسمية',
+        'التقارير الدبلوماسية الأوروبية',
+        'الأدلة الأثرية',
+        'العلوم التاريخية الحديثة'
+      ]
+    }
   }
 };
 
