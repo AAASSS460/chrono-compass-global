@@ -846,30 +846,70 @@ export const storyData: Record<string, Record<number, StoryData>> = {
       sourcesAr: ['السيرة النبوية', 'كتب الحديث']
     },
     1: {
-      title: 'Unification of Saudi Arabia',
-      titleAr: 'توحيد المملكة العربية السعودية',
+      title: 'The Two Holy Mosques Expansion',
+      titleAr: 'توسعة الحرمين الشريفين',
       country: 'Saudi Arabia',
       countryAr: 'المملكة العربية السعودية',
-      period: '1902-1932',
-      periodAr: '1902-1932',
-      category: 'State Formation',
-      categoryAr: 'تكوين الدولة',
-      summary: 'From scattered regions to a unified state under a shared identity and service to the Holy Sites.',
-      summaryAr: 'من أقاليم متفرقة إلى دولة موحّدة بهوية مشتركة وخدمة للحرمين.',
-      fullStory: 'Campaigns, alliances, and institution building formed the modern state and its services for pilgrims.',
-      fullStoryAr: 'حملات وتحالفات وبناء مؤسسات شكّلت الدولة الحديثة وخدماتها للحجاج.',
-      keyFigures: ['King Abdulaziz'],
-      keyFiguresAr: ['الملك عبد العزيز'],
-      historicalContext: 'Post-Ottoman Arabian Peninsula.',
-      historicalContextAr: 'شبه الجزيرة العربية بعد العثمانيين.',
-      lessons: ['Unity, service, stability'],
-      lessonsAr: ['الوحدة والخدمة والاستقرار'],
-      modernRelevance: 'Foundation for contemporary development.',
-      modernRelevanceAr: 'أساس للتنمية المعاصرة.',
-      relatedEvents: ['Institution building'],
-      relatedEventsAr: ['بناء مؤسسات'],
-      sources: ['Historical records'],
-      sourcesAr: ['سجلات تاريخية']
+      period: '1955 - Present',
+      periodAr: '1955م - حتى اليوم',
+      category: 'Sacred Architecture',
+      categoryAr: 'العمارة المقدسة',
+      summary: 'The remarkable expansion of the Grand Mosque in Mecca and the Prophet\'s Mosque in Medina to accommodate millions of pilgrims.',
+      summaryAr: 'التوسعة الرائعة للمسجد الحرام في مكة والمسجد النبوي في المدينة لاستيعاب ملايين الحجاج.',
+      fullStory: 'Since the establishment of modern Saudi Arabia, successive rulers have undertaken massive expansion projects of the Two Holy Mosques. These projects represent the largest construction efforts in Islamic history, combining traditional Islamic architecture with modern engineering.\n\nThe Grand Mosque expansions began under King Abdul Aziz in 1955 and continued through multiple phases, culminating in the current expansion under King Salman, which can accommodate over 2.5 million worshippers. The projects have preserved the sanctity of the sites while incorporating modern amenities like air conditioning, advanced crowd management systems, and accessibility features.\n\nSimilarly, the Prophet\'s Mosque in Medina has undergone several expansions, with the most recent phase featuring retractable umbrellas and marble courtyards. These expansions reflect the Kingdom\'s commitment to serving the global Muslim community and facilitating the Hajj and Umrah pilgrimages.\n\nThe projects employed Islamic architectural principles while utilizing cutting-edge technology, creating spaces that honor tradition while meeting contemporary needs. The expansions have enabled millions more Muslims to perform their religious obligations in comfort and safety.',
+      fullStoryAr: 'منذ تأسيس المملكة العربية السعودية الحديثة، قام الحكام المتعاقبون بمشاريع توسعة ضخمة للحرمين الشريفين. تمثل هذه المشاريع أكبر جهود البناء في التاريخ الإسلامي، مدمجة العمارة الإسلامية التقليدية مع الهندسة الحديثة.\n\nبدأت توسعات المسجد الحرام في عهد الملك عبد العزيز عام 1955 واستمرت عبر مراحل متعددة، بلغت ذروتها في التوسعة الحالية في عهد الملك سلمان، والتي يمكنها استيعاب أكثر من 2.5 مليون مصلٍ. حافظت المشاريع على قدسية المواقع مع دمج وسائل الراحة الحديثة مثل تكييف الهواء وأنظمة إدارة الحشود المتقدمة وميزات الوصول.\n\nوبالمثل، خضع المسجد النبوي في المدينة لعدة توسعات، مع أحدث مرحلة تتميز بالمظلات القابلة للطي والأفنية الرخامية. تعكس هذه التوسعات التزام المملكة بخدمة المجتمع الإسلامي العالمي وتسهيل رحلات الحج والعمرة.\n\nوظفت المشاريع مبادئ العمارة الإسلامية مع استخدام التكنولوجيا المتطورة، مما خلق مساحات تكرم التقليد مع تلبية الاحتياجات المعاصرة. مكنت التوسعات ملايين أكثر من المسلمين من أداء واجباتهم الدينية بالراحة والأمان.',
+      keyFigures: [
+        'King Abdul Aziz (First expansion initiative)',
+        'King Fahd (Major expansion architect)',
+        'King Abdullah (Modernization efforts)',
+        'King Salman (Current expansion oversight)'
+      ],
+      keyFiguresAr: [
+        'الملك عبد العزيز (مبادرة التوسعة الأولى)',
+        'الملك فهد (مهندس التوسعة الكبرى)',
+        'الملك عبد الله (جهود التحديث)',
+        'الملك سلمان (إشراف التوسعة الحالية)'
+      ],
+      historicalContext: 'The expansions coincided with the growth of global Muslim population and increased accessibility of air travel, leading to exponential growth in pilgrimage numbers requiring larger facilities.',
+      historicalContextAr: 'تزامنت التوسعات مع نمو السكان المسلمين العالميين وزيادة إمكانية الوصول للسفر الجوي، مما أدى إلى نمو أعداد الحجاج بشكل هائل مما تطلب مرافق أكبر.',
+      lessons: [
+        'Balance tradition with modernization',
+        'Service to the global Ummah',
+        'Architecture as worship',
+        'Planning for future generations'
+      ],
+      lessonsAr: [
+        'التوازن بين التقليد والتحديث',
+        'خدمة الأمة الإسلامية العالمية',
+        'العمارة كعبادة',
+        'التخطيط للأجيال القادمة'
+      ],
+      modernRelevance: 'The expansions demonstrate how Islamic heritage can be preserved while embracing modern technology and engineering solutions for contemporary challenges.',
+      modernRelevanceAr: 'تُظهر التوسعات كيف يمكن الحفاظ على التراث الإسلامي مع احتضان التكنولوجيا الحديثة والحلول الهندسية للتحديات المعاصرة.',
+      relatedEvents: [
+        'First Saudi Expansion (1955-1973)',
+        'King Fahd Expansion (1982-1988)',
+        'King Abdullah Expansion (2007-2015)',
+        'King Salman Expansion (2015-ongoing)'
+      ],
+      relatedEventsAr: [
+        'التوسعة السعودية الأولى (1955-1973)',
+        'توسعة الملك فهد (1982-1988)',
+        'توسعة الملك عبد الله (2007-2015)',
+        'توسعة الملك سلمان (2015-مستمرة)'
+      ],
+      sources: [
+        'Saudi Ministry of Hajj and Umrah records',
+        'Architectural documentation',
+        'Pilgrimage statistics',
+        'Historical chronicles'
+      ],
+      sourcesAr: [
+        'سجلات وزارة الحج والعمرة السعودية',
+        'التوثيق المعماري',
+        'إحصائيات الحج',
+        'السجلات التاريخية'
+      ]
     }
   },
   malaysia: {
@@ -1269,22 +1309,22 @@ export default function StoryDetail() {
               <BookOpen className="h-12 w-12 text-white" />
             </div>
             <h1 className="text-4xl font-bold mb-4">
-              {isArabic ? story.titleAr : story.title}
+              {isArabic ? finalStory.titleAr : finalStory.title}
             </h1>
             <p className="text-xl text-muted-foreground mb-6 max-w-2xl mx-auto">
-              {isArabic ? story.summaryAr : story.summary}
+              {isArabic ? finalStory.summaryAr : finalStory.summary}
             </p>
             <div className="flex justify-center gap-3 flex-wrap">
               <Badge variant="secondary" className="flex items-center gap-1">
                 <MapPin className="h-3 w-3" />
-                {isArabic ? story.countryAr : story.country}
+                {isArabic ? finalStory.countryAr : finalStory.country}
               </Badge>
               <Badge variant="outline" className="flex items-center gap-1">
                 <Calendar className="h-3 w-3" />
-                {isArabic ? story.periodAr : story.period}
+                {isArabic ? finalStory.periodAr : finalStory.period}
               </Badge>
               <Badge variant="outline">
-                {isArabic ? story.categoryAr : story.category}
+                {isArabic ? finalStory.categoryAr : finalStory.category}
               </Badge>
             </div>
           </div>
@@ -1300,7 +1340,7 @@ export default function StoryDetail() {
           </CardHeader>
           <CardContent>
             <p className="text-lg leading-relaxed">
-              {isArabic ? story.historicalContextAr : story.historicalContext}
+              {isArabic ? finalStory.historicalContextAr : finalStory.historicalContext}
             </p>
           </CardContent>
         </Card>
@@ -1315,7 +1355,7 @@ export default function StoryDetail() {
           </CardHeader>
           <CardContent>
             <div className="prose prose-lg max-w-none dark:prose-invert">
-              {(isArabic ? story.fullStoryAr : story.fullStory).split('\n\n').map((paragraph, index) => (
+              {(isArabic ? finalStory.fullStoryAr : finalStory.fullStory).split('\n\n').map((paragraph, index) => (
                 <p key={index} className="mb-6 text-lg leading-relaxed">
                   {paragraph}
                 </p>
@@ -1334,7 +1374,7 @@ export default function StoryDetail() {
           </CardHeader>
           <CardContent>
             <div className="grid gap-3 md:grid-cols-2">
-              {(isArabic ? story.keyFiguresAr : story.keyFigures).map((figure, index) => (
+              {(isArabic ? finalStory.keyFiguresAr : finalStory.keyFigures).map((figure, index) => (
                 <div key={index} className="flex items-start gap-3 bg-accent/20 rounded-lg p-4">
                   <Star className="h-5 w-5 text-amber-500 mt-0.5 flex-shrink-0" />
                   <span className="font-medium">{figure}</span>
@@ -1356,7 +1396,7 @@ export default function StoryDetail() {
             </CardHeader>
             <CardContent>
               <div className="space-y-3">
-                {(isArabic ? story.lessonsAr : story.lessons).map((lesson, index) => (
+                {(isArabic ? finalStory.lessonsAr : finalStory.lessons).map((lesson, index) => (
                   <div key={index} className="flex items-start gap-2">
                     <div className="w-2 h-2 rounded-full bg-green-500 mt-2 flex-shrink-0" />
                     <span className="text-sm">{lesson}</span>
@@ -1376,7 +1416,7 @@ export default function StoryDetail() {
             </CardHeader>
             <CardContent>
               <div className="space-y-3">
-                {(isArabic ? story.relatedEventsAr : story.relatedEvents).map((event, index) => (
+                {(isArabic ? finalStory.relatedEventsAr : finalStory.relatedEvents).map((event, index) => (
                   <div key={index} className="bg-primary/10 rounded-lg p-3">
                     <span className="text-sm font-medium">{event}</span>
                   </div>
@@ -1396,7 +1436,7 @@ export default function StoryDetail() {
           </CardHeader>
           <CardContent>
             <p className="text-lg leading-relaxed">
-              {isArabic ? story.modernRelevanceAr : story.modernRelevance}
+              {isArabic ? finalStory.modernRelevanceAr : finalStory.modernRelevance}
             </p>
           </CardContent>
         </Card>
@@ -1411,7 +1451,7 @@ export default function StoryDetail() {
           </CardHeader>
           <CardContent>
             <div className="grid gap-2 md:grid-cols-2">
-              {(isArabic ? story.sourcesAr : story.sources).map((source, index) => (
+              {(isArabic ? finalStory.sourcesAr : finalStory.sources).map((source, index) => (
                 <div key={index} className="text-sm bg-muted/50 rounded-lg px-3 py-2">
                   {source}
                 </div>
