@@ -17,7 +17,7 @@ const resources = {
       'nav.about': 'About Us',
       'nav.contact': 'Contact Us',
       'nav.privacyPolicy': 'Privacy Policy',
-      'nav.language': 'Language',
+                  'nav.language': 'اللغة',
       
       // Common
       'common.convert': 'Convert',
@@ -329,7 +329,7 @@ const resources = {
       'nav.about': 'À Propos',
       'nav.contact': 'Contact',
       'nav.privacyPolicy': 'Politique de Confidentialité',
-      'nav.language': 'Langue',
+            'nav.language': 'Langue',
       
       // Common
       'common.convert': 'Convertir',
