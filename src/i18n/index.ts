@@ -147,6 +147,13 @@ const resources = {
       'home.muslimsAroundTheWorld.title': 'Muslims Around the World',
       'home.muslimsAroundTheWorld.description': 'Discover Muslim communities, personalities, and stories from different countries',
       
+      // Footer
+      'footer.company': 'Company',
+      'footer.tools': 'Tools',
+      'footer.connect': 'Connect',
+      'footer.description': 'ChronoCompass is a comprehensive platform offering a suite of Islamic tools and resources.',
+      'footer.allRightsReserved': 'All rights reserved.',
+      
       // Quran
       'quran.title': 'Holy Quran',
       'quran.subtitle': 'Read the Holy Quran with beautiful Arabic text and easy navigation',
@@ -307,6 +314,13 @@ const resources = {
       'home.multilingualDesc': 'جميع الأدوات متوفرة باللغات العربية والإنجليزية والفرنسية والإسبانية لخدمة المسلمين حول العالم',
       'home.muslimsAroundTheWorld.title': 'مسلمون حول العالم',
       'home.muslimsAroundTheWorld.description': 'اكتشف المجتمعات والشخصيات والقصص الإسلامية من مختلف البلدان',
+      
+      // Footer
+      'footer.company': 'الشركة',
+      'footer.tools': 'الأدوات',
+      'footer.connect': 'تواصل معنا',
+      'footer.description': 'ChronoCompass هي منصة شاملة تقدم مجموعة من الأدوات والموارد الإسلامية.',
+      'footer.allRightsReserved': 'جميع الحقوق محفوظة.',
       
       // Quran
       'quran.title': 'القرآن الكريم',
