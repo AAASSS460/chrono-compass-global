@@ -59,6 +59,9 @@ const calculationMethods = [
 export default function CountryPrayerTimes() {
   const { t, i18n } = useTranslation();
   const { country, city } = useParams<{ country: string; city: string }>();
+
+  console.log("Country from URL params:", country);
+  console.log("City from URL params:", city);
   const [prayerTimes, setPrayerTimes] = useState<PrayerTimesData | null>(null);
   const [locationData, setLocationData] = useState<LocationData | null>(null);
   const [qibla, setQibla] = useState<QiblaData | null>(null);
