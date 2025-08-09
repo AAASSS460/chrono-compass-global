@@ -43,7 +43,7 @@ export default function CountriesPrayerTimesList() {
                   {cities.map((city) => (
                     <li key={city.city}>
                       <Link 
-                        to={`/prayer-times/${city.country}/${city.city}`}
+                        to={`/prayer-times/${encodeURIComponent(city.country)}/${encodeURIComponent(city.city)}`}
                         className="block p-3 rounded-lg hover:bg-muted transition-colors"
                       >
                         <span className="font-medium">{isArabic ? city.cityAr : city.city}</span>
