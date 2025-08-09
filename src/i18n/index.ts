@@ -20,6 +20,8 @@ const resources = {
                   'nav.language': 'اللغة',
       'nav.countries': 'Muslims Around the World',
       'nav.countriesPrayerTimes': 'Prayer Times by Country',
+      'nav.asmaulHusna': '99 Names of Allah',
+      'nav.hisnulMuslim': 'Hisnul Muslim',
       
       // Common
       'common.convert': 'Convert',
@@ -188,6 +190,8 @@ const resources = {
       'nav.language': 'اللغة',
       'nav.countries': 'مسلمون حول العالم',
       'nav.countriesPrayerTimes': 'مواقيت الصلاة حسب الدولة',
+      'nav.asmaulHusna': 'أسماء الله الحسنى',
+      'nav.hisnulMuslim': 'حصن المسلم',
       
       // Common
       'common.convert': 'تحويل',

@@ -24,6 +24,8 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
 import CountryPrayerTimes from "./pages/CountryPrayerTimes";
 import CountriesPrayerTimesList from "./pages/CountriesPrayerTimesList";
+import AsmaulHusna from "./pages/AsmaulHusna";
+import HisnulMuslim from "./pages/HisnulMuslim";
 import "./i18n";
 
 const queryClient = new QueryClient();
@@ -56,6 +58,8 @@ const App = () => (
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/prayer-times/:country/:city" element={<CountryPrayerTimes />} />
               <Route path="/countries-prayer-times" element={<CountriesPrayerTimesList />} />
+              <Route path="/asmaul-husna" element={<AsmaulHusna />} />
+              <Route path="/hisnul-muslim" element={<HisnulMuslim />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
