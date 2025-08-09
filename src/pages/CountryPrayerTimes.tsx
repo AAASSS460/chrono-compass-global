@@ -175,12 +175,21 @@ export default function CountryPrayerTimes() {
   useEffect(() => {
     if (city && country) {
       const savedMethod = localStorage.getItem('prayerCalculationMethod');
-      if (savedMethod) {
-        setSelectedMethod(parseInt(savedMethod));
+      let initialMethod = 4; // Default to Umm Al-Qura
+
+      const currentCityData = citiesData.find(c => c.city === city && c.country === country);
+      if (currentCityData && currentCityData.recommendedMethodId) {
+        initialMethod = currentCityData.recommendedMethodId;
       }
-      fetchPrayerTimesByCity(city, country, selectedMethod);
+
+      if (savedMethod) {
+        initialMethod = parseInt(savedMethod);
+      }
+      
+      setSelectedMethod(initialMethod);
+      fetchPrayerTimesByCity(city, country, initialMethod);
     }
-  }, [city, country, selectedMethod]);
+  }, [city, country]); // Removed selectedMethod from dependency array to prevent infinite loop
 
   const formatTime = (time: string) => {
     const [hours, minutes] = time.split(':');

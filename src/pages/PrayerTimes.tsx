@@ -196,7 +196,22 @@ export default function PrayerTimes() {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           const { latitude, longitude } = position.coords;
-          fetchPrayerTimes(latitude, longitude, selectedMethod);
+          // Find the closest city from citiesData to suggest a method
+          let closestCityMethod = 4; // Default to Umm Al-Qura
+          let minDistance = Infinity;
+
+          citiesData.forEach(cityData => {
+            // This requires cityData to have lat/long, which it currently doesn't.
+            // For now, we'll just use a general default or rely on user selection.
+            // A more robust solution would involve a geocoding API to get lat/long for all citiesData.
+            // Or, pre-populate citiesData with lat/long.
+            // For simplicity, we'll just use the saved method or default.
+          });
+
+          const savedMethod = localStorage.getItem('prayerCalculationMethod');
+          const initialMethod = savedMethod ? parseInt(savedMethod) : closestCityMethod;
+          setSelectedMethod(initialMethod);
+          fetchPrayerTimes(latitude, longitude, initialMethod);
         },
         (error) => {
           console.error('Geolocation error:', error);
@@ -206,7 +221,10 @@ export default function PrayerTimes() {
             variant: 'destructive'
           });
           // Fallback to Mecca coordinates
-          fetchPrayerTimes(24.4676039, 39.6054404, selectedMethod);
+          const savedMethod = localStorage.getItem('prayerCalculationMethod');
+          const initialMethod = savedMethod ? parseInt(savedMethod) : 4; // Default to Umm Al-Qura
+          setSelectedMethod(initialMethod);
+          fetchPrayerTimes(24.4676039, 39.6054404, initialMethod);
         }
       );
     } else {
@@ -216,18 +234,16 @@ export default function PrayerTimes() {
         variant: 'destructive'
       });
       // Fallback to Mecca coordinates
-      fetchPrayerTimes(24.4676039, 39.6054404, selectedMethod);
+      const savedMethod = localStorage.getItem('prayerCalculationMethod');
+      const initialMethod = savedMethod ? parseInt(savedMethod) : 4; // Default to Umm Al-Qura
+      setSelectedMethod(initialMethod);
+      fetchPrayerTimes(24.4676039, 39.6054404, initialMethod);
     }
   };
 
   useEffect(() => {
-    const savedMethod = localStorage.getItem('prayerCalculationMethod');
-    if (savedMethod) {
-      setSelectedMethod(parseInt(savedMethod));
-    }
-    // Auto-request location on component mount
     requestLocation();
-  }, [selectedMethod]);
+  }, []); // Removed selectedMethod from dependency array to prevent infinite loop
 
   const formatTime = (time: string) => {
     const [hours, minutes] = time.split(':');
