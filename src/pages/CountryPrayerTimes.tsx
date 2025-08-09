@@ -178,16 +178,12 @@ export default function CountryPrayerTimes() {
 
   useEffect(() => {
     if (city && country) {
-      const savedMethod = localStorage.getItem('prayerCalculationMethod');
+      // Find the recommended method for this city/country
+      const currentCityData = citiesData.find(c => c.city === city && c.country === country);
       let initialMethod = 4; // Default to Umm Al-Qura
 
-      const currentCityData = citiesData.find(c => c.city === city && c.country === country);
       if (currentCityData && currentCityData.recommendedMethodId) {
         initialMethod = currentCityData.recommendedMethodId;
-      }
-
-      if (savedMethod) {
-        initialMethod = parseInt(savedMethod);
       }
       
       setSelectedMethod(initialMethod);
@@ -266,6 +262,9 @@ export default function CountryPrayerTimes() {
             <Select onValueChange={(value) => {
               setSelectedMethod(parseInt(value));
               localStorage.setItem('prayerCalculationMethod', value);
+              if (city && country) {
+                fetchPrayerTimesByCity(city, country, parseInt(value));
+              }
             }} value={selectedMethod.toString()}>
               <SelectTrigger className="w-[240px]">
                 <SelectValue placeholder={t('prayer.calculationMethod')} />
@@ -467,6 +466,22 @@ export default function CountryPrayerTimes() {
                   : 'Fetching prayer times for the specified location'
                 }
               </p>
+            </CardContent>
+          </Card>
+        )}
+
+        {/* Calculation Method Source Info */}
+        {prayerTimes && !loading && (
+          <Card className="mt-6 shadow-lg border-0 bg-gradient-to-br from-muted/50 to-accent/5">
+            <CardContent className="p-4">
+              <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+                <Badge variant="outline" className="text-xs">
+                  {isArabic ? 'المصدر' : 'Source'}
+                </Badge>
+                <span className="font-medium">
+                  {calculationMethods.find(m => m.id === selectedMethod)?.name || 'Unknown Method'}
+                </span>
+              </div>
             </CardContent>
           </Card>
         )}

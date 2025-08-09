@@ -195,24 +195,55 @@ export default function PrayerTimes() {
   const requestLocation = () => {
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition(
-        (position) => {
+        async (position) => {
           const { latitude, longitude } = position.coords;
-          // Find the closest city from citiesData to suggest a method
-          let closestCityMethod = 4; // Default to Umm Al-Qura
-          let minDistance = Infinity;
-
-          citiesData.forEach(cityData => {
-            // This requires cityData to have lat/long, which it currently doesn't.
-            // For now, we'll just use a general default or rely on user selection.
-            // A more robust solution would involve a geocoding API to get lat/long for all citiesData.
-            // Or, pre-populate citiesData with lat/long.
-            // For simplicity, we'll just use the saved method or default.
-          });
-
-          const savedMethod = localStorage.getItem('prayerCalculationMethod');
-          const initialMethod = savedMethod ? parseInt(savedMethod) : closestCityMethod;
-          setSelectedMethod(initialMethod);
-          fetchPrayerTimes(latitude, longitude, initialMethod);
+          
+          // Try to get location info first to determine best method
+          try {
+            const locationResponse = await fetch(
+              `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`
+            );
+            
+            if (locationResponse.ok) {
+              const locationData = await locationResponse.json();
+              const detectedCity = locationData.city || locationData.locality;
+              const detectedCountry = locationData.countryName;
+              
+              // Find matching city in our data to get recommended method
+              let recommendedMethod = 4; // Default to Umm Al-Qura
+              const matchingCity = citiesData.find(c => 
+                c.city.toLowerCase() === detectedCity?.toLowerCase() && 
+                c.country.toLowerCase() === detectedCountry?.toLowerCase()
+              );
+              
+              if (matchingCity) {
+                recommendedMethod = matchingCity.recommendedMethodId;
+              } else {
+                // Try to match by country only
+                const matchingCountry = citiesData.find(c => 
+                  c.country.toLowerCase() === detectedCountry?.toLowerCase()
+                );
+                if (matchingCountry) {
+                  recommendedMethod = matchingCountry.recommendedMethodId;
+                }
+              }
+              
+              setSelectedMethod(recommendedMethod);
+              fetchPrayerTimes(latitude, longitude, recommendedMethod);
+            } else {
+              // Fallback if location detection fails
+              const savedMethod = localStorage.getItem('prayerCalculationMethod');
+              const initialMethod = savedMethod ? parseInt(savedMethod) : 4;
+              setSelectedMethod(initialMethod);
+              fetchPrayerTimes(latitude, longitude, initialMethod);
+            }
+          } catch (error) {
+            console.error('Location detection error:', error);
+            const savedMethod = localStorage.getItem('prayerCalculationMethod');
+            const initialMethod = savedMethod ? parseInt(savedMethod) : 4;
+            setSelectedMethod(initialMethod);
+            fetchPrayerTimes(latitude, longitude, initialMethod);
+          }
         },
         (error) => {
           console.error('Geolocation error:', error);
@@ -225,7 +256,7 @@ export default function PrayerTimes() {
           const savedMethod = localStorage.getItem('prayerCalculationMethod');
           const initialMethod = savedMethod ? parseInt(savedMethod) : 4; // Default to Umm Al-Qura
           setSelectedMethod(initialMethod);
-          fetchPrayerTimes(24.4676039, 39.6054404, initialMethod);
+          fetchPrayerTimes(21.3891, 39.8579, initialMethod); // Mecca coordinates
         }
       );
     } else {
@@ -238,7 +269,7 @@ export default function PrayerTimes() {
       const savedMethod = localStorage.getItem('prayerCalculationMethod');
       const initialMethod = savedMethod ? parseInt(savedMethod) : 4; // Default to Umm Al-Qura
       setSelectedMethod(initialMethod);
-      fetchPrayerTimes(24.4676039, 39.6054404, initialMethod);
+      fetchPrayerTimes(21.3891, 39.8579, initialMethod); // Mecca coordinates
     }
   };
 
@@ -528,6 +559,22 @@ export default function PrayerTimes() {
                 <MapPin className="h-5 w-5" />
                 {isArabic ? 'تفعيل الموقع' : 'Enable Location'}
               </Button>
+            </CardContent>
+          </Card>
+        )}
+
+        {/* Calculation Method Source Info */}
+        {prayerTimes && !loading && (
+          <Card className="mt-6 shadow-lg border-0 bg-gradient-to-br from-muted/50 to-accent/5">
+            <CardContent className="p-4">
+              <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+                <Badge variant="outline" className="text-xs">
+                  {isArabic ? 'المصدر' : 'Source'}
+                </Badge>
+                <span className="font-medium">
+                  {calculationMethods.find(m => m.id === selectedMethod)?.name || 'Unknown Method'}
+                </span>
+              </div>
             </CardContent>
           </Card>
         )}
