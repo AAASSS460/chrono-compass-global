@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Clock, MapPin, Sunrise, Sun, Sunset, Moon, Stars, Calendar, Globe, Compass } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { citiesData } from '@/data/cities';
 
 interface PrayerTimesData {
   Fajr: string;
