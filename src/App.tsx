@@ -26,6 +26,7 @@ import CountryPrayerTimes from "./pages/CountryPrayerTimes";
 import CountriesPrayerTimesList from "./pages/CountriesPrayerTimesList";
 import AsmaulHusna from "./pages/AsmaulHusna";
 import HisnulMuslim from "./pages/HisnulMuslim";
+import DuaDetail from "./pages/DuaDetail";
 import "./i18n";
 
 const queryClient = new QueryClient();
@@ -60,6 +61,7 @@ const App = () => (
               <Route path="/countries-prayer-times" element={<CountriesPrayerTimesList />} />
               <Route path="/asmaul-husna" element={<AsmaulHusna />} />
               <Route path="/hisnul-muslim" element={<HisnulMuslim />} />
+              <Route path="/hisnul-muslim/:title" element={<DuaDetail />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
@@ -72,5 +74,3 @@ const App = () => (
 );
 
 export default App;
-
-
