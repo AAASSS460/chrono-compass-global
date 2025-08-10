@@ -1483,21 +1483,23 @@ export const personalityData: Record<string, Record<number, PersonalityData>> = 
   }
 };
 
+interface LocationState {
+  fromList?: {
+    name?: string;
+    nameAr?: string;
+    countryId?: string;
+    countryName?: string;
+    countryNameAr?: string;
+    index?: number;
+  };
+}
+
 export default function PersonalityDetail() {
   const { countryId, personalityIndex } = useParams<{ countryId: string; personalityIndex: string }>();
   const { i18n } = useTranslation();
   const isArabic = i18n.language === 'ar';
   const location = useLocation();
-  const fallbackFromList = (location.state as any)?.fromList as
-    | {
-        name?: string;
-        nameAr?: string;
-        countryId?: string;
-        countryName?: string;
-        countryNameAr?: string;
-        index?: number;
-      }
-    | undefined;
+  const fallbackFromList = (location.state as LocationState)?.fromList;
   
   const personality = countryId && personalityIndex ? 
     personalityData[countryId]?.[parseInt(personalityIndex)] : null;

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -127,7 +127,7 @@ export default function CountryPrayerTimes() {
     };
   };
 
-  const fetchPrayerTimesByCity = async (selectedCity: string, selectedCountry: string, method: number) => {
+  const fetchPrayerTimesByCity = useCallback(async (selectedCity: string, selectedCountry: string, method: number) => {
     try {
       setLoading(true);
       setError(null);
@@ -174,7 +174,7 @@ export default function CountryPrayerTimes() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [t]);
 
   useEffect(() => {
     if (city && country) {
@@ -189,7 +189,7 @@ export default function CountryPrayerTimes() {
       setSelectedMethod(initialMethod);
       fetchPrayerTimesByCity(city, country, initialMethod);
     }
-  }, [city, country]); // Removed selectedMethod from dependency array to prevent infinite loop
+  }, [city, country, fetchPrayerTimesByCity]); // Removed selectedMethod from dependency array to prevent infinite loop
 
   const formatTime = (time: string) => {
     const [hours, minutes] = time.split(':');

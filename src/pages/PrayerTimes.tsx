@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -122,7 +122,7 @@ export default function PrayerTimes() {
     };
   };
 
-  const fetchPrayerTimes = async (latitude: number, longitude: number, method: number) => {
+  const fetchPrayerTimes = useCallback(async (latitude: number, longitude: number, method: number) => {
     try {
       setLoading(true);
       setError(null);
@@ -190,9 +190,9 @@ export default function PrayerTimes() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [t]);
 
-  const requestLocation = () => {
+  const requestLocation = useCallback(() => {
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition(
         async (position) => {
@@ -271,11 +271,11 @@ export default function PrayerTimes() {
       setSelectedMethod(initialMethod);
       fetchPrayerTimes(21.3891, 39.8579, initialMethod); // Mecca coordinates
     }
-  };
+  }, [fetchPrayerTimes, t]);
 
   useEffect(() => {
     requestLocation();
-  }, []); // Removed selectedMethod from dependency array to prevent infinite loop
+  }, [requestLocation]); // Removed selectedMethod from dependency array to prevent infinite loop
 
   const formatTime = (time: string) => {
     const [hours, minutes] = time.split(':');

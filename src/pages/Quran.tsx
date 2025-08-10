@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -25,11 +25,7 @@ export default function Quran() {
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
 
-  useEffect(() => {
-    fetchSurahs();
-  }, []);
-
-  const fetchSurahs = async () => {
+  const fetchSurahs = useCallback(async () => {
     try {
       const response = await fetch('https://api.alquran.cloud/v1/surah');
       const data = await response.json();
@@ -48,7 +44,11 @@ export default function Quran() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [t, toast]);
+
+  useEffect(() => {
+    fetchSurahs();
+  }, [fetchSurahs]);
 
   const handleSurahClick = (surahNumber: number) => {
     navigate(`/surah/${surahNumber}`);

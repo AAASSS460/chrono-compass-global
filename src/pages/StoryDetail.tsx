@@ -1238,21 +1238,23 @@ export const storyData: Record<string, Record<number, StoryData>> = {
   }
 };
 
+interface LocationState {
+  fromList?: {
+    title?: string;
+    titleAr?: string;
+    countryId?: string;
+    countryName?: string;
+    countryNameAr?: string;
+    index?: number;
+  };
+}
+
 export default function StoryDetail() {
   const { countryId, storyIndex } = useParams<{ countryId: string; storyIndex: string }>();
   const { i18n } = useTranslation();
   const isArabic = i18n.language === 'ar';
   const location = useLocation();
-  const fallbackFromList = (location.state as any)?.fromList as
-    | {
-        title?: string;
-        titleAr?: string;
-        countryId?: string;
-        countryName?: string;
-        countryNameAr?: string;
-        index?: number;
-      }
-    | undefined;
+  const fallbackFromList = (location.state as LocationState)?.fromList;
   
   const story = countryId && storyIndex ? 
     storyData[countryId]?.[parseInt(storyIndex)] : null;

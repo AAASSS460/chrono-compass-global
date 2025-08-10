@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -34,13 +34,7 @@ export default function SurahDetail() {
   const [currentPage, setCurrentPage] = useState(1);
   const ayahsPerPage = 10;
 
-  useEffect(() => {
-    if (surahNumber) {
-      fetchSurah(parseInt(surahNumber));
-    }
-  }, [surahNumber]);
-
-  const fetchSurah = async (surahNum: number) => {
+  const fetchSurah = useCallback(async (surahNum: number) => {
     setLoading(true);
     try {
       const response = await fetch(`https://api.alquran.cloud/v1/surah/${surahNum}`);
@@ -60,7 +54,13 @@ export default function SurahDetail() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [t, toast]);
+
+  useEffect(() => {
+    if (surahNumber) {
+      fetchSurah(parseInt(surahNumber));
+    }
+  }, [surahNumber, fetchSurah]);
 
   const getPaginatedAyahs = () => {
     if (!surah) return [];

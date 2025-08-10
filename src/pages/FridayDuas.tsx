@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Heart, Star, Book } from 'lucide-react';
 
-const getFridayImportance = (t: any) => [
+const getFridayImportance = (t: (key: string) => string) => [
   {
     title: t('fridayDuas.importanceSection.title1'),
     content: t('fridayDuas.importanceSection.content1'),
@@ -19,7 +19,7 @@ const getFridayImportance = (t: any) => [
   }
 ];
 
-const getFridayDuas = (t: any) => [
+const getFridayDuas = (t: (key: string) => string) => [
   {
     arabic: "اللَّهُمَّ صَلِّ وَسَلِّمْ وَبَارِكْ عَلَى نَبِيِّنَا مُحَمَّدٍ وَعَلَى آلِهِ وَصَحْبِهِ أَجْمَعِينَ",
     transliteration: t('fridayDuas.dua1.transliteration'),
@@ -58,7 +58,7 @@ const getFridayDuas = (t: any) => [
   }
 ];
 
-const getSuraAl_Kahf = (t: any) => ({
+const getSuraAl_Kahf = (t: (key: string) => string) => ({
   title: t('fridayDuas.suraAlKahf.title'),
   virtue: t('fridayDuas.suraAlKahf.virtue'),
   description: t('fridayDuas.suraAlKahf.description')
