@@ -193,8 +193,7 @@ const PrivacyPolicy = () => {
           <CardContent>
             <p className="text-muted-foreground leading-relaxed">
               إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، 
-              يرجى التواصل معنا عبر صفحة "اتصل بنا" أو على البريد الإلكتروني: 
-              <span className="text-primary font-semibold">privacy@chronocompass.com</span>
+              يرجى التواصل معنا عبر صفحة "اتصل بنا"
             </p>
           </CardContent>
         </Card>
