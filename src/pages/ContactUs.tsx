@@ -18,36 +18,7 @@ const ContactUs = () => {
       <div className="grid gap-8 md:grid-cols-2">
         {/* معلومات الاتصال */}
         <div className="space-y-6">
-          <Card className="border-primary/20">
-            <CardHeader>
-              <CardTitle className="text-xl text-primary">معلومات الاتصال</CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="flex items-center gap-3">
-                <Mail className="h-5 w-5 text-primary" />
-                <div>
-                  <p className="font-semibold">البريد الإلكتروني</p>
-                  <p className="text-sm text-muted-foreground">info@chronocompass.com</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center gap-3">
-                <MessageSquare className="h-5 w-5 text-primary" />
-                <div>
-                  <p className="font-semibold">رسائل مباشرة</p>
-                  <p className="text-sm text-muted-foreground">متاح على مدار الساعة</p>
-                </div>
-              </div>
-              
-              <div className="flex items-center gap-3">
-                <MapPin className="h-5 w-5 text-primary" />
-                <div>
-                  <p className="font-semibold">الموقع</p>
-                  <p className="text-sm text-muted-foreground">منصة رقمية عالمية</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+          
 
           <Card className="border-primary/20">
             <CardHeader>
