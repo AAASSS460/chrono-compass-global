@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { Globe } from 'lucide-react';
+import { Globe, TikTok } from 'lucide-react';
 
 export function Footer() {
   const { t } = useTranslation();
@@ -33,7 +33,7 @@ export function Footer() {
   ];
 
   const socialLinks = [
-    { icon: Globe, href: 'https://www.tiktok.com/@aaa_eee70?_t=ZS-8yn7opVapO9&_r=1', label: 'TikTok' },
+    { icon: TikTok, href: 'https://www.tiktok.com/@aaa_eee70?_t=ZS-8yn7opVapO9&_r=1', label: 'TikTok' },
   ];
 
   return (
