@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import hisnulMuslimData from '@/data/hisnulMuslimData';
 import { DuaDetailProps } from '@/types';
+import { Helmet } from 'react-helmet-async';
 
 export default function DuaDetail() {
   const { title } = useParams<{ title: string }>();
@@ -15,8 +16,15 @@ export default function DuaDetail() {
     return <div>Dua not found</div>;
   }
 
+  const description = (dua.text[0] || '').substring(0, 160);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-accent/20">
+      <Helmet>
+        <title>{`${title} - حصن المسلم | Faith Time`}</title>
+        <meta name="description" content={`${description}...`} />
+      </Helmet>
+
       <div className="container max-w-4xl mx-auto py-12 px-4">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-primary via-primary-hover to-accent bg-clip-text text-transparent">

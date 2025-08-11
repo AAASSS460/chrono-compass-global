@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, MapPin, Users, Star, BookOpen, Calendar, Globe, Heart, GraduationCap, Trophy, Building } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 interface CountryDetailData {
   id: string;

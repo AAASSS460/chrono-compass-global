@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Skeleton } from '@/components/ui/skeleton';
 import { BookOpen, Volume2, ArrowLeft, ArrowRight, Home } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { Helmet } from 'react-helmet-async';
 
 interface Ayah {
   number: number;
@@ -118,6 +119,11 @@ export default function SurahDetail() {
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
+      <Helmet>
+        <title>{`سورة ${surah.name} (${surah.englishName}) - القرآن الكريم | Faith Time`}</title>
+        <meta name="description" content={`اقرأ واستمع إلى سورة ${surah.name} كاملة. عدد آياتها ${surah.numberOfAyahs} وهي سورة ${surah.revelationType}.`} />
+      </Helmet>
+
       {/* Header */}
       <div className="mb-6">
         <Button

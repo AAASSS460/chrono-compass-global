@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, BookOpen, Calendar, MapPin, Star, Heart, Users, Lightbulb, Clock, Globe } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 interface StoryData {
   title: string;
@@ -1059,7 +1060,7 @@ export const storyData: Record<string, Record<number, StoryData>> = {
       summary: 'Muslim athletes became symbols of excellence and inclusion in French society.',
       summaryAr: 'أصبح الرياضيون المسلمون رموزاً للتميز والشمول في المجتمع الفرنسي.',
       fullStory: 'From Zidane to Benzema, achievements on the field shaped narratives of identity and belonging.',
-      fullStoryAr: 'من زيدان إلى بنزيما، شكّلت الإنجازات في الملاعب سرديات الهوية والانتماء.',
+      fullStoryAr: 'منزيدان إلى بنزيما، شكّلت الإنجازات في الملاعب سرديات الهوية والانتماء.',
       keyFigures: ['Zinedine Zidane', 'Karim Benzema'],
       keyFiguresAr: ['زين الدين زيدان', 'كريم بنزيما'],
       historicalContext: 'Integration debates and multicultural realities.',

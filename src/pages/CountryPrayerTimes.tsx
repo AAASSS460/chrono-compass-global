@@ -8,6 +8,7 @@ import { Clock, MapPin, Sunrise, Sun, Sunset, Moon, Stars, Calendar, Globe, Comp
 import { toast } from '@/hooks/use-toast';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { citiesData } from '@/data/cities';
+import { Helmet } from 'react-helmet-async';
 
 interface PrayerTimesData {
   Fajr: string;
@@ -246,6 +247,10 @@ export default function CountryPrayerTimes() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-accent/20">
+      <Helmet>
+        <title>{`مواقيت الصلاة في ${city}, ${country} | Faith Time`}</title>
+        <meta name="description" content={`اكتشف مواقيت الصلاة الدقيقة (الفجر، الظهر، العصر، المغرب، العشاء) لمدينة ${city} في ${country}.`} />
+      </Helmet>
       <div className="container max-w-6xl mx-auto py-12 px-4">
         {/* Header */}
         <div className="text-center mb-12">

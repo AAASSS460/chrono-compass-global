@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, User, Calendar, MapPin, Star, BookOpen, Heart, Award, Quote, Lightbulb } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 interface PersonalityData {
   name: string;
@@ -1517,7 +1518,7 @@ export default function PersonalityDetail() {
         eraAr: 'المجتمع الإسلامي المعاصر',
         title: 'Influential Muslim figure',
         titleAr: 'شخصية مسلمة مؤثرة',
-        biography: `An influential figure from ${fallbackFromList.countryName ?? countryId} known for service, leadership, and contributions to community and culture. Their work reflects values of faith, knowledge, and compassion.`,
+        biography: `An influential figure from ${fallbackFromList.countryName ?? countryId} known for service, leadership, and contributions to community and culture. Their work reflects values of faith, knowledge, and compassion.`, 
         biographyAr: `شخصية مؤثرة من ${fallbackFromList.countryNameAr ?? fallbackFromList.countryName ?? countryId} معروفة بالخدمة والقيادة والمساهمة في المجتمع والثقافة. يجسد عملها قيم الإيمان والعلم والرحمة.`,
         achievements: [
           'Community leadership and mentorship',
@@ -1566,6 +1567,10 @@ export default function PersonalityDetail() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background to-accent/20">
+      <Helmet>
+        <title>{`شخصية ${finalPersonality.nameAr} - ${finalPersonality.countryAr} | Faith Time`}</title>
+        <meta name="description" content={finalPersonality.biographyAr.substring(0, 160)} />
+      </Helmet>
       <div className="container max-w-4xl mx-auto py-12 px-4">
         {/* Header */}
         <div className="mb-8">
