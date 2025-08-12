@@ -464,4 +464,7 @@ const resources = {
       // About Us
       'about.title': 'À propos de nous',
       'about.welcome': 'Bienvenue à ChronoCompass !',
-      'about.placeholder': 'Ceci est un espace réservé pour votre page \
+      'about.placeholder': 'Ceci est un espace réservé pour votre page.'
+    }
+  }
+};

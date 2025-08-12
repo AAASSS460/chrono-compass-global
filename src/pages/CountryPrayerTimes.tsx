@@ -175,7 +175,7 @@ export default function CountryPrayerTimes() {
     } finally {
       setLoading(false);
     }
-  }, [t]);
+  }, [t, calculateNextPrayer]);
 
   useEffect(() => {
     if (city && country) {

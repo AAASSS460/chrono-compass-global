@@ -190,7 +190,7 @@ export default function PrayerTimes() {
     } finally {
       setLoading(false);
     }
-  }, [t]);
+  }, [t, calculateNextPrayer]);
 
   const requestLocation = useCallback(() => {
     if ('geolocation' in navigator) {
@@ -271,7 +271,7 @@ export default function PrayerTimes() {
       setSelectedMethod(initialMethod);
       fetchPrayerTimes(21.3891, 39.8579, initialMethod); // Mecca coordinates
     }
-  }, [fetchPrayerTimes, t]);
+  }, [fetchPrayerTimes]);
 
   useEffect(() => {
     requestLocation();
