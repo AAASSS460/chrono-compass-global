@@ -44,7 +44,11 @@ async function generateSitemap() {
 
   const hisnulMuslimUrls = Object.keys(hisnulMuslimData).map(title => `${baseUrl}/hisnul-muslim/${encodeURIComponent(title)}`);
   const countryUrls = countryIds.map(id => `${baseUrl}/country/${id}`);
-  const surahUrls = surahs.map((surah: any) => `${baseUrl}/surah/${surah.number}`);
+  interface Surah {
+  number: number;
+}
+
+  const surahUrls = surahs.map((surah: Surah) => `${baseUrl}/surah/${surah.number}`);
   const prayerTimeUrls = citiesData.map(cityInfo => `${baseUrl}/prayer-times/${encodeURIComponent(cityInfo.country)}/${encodeURIComponent(cityInfo.city)}`);
   const personalityUrls = Object.entries(personalityData).flatMap(([countryId, personalities]) =>
     Object.keys(personalities).map(personalityIndex =>

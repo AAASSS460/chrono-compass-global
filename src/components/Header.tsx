@@ -50,8 +50,8 @@ export function Header() {
               <div className="flex flex-col h-full">
                 {/* Header in menu */}
                 <div className="border-b pb-4 mb-4">
-                  <h2 className="text-lg font-semibold text-primary">القائمة الرئيسية</h2>
-                  <p className="text-sm text-muted-foreground">أدوات إسلامية شاملة</p>
+                  <h2 className="text-lg font-semibold text-primary">{t('header.mobileMenu.title')}</h2>
+                  <p className="text-sm text-muted-foreground">{t('header.mobileMenu.subtitle')}</p>
                 </div>
                 
                 {/* Navigation Links */}
@@ -74,7 +74,7 @@ export function Header() {
                 {/* Footer in menu */}
                 <div className="border-t pt-4 mt-4">
                   <p className="text-xs text-muted-foreground text-center">
-                    منصة ChronoCompass
+                    {t('header.mobileMenu.footer')}
                   </p>
                 </div>
               </div>

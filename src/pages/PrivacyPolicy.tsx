@@ -1,14 +1,17 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, Eye, Lock, Users, FileText } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const PrivacyPolicy = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="container mx-auto p-4 md:p-8 max-w-4xl">
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-primary mb-4">سياسة الخصوصية</h1>
+        <h1 className="text-4xl font-bold text-primary mb-4">{t('privacy.title')}</h1>
         <p className="text-xl text-muted-foreground">
-          نحن نحرص على حماية خصوصيتك وبياناتك الشخصية
+          {t('privacy.subtitle')}
         </p>
       </div>
 
@@ -17,14 +20,12 @@ const PrivacyPolicy = () => {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Shield className="h-6 w-6 text-primary" />
-              مقدمة
+              {t('privacy.introduction')}
             </CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground leading-relaxed">
-              نحن في منصة ChronoCompass نلتزم بحماية خصوصيتك وبياناتك الشخصية. 
-              هذه السياسة توضح كيفية جمع واستخدام وحماية المعلومات التي تقدمها لنا 
-              عند استخدام موقعنا الإلكتروني وأدواتنا الرقمية.
+              {t('privacy.introductionDesc')}
             </p>
           </CardContent>
         </Card>
@@ -33,26 +34,26 @@ const PrivacyPolicy = () => {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Eye className="h-6 w-6 text-primary" />
-              المعلومات التي نجمعها
+              {t('privacy.informationWeCollect')}
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div>
-              <h4 className="font-semibold text-primary mb-2">معلومات الاستخدام</h4>
+              <h4 className="font-semibold text-primary mb-2">{t('privacy.usageInformation')}</h4>
               <ul className="text-sm text-muted-foreground space-y-1">
-                <li>• معلومات الموقع الجغرافي (لحساب أوقات الصلاة)</li>
-                <li>• تفضيلات اللغة والواجهة</li>
-                <li>• إحصائيات الاستخدام المجهولة</li>
-                <li>• معلومات الجهاز والمتصفح</li>
+                <li>{t('privacy.usageInfo.location')}</li>
+                <li>{t('privacy.usageInfo.language')}</li>
+                <li>{t('privacy.usageInfo.analytics')}</li>
+                <li>{t('privacy.usageInfo.device')}</li>
               </ul>
             </div>
             
             <div>
-              <h4 className="font-semibold text-primary mb-2">معلومات الاتصال</h4>
+              <h4 className="font-semibold text-primary mb-2">{t('privacy.contactInformation')}</h4>
               <ul className="text-sm text-muted-foreground space-y-1">
-                <li>• البريد الإلكتروني (عند التواصل معنا)</li>
-                <li>• الاسم (اختياري)</li>
-                <li>• الرسائل والاستفسارات</li>
+                <li>{t('privacy.contactInfo.email')}</li>
+                <li>{t('privacy.contactInfo.name')}</li>
+                <li>{t('privacy.contactInfo.messages')}</li>
               </ul>
             </div>
           </CardContent>
@@ -62,29 +63,29 @@ const PrivacyPolicy = () => {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Lock className="h-6 w-6 text-primary" />
-              كيفية استخدام المعلومات
+              {t('privacy.howWeUseInformation')}
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               <div>
-                <h4 className="font-semibold text-primary mb-2">تحسين الخدمات</h4>
+                <h4 className="font-semibold text-primary mb-2">{t('privacy.serviceImprovement')}</h4>
                 <p className="text-sm text-muted-foreground">
-                  نستخدم المعلومات لتحسين أدواتنا وتقديم تجربة أفضل للمستخدمين.
+                  {t('privacy.serviceImprovementDesc')}
                 </p>
               </div>
               
               <div>
-                <h4 className="font-semibold text-primary mb-2">حساب أوقات الصلاة</h4>
+                <h4 className="font-semibold text-primary mb-2">{t('privacy.prayerTimeCalculation')}</h4>
                 <p className="text-sm text-muted-foreground">
-                  نستخدم موقعك الجغرافي لحساب أوقات الصلاة الدقيقة لموقعك.
+                  {t('privacy.prayerTimeCalculationDesc')}
                 </p>
               </div>
               
               <div>
-                <h4 className="font-semibold text-primary mb-2">الرد على الاستفسارات</h4>
+                <h4 className="font-semibold text-primary mb-2">{t('privacy.respondingToInquiries')}</h4>
                 <p className="text-sm text-muted-foreground">
-                  نستخدم معلومات الاتصال للرد على استفساراتكم ورسائلكم.
+                  {t('privacy.respondingToInquiriesDesc')}
                 </p>
               </div>
             </div>
@@ -95,19 +96,18 @@ const PrivacyPolicy = () => {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Users className="h-6 w-6 text-primary" />
-              مشاركة المعلومات
+              {t('privacy.informationSharing')}
             </CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground leading-relaxed">
-              نحن لا نبيع أو نؤجر أو نشارك معلوماتك الشخصية مع أي طرف ثالث 
-              لأغراض تجارية. قد نشارك المعلومات فقط في الحالات التالية:
+              {t('privacy.informationSharingDesc')}
             </p>
             <ul className="text-sm text-muted-foreground mt-3 space-y-1">
-              <li>• عند الحصول على موافقتك الصريحة</li>
-              <li>• عند الحاجة للامتثال للقوانين والأنظمة</li>
-              <li>• لحماية حقوقنا وحقوق المستخدمين الآخرين</li>
-              <li>• مع مزودي الخدمات الموثوقين الذين يساعدوننا في تشغيل الموقع</li>
+              <li>{t('privacy.sharingConditions.consent')}</li>
+              <li>{t('privacy.sharingConditions.legal')}</li>
+              <li>{t('privacy.sharingConditions.rights')}</li>
+              <li>{t('privacy.sharingConditions.providers')}</li>
             </ul>
           </CardContent>
         </Card>
@@ -116,45 +116,44 @@ const PrivacyPolicy = () => {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <FileText className="h-6 w-6 text-primary" />
-              ملفات تعريف الارتباط (Cookies)
+              {t('privacy.cookies')}
             </CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground leading-relaxed">
-              نستخدم ملفات تعريف الارتباط لتحسين تجربة الاستخدام وتذكر تفضيلاتك. 
-              يمكنك إدارة إعدادات ملفات تعريف الارتباط من خلال متصفحك.
+              {t('privacy.cookiesDesc')}
             </p>
           </CardContent>
         </Card>
 
         <Card className="border-primary/20">
           <CardHeader>
-            <CardTitle className="text-xl text-primary">حقوقك</CardTitle>
+            <CardTitle className="text-xl text-primary">{t('privacy.yourRights')}</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid gap-4 md:grid-cols-2">
               <div>
-                <h4 className="font-semibold text-primary mb-2">حق الوصول</h4>
+                <h4 className="font-semibold text-primary mb-2">{t('privacy.rights.access')}</h4>
                 <p className="text-sm text-muted-foreground">
-                  يمكنك طلب نسخة من معلوماتك الشخصية المحفوظة لدينا
+                  {t('privacy.rights.accessDesc')}
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-primary mb-2">حق التعديل</h4>
+                <h4 className="font-semibold text-primary mb-2">{t('privacy.rights.edit')}</h4>
                 <p className="text-sm text-muted-foreground">
-                  يمكنك تحديث أو تصحيح معلوماتك الشخصية في أي وقت
+                  {t('privacy.rights.editDesc')}
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-primary mb-2">حق الحذف</h4>
+                <h4 className="font-semibold text-primary mb-2">{t('privacy.rights.delete')}</h4>
                 <p className="text-sm text-muted-foreground">
-                  يمكنك طلب حذف معلوماتك الشخصية من قواعد بياناتنا
+                  {t('privacy.rights.deleteDesc')}
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-primary mb-2">حق الاعتراض</h4>
+                <h4 className="font-semibold text-primary mb-2">{t('privacy.rights.object')}</h4>
                 <p className="text-sm text-muted-foreground">
-                  يمكنك الاعتراض على معالجة معلوماتك لأغراض معينة
+                  {t('privacy.rights.objectDesc')}
                 </p>
               </div>
             </div>
@@ -163,37 +162,33 @@ const PrivacyPolicy = () => {
 
         <Card className="border-primary/20">
           <CardHeader>
-            <CardTitle className="text-xl text-primary">الأمان</CardTitle>
+            <CardTitle className="text-xl text-primary">{t('privacy.security')}</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground leading-relaxed">
-              نستخدم تقنيات تشفير متقدمة لحماية معلوماتك الشخصية. 
-              نتخذ جميع التدابير الأمنية المناسبة لمنع الوصول غير المصرح به 
-              أو الكشف عن معلوماتك الشخصية.
+              {t('privacy.securityDesc')}
             </p>
           </CardContent>
         </Card>
 
         <Card className="border-primary/20">
           <CardHeader>
-            <CardTitle className="text-xl text-primary">التحديثات</CardTitle>
+            <CardTitle className="text-xl text-primary">{t('privacy.updates')}</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground leading-relaxed">
-              قد نقوم بتحديث هذه السياسة من وقت لآخر. سنقوم بإشعارك بأي تغييرات 
-              جوهرية من خلال نشر السياسة المحدثة على موقعنا.
+              {t('privacy.updatesDesc')}
             </p>
           </CardContent>
         </Card>
 
         <Card className="border-primary/20">
           <CardHeader>
-            <CardTitle className="text-xl text-primary">اتصل بنا</CardTitle>
+            <CardTitle className="text-xl text-primary">{t('privacy.contactUs')}</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground leading-relaxed">
-              إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، 
-              يرجى التواصل معنا عبر صفحة "اتصل بنا"
+              {t('privacy.contactUsDesc')}
             </p>
           </CardContent>
         </Card>

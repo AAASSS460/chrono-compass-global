@@ -4,14 +4,17 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MessageSquare, Phone, MapPin, Send } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const ContactUs = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="container mx-auto p-4 md:p-8 max-w-4xl">
       <div className="text-center mb-8">
-        <h1 className="text-4xl font-bold text-primary mb-4">اتصل بنا</h1>
+        <h1 className="text-4xl font-bold text-primary mb-4">{t('contact.title')}</h1>
         <p className="text-xl text-muted-foreground">
-          نحن هنا لمساعدتك في أي استفسار أو اقتراح
+          {t('contact.subtitle')}
         </p>
       </div>
 
@@ -22,34 +25,34 @@ const ContactUs = () => {
 
           <Card className="border-primary/20">
             <CardHeader>
-              <CardTitle className="text-xl text-primary">كيف يمكننا مساعدتك؟</CardTitle>
+              <CardTitle className="text-xl text-primary">{t('contact.howCanWeHelp')}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3">
               <div className="p-3 bg-primary/5 rounded-lg">
-                <h4 className="font-semibold text-primary">استفسارات تقنية</h4>
+                <h4 className="font-semibold text-primary">{t('contact.technicalInquiries')}</h4>
                 <p className="text-sm text-muted-foreground">
-                  مساعدة في استخدام الأدوات والميزات
+                  {t('contact.technicalInquiriesDesc')}
                 </p>
               </div>
               
               <div className="p-3 bg-primary/5 rounded-lg">
-                <h4 className="font-semibold text-primary">اقتراحات وتحسينات</h4>
+                <h4 className="font-semibold text-primary">{t('contact.suggestions')}</h4>
                 <p className="text-sm text-muted-foreground">
-                  نرحب بآرائكم لتطوير المنصة
+                  {t('contact.suggestionsDesc')}
                 </p>
               </div>
               
               <div className="p-3 bg-primary/5 rounded-lg">
-                <h4 className="font-semibold text-primary">تقارير أخطاء</h4>
+                <h4 className="font-semibold text-primary">{t('contact.bugReports')}</h4>
                 <p className="text-sm text-muted-foreground">
-                  إبلاغ عن أي مشاكل تقنية
+                  {t('contact.bugReportsDesc')}
                 </p>
               </div>
               
               <div className="p-3 bg-primary/5 rounded-lg">
-                <h4 className="font-semibold text-primary">شراكة وتعاون</h4>
+                <h4 className="font-semibold text-primary">{t('contact.partnership')}</h4>
                 <p className="text-sm text-muted-foreground">
-                  فرص التعاون مع المؤسسات الإسلامية
+                  {t('contact.partnershipDesc')}
                 </p>
               </div>
             </CardContent>
@@ -59,40 +62,40 @@ const ContactUs = () => {
         {/* نموذج الاتصال */}
         <Card className="border-primary/20">
           <CardHeader>
-            <CardTitle className="text-xl text-primary">أرسل رسالة</CardTitle>
+            <CardTitle className="text-xl text-primary">{t('contact.sendMessage')}</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div>
-              <label className="block text-sm font-medium mb-2">الاسم الكامل</label>
-              <Input placeholder="أدخل اسمك الكامل" />
+              <label className="block text-sm font-medium mb-2">{t('contact.fullName')}</label>
+              <Input placeholder={t('contact.fullNamePlaceholder')} />
             </div>
             
             <div>
-              <label className="block text-sm font-medium mb-2">البريد الإلكتروني</label>
-              <Input type="email" placeholder="example@email.com" />
+              <label className="block text-sm font-medium mb-2">{t('contact.email')}</label>
+              <Input type="email" placeholder={t('contact.emailPlaceholder')} />
             </div>
             
             <div>
-              <label className="block text-sm font-medium mb-2">نوع الرسالة</label>
+              <label className="block text-sm font-medium mb-2">{t('contact.messageType')}</label>
               <select className="w-full p-2 border border-input rounded-md bg-background">
-                <option>اختر نوع الرسالة</option>
-                <option>استفسار تقني</option>
-                <option>اقتراح تحسين</option>
-                <option>تقرير خطأ</option>
-                <option>شراكة وتعاون</option>
-                <option>أخرى</option>
+                <option>{t('contact.messageTypePlaceholder')}</option>
+                <option>{t('contact.messageType.technical')}</option>
+                <option>{t('contact.messageType.suggestion')}</option>
+                <option>{t('contact.messageType.bug')}</option>
+                <option>{t('contact.messageType.partnership')}</option>
+                <option>{t('contact.messageType.other')}</option>
               </select>
             </div>
             
             <div>
-              <label className="block text-sm font-medium mb-2">الموضوع</label>
-              <Input placeholder="موضوع الرسالة" />
+              <label className="block text-sm font-medium mb-2">{t('contact.subject')}</label>
+              <Input placeholder={t('contact.subjectPlaceholder')} />
             </div>
             
             <div>
-              <label className="block text-sm font-medium mb-2">الرسالة</label>
+              <label className="block text-sm font-medium mb-2">{t('contact.message')}</label>
               <Textarea 
-                placeholder="اكتب رسالتك هنا..." 
+                placeholder={t('contact.messagePlaceholder')} 
                 rows={5}
                 className="resize-none"
               />
@@ -100,7 +103,7 @@ const ContactUs = () => {
             
             <Button className="w-full" size="lg">
               <Send className="h-4 w-4 mr-2" />
-              إرسال الرسالة
+              {t('contact.send')}
             </Button>
           </CardContent>
         </Card>
@@ -109,20 +112,20 @@ const ContactUs = () => {
       {/* معلومات إضافية */}
       <Card className="mt-8 border-primary/20">
         <CardHeader>
-          <CardTitle className="text-xl text-primary">معلومات مهمة</CardTitle>
+          <CardTitle className="text-xl text-primary">{t('contact.importantInfo')}</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="grid gap-4 md:grid-cols-2">
             <div>
-              <h4 className="font-semibold text-primary mb-2">وقت الاستجابة</h4>
+              <h4 className="font-semibold text-primary mb-2">{t('contact.responseTime')}</h4>
               <p className="text-sm text-muted-foreground">
-                نستجيب لجميع الرسائل خلال 24-48 ساعة في أيام العمل
+                {t('contact.responseTimeDesc')}
               </p>
             </div>
             <div>
-              <h4 className="font-semibold text-primary mb-2">الخصوصية</h4>
+              <h4 className="font-semibold text-primary mb-2">{t('contact.privacy')}</h4>
               <p className="text-sm text-muted-foreground">
-                نضمن خصوصية جميع المعلومات المرسلة ولن نشاركها مع أي طرف ثالث
+                {t('contact.privacyDesc')}
               </p>
             </div>
           </div>

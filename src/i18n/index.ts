@@ -17,7 +17,7 @@ const resources = {
       'nav.about': 'About Us',
       'nav.contact': 'Contact Us',
       'nav.privacyPolicy': 'Privacy Policy',
-                  'nav.language': 'اللغة',
+      'nav.language': 'Language',
       'nav.countries': 'Muslims Around the World',
       'nav.countriesPrayerTimes': 'Prayer Times by Country',
       'nav.asmaulHusna': '99 Names of Allah',
@@ -89,7 +89,7 @@ const resources = {
       'prayer.maghrib': 'Maghrib',
       'prayer.isha': 'Isha',
       'prayer.location': 'Location',
-      'prayer.loading': 'Loading prayer times...',
+      'prayer.loading': 'Loading prayer times...', 
       'prayer.error': 'Error loading prayer times',
       'prayer.enableLocation': 'Enable Location',
       'prayer.today': 'Today\'s Prayer Times',
@@ -99,8 +99,8 @@ const resources = {
       'fridayDuas.title': 'Friday Duas',
       'fridayDuas.subtitle': 'Special supplications for the blessed day of Friday',
       'fridayDuas.importance': 'Importance of Friday',
-      'fridayDuas.supplications': 'Friday Supplications',
       'fridayDuas.importanceDesc': 'Virtues of Friday in Islam',
+      'fridayDuas.supplications': 'Friday Supplications',
       'fridayDuas.supplicationsDesc': 'Answered supplications for the blessed Friday',
       'fridayDuas.note': 'It is recommended to increase dhikr, supplication, and sending prayers upon the Prophet (peace be upon him) on Friday',
       
@@ -127,7 +127,7 @@ const resources = {
       'fridayDuas.dua2.transliteration': 'Rabbanaa aatinaa fil-dunyaa hasanatan wa fil-aakhirati hasanatan wa qinaa \'adhaab an-naar',
       'fridayDuas.dua2.translation': 'Our Lord, give us in this world [that which is] good and in the Hereafter [that which is] good and protect us from the punishment of the Fire.',
       'fridayDuas.dua2.virtue': 'A comprehensive supplication for the good of this world and the next',
-      'fridayDuas.dua3.transliteration': 'Allaahummaghfir lee dhanbee wa wassi\' lee fee daaree wa baarik lee fee rizqee',
+      'fridayDuas.dua3.transliteration': 'Allaahumma maghfir lee dhanbee wa wassi\' lee fee daaree wa baarik lee fee rizqee',
       'fridayDuas.dua3.translation': 'O Allah, forgive my sin, expand my home for me, and bless my sustenance.',
       'fridayDuas.dua3.virtue': 'A comprehensive supplication for forgiveness and blessings',
       'fridayDuas.dua4.transliteration': 'Allaahumma aslih lee deeneel-ladhee huwa \'ismatu amree, wa aslih lee dunyaayal-latee feehaa ma\'aashee, wa aslih lee aakhirateel-latee feehaa ma\'aadee',
@@ -161,7 +161,7 @@ const resources = {
       'quran.subtitle': 'Read the Holy Quran with beautiful Arabic text and easy navigation',
       'quran.surahs': 'Surahs',
       'quran.totalSurahs': '{{count}} Surahs',
-      'quran.searchSurahs': 'Search surahs...',
+      'quran.searchSurahs': 'Search surahs...', 
       'quran.ayahs': '{{count}} Ayahs',
       'quran.ayah': 'Ayah',
       'quran.meccan': 'Meccan',
@@ -172,6 +172,31 @@ const resources = {
       'quran.pageOf': 'Page {{current}} of {{total}}',
       'quran.errorFetchingSurahs': 'Error loading surahs. Please try again.',
       'quran.errorFetchingSurah': 'Error loading surah. Please try again.',
+
+      // Header Mobile Menu
+      'header.mobileMenu.title': 'Main Menu',
+      'header.mobileMenu.subtitle': 'Comprehensive Islamic Tools',
+      'header.mobileMenu.footer': 'ChronoCompass Platform',
+
+      // Asmaul Husna
+      'asmaulHusna.title': 'The 99 Names of Allah',
+      'asmaulHusna.subtitle': 'Learn about the 99 Beautiful Names of Allah and their meanings in Arabic and English.',
+
+      // Countries
+      'countries.title': 'Muslims Around the World',
+      'countries.subtitle': 'Discover the rich diversity of Islamic communities around the world, learn about prominent personalities and inspiring stories from each country.',
+      'countries.notablePersonalities': 'Notable Personalities',
+      'countries.notableStories': 'Notable Stories',
+      'countries.viewDetails': 'View Country Details',
+      'countries.globalStatistics': 'Global Statistics',
+      'countries.totalMuslims': 'Total Muslims Worldwide',
+      'countries.ofWorldPopulation': 'Of World Population',
+      'countries.muslimMajorityCountries': 'Muslim-Majority Countries',
+
+      // Not Found
+      'notFound.title': '404',
+      'notFound.message': 'Oops! Page not found',
+      'notFound.returnHome': 'Return to Home',
     }
   },
   ar: {
@@ -259,7 +284,7 @@ const resources = {
       'prayer.maghrib': 'المغرب',
       'prayer.isha': 'العشاء',
       'prayer.location': 'الموقع',
-      'prayer.loading': 'جاري تحميل مواقيت الصلاة...',
+      'prayer.loading': 'جاري تحميل مواقيت الصلاة...', 
       'prayer.error': 'خطأ في تحميل مواقيت الصلاة',
       'prayer.enableLocation': 'تفعيل الموقع',
       'prayer.today': 'مواقيت صلاة اليوم',
@@ -269,8 +294,8 @@ const resources = {
       'fridayDuas.title': 'أدعية يوم الجمعة',
       'fridayDuas.subtitle': 'الأدعية الخاصة ليوم الجمعة المبارك',
       'fridayDuas.importance': 'أهمية يوم الجمعة',
-      'fridayDuas.supplications': 'أدعية الجمعة',
       'fridayDuas.importanceDesc': 'فضائل يوم الجمعة في الإسلام',
+      'fridayDuas.supplications': 'أدعية الجمعة',
       'fridayDuas.supplicationsDesc': 'أدعية مستجابة ليوم الجمعة المبارك',
       'fridayDuas.note': 'يُستحب الإكثار من الدعاء والذكر والصلاة على النبي صلى الله عليه وسلم في يوم الجمعة',
       
@@ -286,7 +311,7 @@ const resources = {
       
       // Friday Duas - Sura Al-Kahf
       'fridayDuas.suraAlKahf.title': 'سورة الكهف',
-      'fridayDuas.suraAlKahf.virtue': 'من قرأ سورة الكهف في يوم الجمعة أضاء له من النور ما بين الجمعتين',
+      'fridayDuas.suraAlKahf.virtue': 'من قرأ سورة الكهف في يوم الجمعة أضاء له من النور ما بين الجمعتين.',
       'fridayDuas.suraAlKahf.description': 'يُستحب قراءة سورة الكهف كاملة يوم الجمعة، وهي السورة الثامنة عشرة في القرآن الكريم',
       'fridayDuas.suraAlKahf.virtueTitle': 'فضل قراءة سورة الكهف:',
       
@@ -331,7 +356,7 @@ const resources = {
       'quran.subtitle': 'اقرأ القرآن الكريم بالنص العربي الجميل والتنقل السهل',
       'quran.surahs': 'السور',
       'quran.totalSurahs': '{{count}} سورة',
-      'quran.searchSurahs': 'البحث في السور...',
+      'quran.searchSurahs': 'البحث في السور...', 
       'quran.ayahs': '{{count}} آية',
       'quran.ayah': 'آية',
       'quran.meccan': 'مكية',
@@ -342,6 +367,31 @@ const resources = {
       'quran.pageOf': 'صفحة {{current}} من {{total}}',
       'quran.errorFetchingSurahs': 'خطأ في تحميل السور. يرجى المحاولة مرة أخرى.',
       'quran.errorFetchingSurah': 'خطأ في تحميل السورة. يرجى المحاولة مرة أخرى.',
+
+      // Header Mobile Menu
+      'header.mobileMenu.title': 'القائمة الرئيسية',
+      'header.mobileMenu.subtitle': 'أدوات إسلامية شاملة',
+      'header.mobileMenu.footer': 'منصة ChronoCompass',
+
+      // Asmaul Husna
+      'asmaulHusna.title': 'أسماء الله الحسنى',
+      'asmaulHusna.subtitle': 'تعرف على أسماء الله الحسنى ومعانيها باللغتين العربية والإنجليزية.',
+
+      // Countries
+      'countries.title': 'مسلمون حول العالم',
+      'countries.subtitle': 'اكتشف التنوع الغني للمجتمعات الإسلامية حول العالم، وتعرف على أبرز الشخصيات والقصص الملهمة من كل دولة.',
+      'countries.notablePersonalities': 'شخصيات بارزة',
+      'countries.notableStories': 'قصص بارزة',
+      'countries.viewDetails': 'عرض تفاصيل الدولة',
+      'countries.globalStatistics': 'إحصائيات عامة',
+      'countries.totalMuslims': 'إجمالي المسلمين في العالم',
+      'countries.ofWorldPopulation': 'من سكان العالم',
+      'countries.muslimMajorityCountries': 'دولة ذات أغلبية مسلمة',
+
+      // Not Found
+      'notFound.title': '404',
+      'notFound.message': 'عذراً! الصفحة غير موجودة',
+      'notFound.returnHome': 'العودة إلى الصفحة الرئيسية',
     }
   },
   fr: {
@@ -410,93 +460,8 @@ const resources = {
       'home.useTool': 'Utiliser l\'Outil',
       'home.multilingual': 'Disponible en Plusieurs Langues',
       'home.multilingualDesc': 'Tous les outils sont disponibles en arabe, anglais, français et espagnol pour servir les musulmans du monde entier',
-    }
-  },
-  es: {
-    translation: {
-      // Navigation
-      'nav.dateConverter': 'Convertidor de Fecha',
-      'nav.ageCalculator': 'Calculadora de Edad',
-      'nav.morningEveningAdhkar': 'Adhkar de Mañana y Tarde',
-      'nav.prayerTimes': 'Horarios de Oración',
-      'nav.fridayDuas': 'Duas del Viernes',
-      'nav.quran': 'Sagrado Corán',
-      'nav.islamicQuiz': 'Quiz Islámico',
-      'nav.about': 'Acerca de',
-      'nav.contact': 'Contacto',
-      'nav.privacyPolicy': 'Política de Privacidad',
-      'nav.language': 'Idioma',
-      
-      // Common
-      'common.convert': 'Convertir',
-      'common.calculate': 'Calcular',
-      'common.reset': 'Reiniciar',
-      'common.result': 'Resultado',
-      'common.day': 'Día',
-      'common.month': 'Mes',
-      'common.year': 'Año',
-      'common.today': 'Hoy',
-      'common.error': 'Error',
-      'common.next': 'Siguiente',
-      'common.previous': 'Anterior',
-      
-      // Date Converter
-      'dateConverter.title': 'Convertidor de Fecha Hijri a Gregoriano',
-      'dateConverter.subtitle': 'Convierte fechas entre calendarios Hijri y Gregoriano fácilmente',
-      'dateConverter.hijriDate': 'Fecha Hijri',
-      'dateConverter.gregorianDate': 'Fecha Gregoriana',
-      'dateConverter.enterHijriDate': 'Ingresa la Fecha Hijri',
-      'dateConverter.enterGregorianDate': 'Ingresa la Fecha Gregoriana',
-      'dateConverter.convertToGregorian': 'Convertir a Gregoriano',
-      'dateConverter.convertToHijri': 'Convertir a Hijri',
-      'dateConverter.invalidDate': 'Por favor ingresa una fecha válida',
-      'dateConverter.conversionError': 'Ocurrió un error durante la conversión de fecha',
-      'dateConverter.numericResult': 'Resultado Numérico',
-      
-      // Age Calculator
-      'ageCalculator.title': 'Calculadora de Edad',
-      'ageCalculator.subtitle': 'Calcula tu edad exacta en años, meses y días',
-      'ageCalculator.birthDate': 'Fecha de Nacimiento',
-      'ageCalculator.currentDate': 'Fecha Actual',
-      'ageCalculator.enterBirthDate': 'Ingresa tu fecha de nacimiento',
-      'ageCalculator.yourAge': 'Tu Edad',
-      'ageCalculator.years': 'Años',
-      'ageCalculator.months': 'Meses',
-      'ageCalculator.days': 'Días',
-      'ageCalculator.totalDays': 'Total de Días',
-      'ageCalculator.totalMonths': 'Total de Meses',
-      'ageCalculator.nextBirthday': 'Próximo Cumpleaños',
-      'ageCalculator.daysUntilBirthday': 'Días hasta el cumpleaños',
-      'ageCalculator.birthDateRequired': 'La fecha de nacimiento es requerida',
-      'ageCalculator.futureDate': 'La fecha de nacimiento no puede estar en el futuro',
-      'ageCalculator.calculationError': 'Ocurrió un error al calcular la edad',
-      'ageCalculator.numericResult': 'Resultado Numérico',
-      
-      // Home
-      'home.title': 'Herramientas Islámicas Integrales',
-      'home.description': 'Una colección completa de herramientas islámicas útiles incluyendo conversión de fecha, cálculo de edad, adhkar, horarios de oración y duas del viernes',
-      'home.useTool': 'Usar Herramienta',
-      'home.multilingual': 'Disponible en Múltiples Idiomas',
-      'home.multilingualDesc': 'Todas las herramientas están disponibles en árabe, inglés, francés y español para servir a musulmanes de todo el mundo',
-    }
-  }
-};
 
-i18n
-  .use(LanguageDetector)
-  .use(initReactI18next)
-  .init({
-    resources,
-    fallbackLng: 'en',
-    debug: false,
-    interpolation: {
-      escapeValue: false,
-    },
-    detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
-      caches: ['localStorage'],
-    },
-  });
-
-export default i18n;
-
+      // About Us
+      'about.title': 'À propos de nous',
+      'about.welcome': 'Bienvenue à ChronoCompass !',
+      'about.placeholder': 'Ceci est un espace réservé pour votre page \
