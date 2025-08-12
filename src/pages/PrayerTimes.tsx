@@ -190,7 +190,7 @@ export default function PrayerTimes() {
     } finally {
       setLoading(false);
     }
-  }, [t, calculateNextPrayer]);
+  }, [t]);
 
   const requestLocation = useCallback(() => {
     if ('geolocation' in navigator) {
