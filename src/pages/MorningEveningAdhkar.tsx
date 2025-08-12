@@ -1,3 +1,4 @@
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -23,64 +24,10 @@ const morningAdhkar = [
     count: 1
   },
   {
-    arabic: "اللَّهُمَّ إِنِّي أَصْبَحْتُ أُشْهِدُكَ وَأُشْهِدُ حَمَلَةَ عَرْشِكَ وَمَلَائِكَتَكَ وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلَّا أَنْتَ وَحْدَكَ لَا شَرِيكَ لَكَ، وَأَنَّ مُحَمَّدًا عَبْدُكَ وَرَسُولُكَ",
-    transliteration: "Allaahumma innee asbahtu ush-hiduka wa ush-hidu hamalata 'arshik, wa malaa'ikataka wa jamee'a khalqik, annaka antal-laahu laa ilaaha illaa ant wahdaka laa shareeka lak, wa anna Muhammadan 'abduka wa rasooluk",
-    translation: "O Allah, verily I have reached the morning and call upon You, the bearers of Your Throne, Your angels, and all creation to witness that surely You are Allah, none has the right to be worshipped except You, alone, without partner, and that Muhammad is Your servant and Your Messenger.",
-    count: 4
-  },
-  {
-    arabic: "اللَّهُمَّ مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ لَا شَرِيكَ لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ",
-    transliteration: "Allaahumma maa asbaha bee min ni'matin aw bi'ahadin min khalqika faminka wahdaka laa shareeka lak, falakal-hamdu wa lakash-shukr",
-    translation: "O Allah, whatever blessing has come to be with me or with any of Your creation, it is from You alone, You have no partner, so for You is all praise and unto You all thanks.",
-    count: 1
-  },
-  {
-    arabic: "اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي، لَا إِلَهَ إِلَّا أَنْتَ",
-    transliteration: "Allaahumma 'aafinee fee badanee, Allaahumma 'aafinee fee sam'ee, Allaahumma 'aafinee fee basaree, laa ilaaha illaa ant",
-    translation: "O Allah, make me healthy in my body. O Allah, preserve my hearing. O Allah, preserve my sight. There is none worthy of worship but You.",
-    count: 3
-  },
-  {
-    arabic: "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْكُفْرِ وَالْفَقْرِ، وَأَعُوذُ بِكَ مِنْ عَذَابِ الْقَبْرِ، لَا إِلَهَ إِلَّا أَنْتَ",
-    transliteration: "Allaahumma innee a'oodhu bika minal-kufri wal-faqr, wa a'oodhu bika min 'adhaabil-qabr, laa ilaaha illaa ant",
-    translation: "O Allah, I seek refuge in You from disbelief and poverty, and I seek refuge in You from the punishment of the grave. There is none worthy of worship but You.",
-    count: 3
-  },
-  {
     arabic: "حَسْبِيَ اللَّهُ لَا إِلَهَ إِلَّا هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ",
     transliteration: "Hasbiyal-laahu laa ilaaha illaa huwa 'alayhi tawakkaltu wa huwa rabbul-'arshil-'atheem",
     translation: "Allah is sufficient for me. None has the right to be worshipped except Him. Upon Him I rely, and He is the Lord of the Great Throne.",
     count: 7
-  },
-  {
-    arabic: "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِينِي وَدُنْيَايَ وَأَهْلِي وَمَالِي، اللَّهُمَّ اسْتُرْ عَوْرَاتِي وَآمِنْ رَوْعَاتِي، اللَّهُمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ وَمِنْ خَلْفِي وَعَنْ يَمِينِي وَعَنْ شِمَالِي وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي",
-    transliteration: "Allaahumma innee as'alukal-'afwa wal-'aafiyata fid-dunyaa wal-aakhirah, Allaahumma innee as'alukal-'afwa wal-'aafiyata fee deenee wa dunyaaya wa ahlee wa maalee, Allaahummastur 'awraatee wa aamin raw'aatee, Allaahummahfazhnee min bayni yadayya wa min khalfee wa 'an yameenee wa 'an shimaalee wa min fawqee, wa a'oodhu bi'azhamatika an ughtaala min tahtee",
-    translation: "O Allah, I ask You for pardon and well-being in this world and the Hereafter. O Allah, I ask You for pardon and well-being in my religion, my worldly affairs, my family, and my wealth. O Allah, conceal my faults and calm my fears. O Allah, protect me from before me and from behind me, from my right and my left, and from above me, and I seek refuge in Your Greatness from being unexpectedly seized from below me.",
-    count: 1
-  },
-  {
-    arabic: "يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ أَصْلِحْ لِي شَأْنِي كُلَّهُ وَلَا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ",
-    transliteration: "Yaa Hayyu yaa Qayyoomu birahmatika astagheethu aslih lee sha'nee kullahu wa laa takilnee ilaa nafsee tarfata 'ayn",
-    translation: "O Ever Living, O Sustainer, by Your mercy I seek assistance, rectify for me all of my affairs and do not leave me to myself, even for the blink of an eye.",
-    count: 3
-  },
-  {
-    arabic: "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ عَدَدَ خَلْقِهِ وَرِضَا نَفْسِهِ وَزِنَةَ عَرْشِهِ وَمِدَادَ كَلِمَاتِهِ",
-    transliteration: "Subhaanallaahi wa bihamdihi 'adada khalqihi wa ridhaa nafsihi wa zinata 'arshihi wa midaada kalimaatihi",
-    translation: "How perfect Allah is and I praise Him by the number of His creation and His pleasure, and by the weight of His Throne, and the ink of His words.",
-    count: 3
-  },
-  {
-    arabic: "اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى نَبِيِّنَا مُحَمَّدٍ",
-    transliteration: "Allaahumma salli wa sallim 'alaa nabiyyinaa Muhammad",
-    translation: "O Allah, send prayers and peace upon our Prophet Muhammad.",
-    count: 10
-  },
-  {
-    arabic: "أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ",
-    transliteration: "A'oodhu bikalimaatil-laahit-taammaati min sharri maa khalaq",
-    translation: "I seek refuge in the perfect words of Allah from the evil of what He has created.",
-    count: 3
   },
   {
     arabic: "بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ",
@@ -110,64 +57,10 @@ const eveningAdhkar = [
     count: 1
   },
   {
-    arabic: "اللَّهُمَّ إِنِّي أَمْسَيْتُ أُشْهِدُكَ وَأُشْهِدُ حَمَلَةَ عَرْشِكَ وَمَلَائِكَتَكَ وَجَمِيعَ خَلْقِكَ، أَنَّكَ أَنْتَ اللَّهُ لَا إِلَهَ إِلَّا أَنْتَ وَحْدَكَ لَا شَرِيكَ لَكَ، وَأَنَّ مُحَمَّدًا عَبْدُكَ وَرَسُولُكَ",
-    transliteration: "Allaahumma innee amsaytu ush-hiduka wa ush-hidu hamalata 'arshik, wa malaa'ikataka wa jamee'a khalqik, annaka antal-laahu laa ilaaha illaa ant wahdaka laa shareeka lak, wa anna Muhammadan 'abduka wa rasooluk",
-    translation: "O Allah, verily I have reached the evening and call upon You, the bearers of Your Throne, Your angels, and all creation to witness that surely You are Allah, none has the right to be worshipped except You, alone, without partner, and that Muhammad is Your servant and Your Messenger.",
-    count: 4
-  },
-  {
-    arabic: "اللَّهُمَّ مَا أَمْسَى بِي مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ لَا شَرِيكَ لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ",
-    transliteration: "Allaahumma maa amsaa bee min ni'matin aw bi'ahadin min khalqika faminka wahdaka laa shareeka lak, falakal-hamdu wa lakash-shukr",
-    translation: "O Allah, whatever blessing has come to be with me or with any of Your creation, it is from You alone, You have no partner, so for You is all praise and unto You all thanks.",
-    count: 1
-  },
-  {
-    arabic: "اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي، لَا إِلَهَ إِلَّا أَنْتَ",
-    transliteration: "Allaahumma 'aafinee fee badanee, Allaahumma 'aafinee fee sam'ee, Allaahumma 'aafinee fee basaree, laa ilaaha illaa ant",
-    translation: "O Allah, make me healthy in my body. O Allah, preserve my hearing. O Allah, preserve my sight. There is none worthy of worship but You.",
-    count: 3
-  },
-  {
-    arabic: "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْكُفْرِ وَالْفَقْرِ، وَأَعُوذُ بِكَ مِنْ عَذَابِ الْقَبْرِ، لَا إِلَهَ إِلَّا أَنْتَ",
-    transliteration: "Allaahumma innee a'oodhu bika minal-kufri wal-faqr, wa a'oodhu bika min 'adhaabil-qabr, laa ilaaha illaa ant",
-    translation: "O Allah, I seek refuge in You from disbelief and poverty, and I seek refuge in You from the punishment of the grave. There is none worthy of worship but You.",
-    count: 3
-  },
-  {
     arabic: "حَسْبِيَ اللَّهُ لَا إِلَهَ إِلَّا هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ",
     transliteration: "Hasbiyal-laahu laa ilaaha illaa huwa 'alayhi tawakkaltu wa huwa rabbul-'arshil-'atheem",
     translation: "Allah is sufficient for me. None has the right to be worshipped except Him. Upon Him I rely, and He is the Lord of the Great Throne.",
     count: 7
-  },
-  {
-    arabic: "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ، اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِينِي وَدُنْيَايَ وَأَهْلِي وَمَالِي، اللَّهُمَّ اسْتُرْ عَوْرَاتِي وَآمِنْ رَوْعَاتِي، اللَّهُمَّ احْفَظْنِي مِنْ بَيْنِ يَدَيَّ وَمِنْ خَلْفِي وَعَنْ يَمِينِي وَعَنْ شِمَالِي وَمِنْ فَوْقِي، وَأَعُوذُ بِعَظَمَتِكَ أَنْ أُغْتَالَ مِنْ تَحْتِي",
-    transliteration: "Allaahumma innee as'alukal-'afwa wal-'aafiyata fid-dunyaa wal-aakhirah, Allaahumma innee as'alukal-'afwa wal-'aafiyata fee deenee wa dunyaaya wa ahlee wa maalee, Allaahummastur 'awraatee wa aamin raw'aatee, Allaahummahfazhnee min bayni yadayya wa min khalfee wa 'an yameenee wa 'an shimaalee wa min fawqee, wa a'oodhu bi'azhamatika an ughtaala min tahtee",
-    translation: "O Allah, I ask You for pardon and well-being in this world and the Hereafter. O Allah, I ask You for pardon and well-being in my religion, my worldly affairs, my family, and my wealth. O Allah, conceal my faults and calm my fears. O Allah, protect me from before me and from behind me, from my right and my left, and from above me, and I seek refuge in Your Greatness from being unexpectedly seized from below me.",
-    count: 1
-  },
-  {
-    arabic: "يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ أَصْلِحْ لِي شَأْنِي كُلَّهُ وَلَا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ",
-    transliteration: "Yaa Hayyu yaa Qayyoomu birahmatika astagheethu aslih lee sha'nee kullahu wa laa takilnee ilaa nafsee tarfata 'ayn",
-    translation: "O Ever Living, O Sustainer, by Your mercy I seek assistance, rectify for me all of my affairs and do not leave me to myself, even for the blink of an eye.",
-    count: 3
-  },
-  {
-    arabic: "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ عَدَدَ خَلْقِهِ وَرِضَا نَفْسِهِ وَزِنَةَ عَرْشِهِ وَمِدَادَ كَلِمَاتِهِ",
-    transliteration: "Subhaanallaahi wa bihamdihi 'adada khalqihi wa ridhaa nafsihi wa zinata 'arshihi wa midaada kalimaatihi",
-    translation: "How perfect Allah is and I praise Him by the number of His creation and His pleasure, and by the weight of His Throne, and the ink of His words.",
-    count: 3
-  },
-  {
-    arabic: "اللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى نَبِيِّنَا مُحَمَّدٍ",
-    transliteration: "Allaahumma salli wa sallim 'alaa nabiyyinaa Muhammad",
-    translation: "O Allah, send prayers and peace upon our Prophet Muhammad.",
-    count: 10
-  },
-  {
-    arabic: "أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ",
-    transliteration: "A'oodhu bikalimaatil-laahit-taammaati min sharri maa khalaq",
-    translation: "I seek refuge in the perfect words of Allah from the evil of what He has created.",
-    count: 3
   },
   {
     arabic: "بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ",
@@ -177,39 +70,42 @@ const eveningAdhkar = [
   }
 ];
 
+const AdhkarCard = ({ adhkar, icon }: { 
+  adhkar: typeof morningAdhkar, 
+  icon: React.ReactNode 
+}) => (
+  <div className="space-y-6">
+    {adhkar.map((dhikr, index) => (
+      <Card key={index} className="shadow-md border-0 bg-gradient-to-br from-card to-accent/5">
+        <CardContent className="p-6">
+          <div className="space-y-4">
+            <div className="text-right" dir="rtl">
+              <p className="text-xl leading-relaxed font-arabic text-primary">{dhikr.arabic}</p>
+            </div>
+            
+            <div className="space-y-2">
+              <p className="text-sm italic text-muted-foreground">{dhikr.transliteration}</p>
+              <p className="text-sm text-foreground">{dhikr.translation}</p>
+            </div>
+            
+            <div className="flex items-center justify-between border-t pt-3">
+              <div className="flex items-center gap-2">
+                {icon}
+                <span className="text-sm font-medium text-muted-foreground">
+                  {dhikr.count === 1 ? 'Once' : `${dhikr.count} times`}
+                </span>
+              </div>
+              <Heart className="h-4 w-4 text-primary/60" />
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+    ))}
+  </div>
+);
+
 export default function MorningEveningAdhkar() {
   const { t } = useTranslation();
-
-  const AdhkarCard = ({ adhkar, icon }: { adhkar: typeof morningAdhkar, icon: React.ReactNode }) => (
-    <div className="space-y-6">
-      {adhkar.map((dhikr, index) => (
-        <Card key={index} className="shadow-md border-0 bg-gradient-to-br from-card to-accent/5">
-          <CardContent className="p-6">
-            <div className="space-y-4">
-              <div className="text-right" dir="rtl">
-                <p className="text-xl leading-relaxed font-arabic text-primary">{dhikr.arabic}</p>
-              </div>
-              
-              <div className="space-y-2">
-                <p className="text-sm italic text-muted-foreground">{dhikr.transliteration}</p>
-                <p className="text-sm text-foreground">{dhikr.translation}</p>
-              </div>
-              
-              <div className="flex items-center justify-between border-t pt-3">
-                <div className="flex items-center gap-2">
-                  {icon}
-                  <span className="text-sm font-medium text-muted-foreground">
-                    {dhikr.count === 1 ? t('adhkar.once') : t('adhkar.times', { count: dhikr.count })}
-                  </span>
-                </div>
-                <Heart className="h-4 w-4 text-primary/60" />
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      ))}
-    </div>
-  );
 
   return (
     <div className="container max-w-4xl mx-auto py-8 px-4">
@@ -271,4 +167,3 @@ export default function MorningEveningAdhkar() {
     </div>
   );
 }
-
