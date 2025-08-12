@@ -75,7 +75,7 @@ export default function PrayerTimes() {
     return `${day}-${month}-${year}`;
   };
 
-  const calculateNextPrayer = (times: PrayerTimesData) => {
+  const calculateNextPrayer = useCallback((times: PrayerTimesData) => {
     const now = new Date();
     const currentTime = now.getHours() * 60 + now.getMinutes();
     
@@ -120,7 +120,7 @@ export default function PrayerTimes() {
       time: fajrTomorrow.time,
       remaining: `${diffHours}:${diffMins.toString().padStart(2, '0')}`
     };
-  };
+  }, [isArabic]);
 
   const fetchPrayerTimes = useCallback(async (latitude: number, longitude: number, method: number) => {
     try {
@@ -190,7 +190,7 @@ export default function PrayerTimes() {
     } finally {
       setLoading(false);
     }
-  }, [t]);
+  }, [t, calculateNextPrayer]);
 
   const requestLocation = useCallback(() => {
     if ('geolocation' in navigator) {

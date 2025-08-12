@@ -81,7 +81,7 @@ export default function CountryPrayerTimes() {
     return `${day}-${month}-${year}`;
   };
 
-  const calculateNextPrayer = (times: PrayerTimesData) => {
+  const calculateNextPrayer = useCallback((times: PrayerTimesData) => {
     const now = new Date();
     const currentTime = now.getHours() * 60 + now.getMinutes();
     
@@ -126,7 +126,7 @@ export default function CountryPrayerTimes() {
       time: fajrTomorrow.time,
       remaining: `${diffHours}:${diffMins.toString().padStart(2, '0')}`
     };
-  };
+  }, [isArabic]);
 
   const fetchPrayerTimesByCity = useCallback(async (selectedCity: string, selectedCountry: string, method: number) => {
     try {
