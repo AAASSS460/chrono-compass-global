@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import { personalityData } from './PersonalityDetail';
-import { storyData } from './StoryDetail';
+import { personalityData } from '@/data/personalities';
+import { storyData } from '@/data/stories';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
