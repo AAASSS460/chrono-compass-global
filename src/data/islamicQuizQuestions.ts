@@ -5,6 +5,8 @@ interface QuizQuestion {
   options: string[];
   optionsAr: string[];
   answer: number; // Index of the correct option
+  explanation?: string;
+  explanationAr?: string;
 }
 
 interface QuizLevel {
