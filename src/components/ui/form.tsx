@@ -16,7 +16,17 @@ import { useFormField } from "./use-form-field"
 
 const Form = FormProvider
 
+const FormFieldContext = React.createContext<
+  {
+    name: string
+  } | undefined
+>(undefined)
 
+const FormItemContext = React.createContext<
+  {
+    id: string
+  } | undefined
+>(undefined)
 
 const FormField = <
   TFieldValues extends FieldValues = FieldValues,
@@ -30,10 +40,6 @@ const FormField = <
     </FormFieldContext.Provider>
   )
 }
-
-
-
-
 
 const FormItem = React.forwardRef<
   HTMLDivElement,
@@ -130,6 +136,7 @@ const FormMessage = React.forwardRef<
 FormMessage.displayName = "FormMessage"
 
 export {
+  useFormField,
   Form,
   FormItem,
   FormLabel,

@@ -6,22 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { MapPin, Users, Star, BookOpen, ArrowRight, ExternalLink } from 'lucide-react';
-
-interface Country {
-  id: string;
-  name: string;
-  nameAr: string;
-  population: string;
-  percentage: string;
-  flag: string;
-  description: string;
-  descriptionAr: string;
-  notablePersonalities: string[];
-  notablePersonalitiesAr: string[];
-  stories: string[];
-  storiesAr: string[];
-  gradient: string;
-}
+import { Country } from '@/types';
 
 const countries: Country[] = [
   {
