@@ -13,12 +13,9 @@ const AboutUs = () => {
         </CardHeader>
         <CardContent className="space-y-4">
           <p>{t('about.welcome')}</p>
-          <p>
-            {t('about.placeholder')}
-          </p>
-          <p>
-            {t('about.trust')}
-          </p>
+          <p>{t('about.mission')}</p>
+          <p>{t('about.vision')}</p>
+          <p>{t('about.commitment')}</p>
         </CardContent>
       </Card>
     </div>
