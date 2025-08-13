@@ -1,0 +1,1 @@
+export const dua_for_someone_who_says_ghafar_allahu_lak = { "text": ["ولك "], "footnote": [ "أحمد 5/28 والنسائي في عمل اليوم والليلة ص218برقم 421 تحقيق الدكتور فاروق حمادة" ] };

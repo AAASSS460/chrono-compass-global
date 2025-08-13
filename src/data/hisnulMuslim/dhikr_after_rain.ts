@@ -1,0 +1,1 @@
+export const dhikr_after_rain = { "text": ["مُطرنا بفضل الله ورحمته "], "footnote": ["والبخاري 1/205 ،مسلم 1/83"] };

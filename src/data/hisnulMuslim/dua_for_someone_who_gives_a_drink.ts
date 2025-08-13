@@ -1,0 +1,1 @@
+export const dua_for_someone_who_gives_a_drink = { "text": ["اللهُمَّ أَطْعِمْ مَنْ أطْعَمَني وأَسْقِ مَنْ sْقَاني "], "footnote": ["مسلم3/ 26"] };

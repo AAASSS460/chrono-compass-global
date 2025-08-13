@@ -1,0 +1,1 @@
+export const dua_for_someone_who_says_barak_allahu_feek = { "text": ["وفيك بارك الله "], "footnote": [ "أخرجه ابن السني ص138 برقم 278 وانظر الوابل الصيب لابن القيم 304 تحقيق بشير محمد عيون" ] };

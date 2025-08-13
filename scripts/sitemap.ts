@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import hisnulMuslimData from '../src/data/hisnulMuslimData';
+import hisnulMuslimData from '../src/data/hisnulMuslim';
 import { citiesData } from '../src/data/cities';
 import { personalityData } from '../src/pages/PersonalityDetail';
 import { storyData } from '../src/pages/StoryDetail';

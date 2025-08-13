@@ -1,0 +1,1 @@
+export const dua_for_someone_who_offers_you_his_wealth = { "text": ["بارك الله لك في أهلك ومالك "], "footnote": ["البخاري الفتح4/ 88"] };

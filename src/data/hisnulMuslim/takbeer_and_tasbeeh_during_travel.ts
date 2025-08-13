@@ -1,0 +1,1 @@
+export const takbeer_and_tasbeeh_during_travel = { "text": [ "قال جابر رضي الله عنه : كنا إذا صعدنا كبرنا ، وإذا نزلنا سبحنا " ], "footnote": ["البخاري الفتح6/ 135"] };

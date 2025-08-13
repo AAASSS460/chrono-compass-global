@@ -1,0 +1,1 @@
+export const dua_if_the_ride_falters = { "text": ["بسم الله "], "footnote": ["أبو داود 4/296 وصححه الألباني في صحيح أبي داود 3/941"] };

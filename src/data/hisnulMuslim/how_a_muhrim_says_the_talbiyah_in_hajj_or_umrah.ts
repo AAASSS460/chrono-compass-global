@@ -1,0 +1,1 @@
+export const how_a_muhrim_says_the_talbiyah_in_hajj_or_umrah = { "text": [ "لبيك اللهم لبيك ، لبيك لا شريك لك لبيك ، إن الحمد والنعمة لك والملك ، لا شريك لك " ], "footnote": ["البخاري مع الفتح 3/ 408 ، ومسلم 2/841"] };

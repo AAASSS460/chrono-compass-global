@@ -1,0 +1,1 @@
+export const before_wudu_dhikr = { "text": ["بسم الله "], "footnote": ["أبو داود وابن ماجه وأحمد وانظر إرواء الغليل 1/ 122"] };

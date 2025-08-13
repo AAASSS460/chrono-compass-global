@@ -1,0 +1,1 @@
+export const travelers_dua_for_the_resident = { "text": ["أستودعُكَ الله الذي لا تضيع ودائعه "], "footnote": ["أحمد 2/403 وابن ماجه 2/943 وانظر صحيح ابن ماجة2/ 133"] };

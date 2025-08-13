@@ -1,0 +1,1 @@
+export const what_a_fasting_person_says_when_insulted = { "text": ["إني صائم ، إني صائم "], "footnote": ["البخاري مع الفتح 4/103 ،ومسلم 2/ 806"] };

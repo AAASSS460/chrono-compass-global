@@ -1,0 +1,1 @@
+export const dua_for_someone_who_says_i_love_you_for_the_sake_of_allah = { "text": ["أحبك الذي أحببتني له ُ "], "footnote": [ "أخرجه أبو داود 4/333، وحسنه الألباني في صحيح سنن أبي داود 3/965" ] };

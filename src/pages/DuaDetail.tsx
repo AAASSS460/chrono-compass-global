@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import hisnulMuslimData from '@/data/hisnulMuslimData';
+import hisnulMuslimData from '@/data/hisnulMuslim';
 import { DuaDetailProps } from '@/types';
 import { Helmet } from 'react-helmet-async';
 

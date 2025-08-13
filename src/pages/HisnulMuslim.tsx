@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Card, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Search } from 'lucide-react';
-import hisnulMuslimData from '@/data/hisnulMuslimData';
+import hisnulMuslimData from '@/data/hisnulMuslim';
 
 export default function HisnulMuslim() {
   const { t, i18n } = useTranslation();

@@ -1,0 +1,1 @@
+export const dua_when_it_rains = { "text": ["اللهم صيباً نافعاً "], "footnote": ["البخاري مع الفتح 2/518"] };

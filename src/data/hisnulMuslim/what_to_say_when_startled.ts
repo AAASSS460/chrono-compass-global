@@ -1,0 +1,1 @@
+export const what_to_say_when_startled = { "text": ["لا إله إلا الله "], "footnote": ["البخاري مع الفتح 6/ 181 ، ومسلم 4/ 2208"] };

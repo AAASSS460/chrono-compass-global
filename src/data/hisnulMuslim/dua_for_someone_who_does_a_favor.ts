@@ -1,0 +1,1 @@
+export const dua_for_someone_who_does_a_favor = { "text": ["جَزَاكَ الله خيراً "], "footnote": [ "أخرجه الترمذي رقم 2035 وانظر صحيح الجامع 6244 وصحيح الترمذي2/ 200" ] };

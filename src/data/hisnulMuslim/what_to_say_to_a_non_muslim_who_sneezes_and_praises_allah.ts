@@ -1,0 +1,1 @@
+export const what_to_say_to_a_non_muslim_who_sneezes_and_praises_allah = { "text": ["يهديكم الله ويصلح بالكم "], "footnote": [ "الترمذي 5/82 وأحمد 4/400 وأبو داود 4/308، وانظر صحيح الترمذي 2/354" ] };

@@ -1,0 +1,1 @@
+export const dua_of_a_fasting_person_when_food_is_present_and_he_is_not_breaking_his_fast = { "text": [ "إذا دُعي أحدكم فليجب ، فإن كان صائماً فليصل وإن كان مفطراً فليطعم ومعنى فليصل أي فليدع" ], "footnote": ["مسلم 2/1054"] };

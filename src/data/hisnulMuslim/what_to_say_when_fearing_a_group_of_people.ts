@@ -1,0 +1,1 @@
+export const what_to_say_when_fearing_a_group_of_people = { "text": [" اللهم اكفنيهم بما شئت "], "footnote": ["مسلم 4/2300"] };

@@ -1,0 +1,1 @@
+export const how_to_return_salam_to_a_non_muslim = { "text": ["إذا سلم عليكم أهل الكتاب فقولوا : وعليكم "], "footnote": ["البخاري مع الفتح11/42 ،ومسلم 4/1705"] };

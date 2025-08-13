@@ -1,0 +1,1 @@
+export const dua_when_placing_the_deceased_in_the_grave = { "text": ["بسم الله وعلى سُنة رسول الله "], "footnote": [ "أبو داود 3/314بسند صحيح وأحمد بلفظ بسم الله وعلى ملة رسول الله وسنده صحيح" ] };

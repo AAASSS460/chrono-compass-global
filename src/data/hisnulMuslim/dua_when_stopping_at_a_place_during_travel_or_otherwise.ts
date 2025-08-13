@@ -1,0 +1,1 @@
+export const dua_when_stopping_at_a_place_during_travel_or_otherwise = { "text": ["أعوذ بكلمات الله التامات من شر ما خلق "], "footnote": ["رواه مسلم4/2080"] };
