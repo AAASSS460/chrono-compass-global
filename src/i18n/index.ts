@@ -277,7 +277,13 @@ const resources = {
       'privacy.updates': 'Updates to This Policy',
       'privacy.updatesDesc': 'We may update this privacy policy from time to time. We will notify you of any significant changes.',
       'privacy.contactUs': 'Contact Us',
-      'privacy.contactUsDesc': 'If you have any questions about this privacy policy, please contact us.'
+      'privacy.contactUsDesc': 'If you have any questions about this privacy policy, please contact us.',
+
+      // Cookie Consent
+      "cookieConsent.message": "This website uses cookies to enhance the user experience.",
+      "cookieConsent.accept": "Accept",
+      "cookieConsent.decline": "Decline",
+      "cookieConsent.learnMore": "Learn more"
     }
   },
     ar: {
@@ -558,7 +564,13 @@ const resources = {
       'privacy.updates': 'تحديثات على هذه السياسة',
       'privacy.updatesDesc': 'قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سنخطرك بأي تغييرات مهمة.',
       'privacy.contactUs': 'اتصل بنا',
-      'privacy.contactUsDesc': 'إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى الاتصال بنا.'
+      'privacy.contactUsDesc': 'إذا كان لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى الاتصال بنا.',
+
+      // Cookie Consent
+      "cookieConsent.message": "يستخدم هذا الموقع ملفات تعريف الارتباط لتحسين تجربة المستخدم.",
+      "cookieConsent.accept": "قبول",
+      "cookieConsent.decline": "رفض",
+      "cookieConsent.learnMore": "اعرف المزيد"
     }
   },
   fr: {

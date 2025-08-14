@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { Globe } from 'lucide-react';
 import TikTokIcon from './icons/TikTokIcon';
+import CookieConsent from 'react-cookie-consent';
 
 export function Footer() {
   const { t } = useTranslation();
@@ -96,6 +97,21 @@ export function Footer() {
           &copy; {currentYear} ChronoCompass. {t('footer.allRightsReserved')}
         </div>
       </div>
+      <CookieConsent
+        location="bottom"
+        buttonText={t('cookieConsent.accept')}
+        declineButtonText={t('cookieConsent.decline')}
+        cookieName="chronoCompassCookieConsent"
+        style={{ background: "#2B373B" }}
+        buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+        declineButtonStyle={{ margin: "10px 10px 10px 0" }}
+        expires={150}
+      >
+        {t('cookieConsent.message')}{" "}
+        <Link to="/privacy-policy" style={{ color: "#F1D600" }}>
+          {t('cookieConsent.learnMore')}
+        </Link>
+      </CookieConsent>
     </footer>
   );
 }
