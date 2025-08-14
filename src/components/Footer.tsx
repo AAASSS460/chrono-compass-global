@@ -3,9 +3,27 @@ import { Link } from 'react-router-dom';
 import { Globe } from 'lucide-react';
 import TikTokIcon from './icons/TikTokIcon';
 import CookieConsent from 'react-cookie-consent';
+import { useEffect, useState } from 'react';
 
 export function Footer() {
   const { t } = useTranslation();
+  const [isEuUser, setIsEuUser] = useState(false);
+
+  useEffect(() => {
+    fetch('http://ip-api.com/json')
+      .then(res => res.json())
+      .then(data => {
+        const europeanCountries = [
+          'AT', 'BE', 'BG', 'CY', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI', 'FR', 'GR', 'HR', 'HU',
+          'IE', 'IT', 'LT', 'LU', 'LV', 'MT', 'NL', 'PL', 'PT', 'RO', 'SE', 'SI', 'SK',
+          'GB', 'CH', 'NO', 'IS'
+        ];
+        if (europeanCountries.includes(data.countryCode)) {
+          setIsEuUser(true);
+        }
+      })
+      .catch(err => console.error('Error fetching user location:', err));
+  }, []);
 
   const currentYear = new Date().getFullYear();
 
@@ -97,21 +115,23 @@ export function Footer() {
           &copy; {currentYear} ChronoCompass. {t('footer.allRightsReserved')}
         </div>
       </div>
-      <CookieConsent
-        location="bottom"
-        buttonText={t('cookieConsent.accept')}
-        declineButtonText={t('cookieConsent.decline')}
-        cookieName="chronoCompassCookieConsent"
-        style={{ background: "#2B373B" }}
-        buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
-        declineButtonStyle={{ margin: "10px 10px 10px 0" }}
-        expires={150}
-      >
-        {t('cookieConsent.message')}{" "}
-        <Link to="/privacy-policy" style={{ color: "#F1D600" }}>
-          {t('cookieConsent.learnMore')}
-        </Link>
-      </CookieConsent>
+      {isEuUser && (
+        <CookieConsent
+          location="bottom"
+          buttonText={t('cookieConsent.accept')}
+          declineButtonText={t('cookieConsent.decline')}
+          cookieName="chronoCompassCookieConsent"
+          style={{ background: "#2B373B" }}
+          buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+          declineButtonStyle={{ margin: "10px 10px 10px 0" }}
+          expires={150}
+        >
+          {t('cookieConsent.message')}{" "}
+          <Link to="/privacy-policy" style={{ color: "#F1D600" }}>
+            {t('cookieConsent.learnMore')}
+          </Link>
+        </CookieConsent>
+      )}
     </footer>
   );
 }
