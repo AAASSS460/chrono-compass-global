@@ -2,8 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import hisnulMuslimData from '../src/data/hisnulMuslim';
 import { citiesData } from '../src/data/cities';
-import { personalityData } from '../src/pages/PersonalityDetail';
-import { storyData } from '../src/pages/StoryDetail';
+import { personalityData } from '../src/data/personalities';
+import { storyData } from '../src/data/stories';
 
 // Since the countries data is in a .tsx file and not exported,
 // we read it as text and extract the IDs. This is a simplified approach.
@@ -42,7 +42,7 @@ async function generateSitemap() {
     '/hisnul-muslim',
   ];
 
-  const hisnulMuslimUrls = Object.keys(hisnulMuslimData).map(title => `${baseUrl}/hisnul-muslim/${encodeURIComponent(title)}`);
+      const hisnulMuslimUrls = Object.keys(hisnulMuslimData).map(key => `${baseUrl}/hisnul-muslim/${encodeURIComponent(key)}`);
   const countryUrls = countryIds.map(id => `${baseUrl}/country/${id}`);
   interface Surah {
   number: number;
@@ -51,14 +51,14 @@ async function generateSitemap() {
   const surahUrls = surahs.map((surah: Surah) => `${baseUrl}/surah/${surah.number}`);
   const prayerTimeUrls = citiesData.map(cityInfo => `${baseUrl}/prayer-times/${encodeURIComponent(cityInfo.country)}/${encodeURIComponent(cityInfo.city)}`);
   const personalityUrls = Object.entries(personalityData).flatMap(([countryId, personalities]) =>
-    Object.keys(personalities).map(personalityIndex =>
+    personalities ? Object.keys(personalities).map(personalityIndex =>
       `${baseUrl}/personality/${countryId}/${personalityIndex}`
-    )
+    ) : []
   );
   const storyUrls = Object.entries(storyData).flatMap(([countryId, stories]) =>
-    Object.keys(stories).map(storyIndex =>
+    stories ? Object.keys(stories).map(storyIndex =>
       `${baseUrl}/story/${countryId}/${storyIndex}`
-    )
+    ) : []
   );
 
   const allUrls = [
