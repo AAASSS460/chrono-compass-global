@@ -726,7 +726,13 @@ const resources = {
       'privacy.updates': 'Mises à jour de cette politique',
       'privacy.updatesDesc': 'Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. Nous vous informerons de tout changement important.',
       'privacy.contactUs': 'Contactez-nous',
-      'privacy.contactUsDesc': 'Si vous avez des questions sur cette politique de confidentialité, veuillez nous contacter.'
+      'privacy.contactUsDesc': 'Si vous avez des questions sur cette politique de confidentialité, veuillez nous contacter.',
+
+      // Cookie Consent
+      "cookieConsent.message": "Ce site web utilise des cookies pour améliorer l'expérience utilisateur.",
+      "cookieConsent.accept": "Accepter",
+      "cookieConsent.decline": "Refuser",
+      "cookieConsent.learnMore": "En savoir plus"
     }
   }
 }
