@@ -11,10 +11,10 @@ export default function HisnulMuslim() {
   const isArabic = i18n.language === 'ar';
   const [searchTerm, setSearchTerm] = useState('');
 
-  const duaTitles = Object.keys(hisnulMuslimData);
+  const duaEntries = Object.entries(hisnulMuslimData);
 
-  const filteredTitles = duaTitles.filter(title =>
-    title.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredEntries = duaEntries.filter(([, { titleKey }]) =>
+    t(titleKey).toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
@@ -43,12 +43,12 @@ export default function HisnulMuslim() {
         </div>
 
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {filteredTitles.map((title, index) => (
-            <Link key={index} to={`/hisnul-muslim/${encodeURIComponent(title)}`}>
+          {filteredEntries.map(([key, { titleKey }]) => (
+            <Link key={key} to={`/hisnul-muslim/${encodeURIComponent(key)}`}>
               <Card className="shadow-lg border-0 bg-gradient-to-br from-card to-primary/5 hover:shadow-primary/20 transition-shadow duration-300">
                 <CardHeader>
                   <CardTitle className="text-lg font-semibold text-primary text-center">
-                    {title}
+                    {t(titleKey)}
                   </CardTitle>
                 </CardHeader>
               </Card>
