@@ -54,7 +54,7 @@ const SmartIslamicQuiz: React.FC = () => {
     if (quizStarted) {
       // For this game, we'll use a mix of difficulties or just 'hard' as per user's hint
       // The original HTML game didn't have difficulty selection, so we'll default to hard
-      const allHardQuestions = islamicQuizQuestions.hard.map(q => ({ ...q, difficulty: 'hard' }));
+      const allHardQuestions = islamicQuizQuestions.hard.map(q => ({ ...q, difficulty: 'hard' as const }));
       setQuizQuestions(getDailyQuestions(allHardQuestions));
       setCurrentQuestionIndex(0);
       setScore(0);

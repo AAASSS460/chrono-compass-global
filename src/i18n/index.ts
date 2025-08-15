@@ -22,7 +22,6 @@ const resources = {
       'nav.countriesPrayerTimes': 'Prayer Times by Country',
       'nav.asmaulHusna': '99 Names of Allah',
       'nav.hisnulMuslim': 'Hisnul Muslim',
-      'nav.smartIslamicQuiz': 'Jeu de Quiz Islamique Intelligent',
       'nav.smartIslamicQuiz': 'Smart Islamic Quiz',
       
       // Common

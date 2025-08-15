@@ -10,7 +10,13 @@ export default function DuaDetail() {
   const { i18n } = useTranslation();
   const isArabic = i18n.language === 'ar';
 
-  const dua = hisnulMuslimData[title as keyof typeof hisnulMuslimData] as DuaDetailProps;
+  const duaData = hisnulMuslimData[title as keyof typeof hisnulMuslimData];
+  
+  if (!duaData || !('data' in duaData)) {
+    return <div>Dua not found</div>;
+  }
+  
+  const dua = duaData.data as DuaDetailProps;
 
   if (!dua) {
     return <div>Dua not found</div>;

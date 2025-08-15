@@ -13,7 +13,7 @@ function convertNumbers(num: number, locale: string): string {
   return num.toLocaleString(locale);
 }
 
-export default function AgeCalculator() {
+function AgeCalculator() {
   const { t } = useTranslation();
   
   const [birthDate, setBirthDate] = useState('');
@@ -241,3 +241,5 @@ export default function AgeCalculator() {
     </div>
   );
 }
+
+export default AgeCalculator;
