@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -8,6 +9,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 export function Header() {
   const { t } = useTranslation();
   const location = useLocation();
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
 
   const navLinks = [
     { to: '/date-converter', icon: Calendar, label: t('nav.dateConverter') },
@@ -41,7 +43,7 @@ export function Header() {
           <LanguageSelector />
           
           {/* Mobile Menu - Now shown on all screen sizes */}
-          <Sheet>
+          <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon">
                 <Menu className="h-6 w-6" />
@@ -63,6 +65,7 @@ export function Header() {
                       asChild
                       variant={location.pathname === link.to ? 'default' : 'ghost'}
                       className="justify-start gap-3 h-12"
+                      onClick={() => setIsSheetOpen(false)}
                     >
                       <Link to={link.to}>
                         <link.icon className="h-5 w-5" />
