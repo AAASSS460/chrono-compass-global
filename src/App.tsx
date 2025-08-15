@@ -16,6 +16,7 @@ const MorningEveningAdhkar = lazy(() => import("./pages/MorningEveningAdhkar"));
 const PrayerTimes = lazy(() => import("./pages/PrayerTimes"));
 const FridayDuas = lazy(() => import("./pages/FridayDuas"));
 const IslamicQuiz = lazy(() => import("./pages/IslamicQuiz"));
+const SmartIslamicQuiz = lazy(() => import("./pages/SmartIslamicQuiz"));
 const Quran = lazy(() => import("./pages/Quran"));
 const SurahDetail = lazy(() => import("./pages/SurahDetail"));
 const Countries = lazy(() => import("./pages/Countries"));
@@ -52,6 +53,7 @@ const App = () => (
                 <Route path="/prayer-times" element={<PrayerTimes />} />
                 <Route path="/friday-duas" element={<FridayDuas />} />
                 <Route path="/islamic-quiz" element={<IslamicQuiz />} />
+                <Route path="/smart-islamic-quiz" element={<SmartIslamicQuiz />} />
                 <Route path="/quran" element={<Quran />} />
                 <Route path="/surah/:surahNumber" element={<SurahDetail />} />
                 <Route path="/countries" element={<Countries />} />

@@ -45,6 +45,7 @@ export function Footer() {
         { label: t('nav.prayerTimes'), to: '/prayer-times' },
         { label: t('nav.fridayDuas'), to: '/friday-duas' },
         { label: t('nav.islamicQuiz'), to: '/islamic-quiz' },
+        { label: t('nav.smartIslamicQuiz'), to: '/smart-islamic-quiz' },
         { label: t('nav.quran'), to: '/quran' },
         { label: t('nav.countries'), to: '/countries' },
         { label: t('nav.countriesPrayerTimes'), to: '/countries-prayer-times' },

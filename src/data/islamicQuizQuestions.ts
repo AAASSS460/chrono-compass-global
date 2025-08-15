@@ -261,5 +261,15 @@ export const islamicQuizQuestions: QuizLevel = {
       optionsAr: ["الحنفي", "المالكي", "الشافعي", "الحنبلي"],
       answer: 0,
     },
+    {
+      id: 11,
+      question: "I am a pillar of Islam, I cannot be seen with the eye, nor touched by hand.",
+      questionAr: "أنا ركن من أركان الإسلام، لا أرى بالعين ولا ألمس باليد.",
+      options: ["Salat (Prayer)", "Zakat (Charity)", "Sawm (Fasting)", "Iman (Faith)"],
+      optionsAr: ["الصلاة", "الزكاة", "الصوم", "الإيمان"],
+      answer: 3, // Index of Iman (Faith)
+      explanation: "Iman (Faith) is an unseen pillar of Islam, residing in the heart and believed in without physical manifestation.",
+      explanationAr: "الإيمان هو ركن غير مرئي من أركان الإسلام، يسكن في القلب ويُعتقد به دون تجسيد مادي.",
+    },
   ],
 };

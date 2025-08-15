@@ -16,6 +16,7 @@ export function Header() {
     { to: '/prayer-times', icon: Clock, label: t('nav.prayerTimes') },
     { to: '/friday-duas', icon: BookOpen, label: t('nav.fridayDuas') },
     { to: '/islamic-quiz', icon: HelpCircle, label: t('nav.islamicQuiz') },
+    { to: '/smart-islamic-quiz', icon: HelpCircle, label: t('nav.smartIslamicQuiz') },
     { to: '/asmaul-husna', icon: BookOpen, label: t('nav.asmaulHusna') },
     { to: '/hisnul-muslim', icon: BookOpen, label: t('nav.hisnulMuslim') },
     { to: '/quran', icon: BookOpen, label: t('nav.quran') },
